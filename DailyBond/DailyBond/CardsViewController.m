@@ -12,6 +12,8 @@
 #import "DailyBond-Swift.h"
 #import "CardBirthdayViewController.h"
 #import "CardEventViewController.h"
+#import "CardNewPostViewController.h"
+#import "CardKeepInTouchViewController.h"
 
 @interface CardsViewController ()
 
@@ -62,7 +64,7 @@
     NSLog(@"Showing card...");
     
     // TODO : LOAD CONTROLLER HERE RIGHT NOWWW!!!
-    CardViewController *popin = [[CardEventViewController alloc] init];//[[SFCardFlowManager sharedInstance] getNextCardController];
+    CardViewController *popin = [[CardKeepInTouchViewController alloc] init];//[[SFCardFlowManager sharedInstance] getNextCardController];
     
     //SFCardViewController *popin = [[SFCardManager sharedInstance] getNextCard]; //[[SFTutorialViewController alloc] initWithNibName:@"SFTutorialViewController" bundle:nil];
     //popin.view.frame = CGRectMake(0, 0, 320, 500);
