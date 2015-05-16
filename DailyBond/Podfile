@@ -9,6 +9,7 @@ target 'DailyBond' do
     pod 'ParseUI'
     pod 'ParseCrashReporting'
     pod 'Bolts'
+    pod 'BFTask-Extras'
 end
 
 target 'DailyBondTests' do

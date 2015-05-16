@@ -10,6 +10,7 @@
 		2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224991B07BCF200B5042E /* TestViewController.swift */; };
 		2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92249B1B07BEEC00B5042E /* FBRequests.swift */; };
 		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
+		D58F598C1B07BA8C00FAB188 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D58F598B1B07BA8C00FAB188 /* User.m */; };
 		EB04D8B71B07A61C009B8AB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8B61B07A61C009B8AB0 /* main.m */; };
 		EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8B91B07A61C009B8AB0 /* AppDelegate.m */; };
 		EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8BC1B07A61C009B8AB0 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 		2E9224991B07BCF200B5042E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2E92249B1B07BEEC00B5042E /* FBRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRequests.swift; sourceTree = "<group>"; };
 		B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.release.xcconfig"; sourceTree = "<group>"; };
+		D58F598A1B07BA8C00FAB188 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = DailyBond.xcodeproj/../DailyBond/User.h; sourceTree = "<group>"; };
+		D58F598B1B07BA8C00FAB188 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = DailyBond.xcodeproj/../DailyBond/User.m; sourceTree = "<group>"; };
 		EB04D8B11B07A61C009B8AB0 /* DailyBond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyBond.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB04D8B51B07A61C009B8AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB04D8B61B07A61C009B8AB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 		EB04D8A81B07A61C009B8AB0 = {
 			isa = PBXGroup;
 			children = (
+				D58F598A1B07BA8C00FAB188 /* User.h */,
+				D58F598B1B07BA8C00FAB188 /* User.m */,
 				EB04D8DA1B07A8D2009B8AB0 /* Podfile */,
 				EB04D8B31B07A61C009B8AB0 /* DailyBond */,
 				EB04D8CD1B07A61C009B8AB0 /* DailyBondTests */,
@@ -322,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D58F598C1B07BA8C00FAB188 /* User.m in Sources */,
 				EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */,
 				EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */,
 				2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */,
