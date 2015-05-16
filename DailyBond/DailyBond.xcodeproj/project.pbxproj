@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
 		EB04D8B71B07A61C009B8AB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8B61B07A61C009B8AB0 /* main.m */; };
 		EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8B91B07A61C009B8AB0 /* AppDelegate.m */; };
 		EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8BC1B07A61C009B8AB0 /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8C11B07A61C009B8AB0 /* Images.xcassets */; };
 		EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8C31B07A61C009B8AB0 /* LaunchScreen.xib */; };
 		EB04D8D11B07A61C009B8AB0 /* DailyBondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */; };
+		EB04D8DB1B07A8D2009B8AB0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8DA1B07A8D2009B8AB0 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02ECE7FA6D8B7D13F7A4EC0F /* Pods-DailyBond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.debug.xcconfig"; sourceTree = "<group>"; };
+		06E9BB640064F12766596638 /* libPods-DailyBond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyBond.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.release.xcconfig"; sourceTree = "<group>"; };
 		EB04D8B11B07A61C009B8AB0 /* DailyBond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyBond.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB04D8B51B07A61C009B8AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB04D8B61B07A61C009B8AB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +45,7 @@
 		EB04D8CA1B07A61C009B8AB0 /* DailyBondTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyBondTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB04D8CF1B07A61C009B8AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyBondTests.m; sourceTree = "<group>"; };
+		EB04D8DA1B07A8D2009B8AB0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +67,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A5AD829A6AFC897EB1112F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02ECE7FA6D8B7D13F7A4EC0F /* Pods-DailyBond.debug.xcconfig */,
+				B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9F2E155D3EC9A876E8380BEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06E9BB640064F12766596638 /* libPods-DailyBond.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EB04D8A81B07A61C009B8AB0 = {
 			isa = PBXGroup;
 			children = (
+				EB04D8DA1B07A8D2009B8AB0 /* Podfile */,
 				EB04D8B31B07A61C009B8AB0 /* DailyBond */,
 				EB04D8CD1B07A61C009B8AB0 /* DailyBondTests */,
 				EB04D8B21B07A61C009B8AB0 /* Products */,
+				2A5AD829A6AFC897EB1112F1 /* Pods */,
+				9F2E155D3EC9A876E8380BEA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB04D8D41B07A61C009B8AB0 /* Build configuration list for PBXNativeTarget "DailyBond" */;
 			buildPhases = (
+				DFF7D278A2780D4408E6643A /* Check Pods Manifest.lock */,
 				EB04D8AD1B07A61C009B8AB0 /* Sources */,
 				EB04D8AE1B07A61C009B8AB0 /* Frameworks */,
 				EB04D8AF1B07A61C009B8AB0 /* Resources */,
+				684AC1B964AC688FDE51F950 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +230,7 @@
 			files = (
 				EB04D8C01B07A61C009B8AB0 /* Main.storyboard in Resources */,
 				EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */,
+				EB04D8DB1B07A8D2009B8AB0 /* Podfile in Resources */,
 				EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +243,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		684AC1B964AC688FDE51F950 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFF7D278A2780D4408E6643A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EB04D8AD1B07A61C009B8AB0 /* Sources */ = {
@@ -347,6 +410,7 @@
 		};
 		EB04D8D51B07A61C009B8AB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02ECE7FA6D8B7D13F7A4EC0F /* Pods-DailyBond.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DailyBond/Info.plist;
@@ -357,6 +421,7 @@
 		};
 		EB04D8D61B07A61C009B8AB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DailyBond/Info.plist;
@@ -418,6 +483,7 @@
 				EB04D8D61B07A61C009B8AB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB04D8D71B07A61C009B8AB0 /* Build configuration list for PBXNativeTarget "DailyBondTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +492,7 @@
 				EB04D8D91B07A61C009B8AB0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
