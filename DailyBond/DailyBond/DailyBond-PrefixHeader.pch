@@ -1,0 +1,18 @@
+//
+//  DailyBond-PrefixHeader.pch
+//  DailyBond
+//
+//  Created by Felix Dumit on 5/16/15.
+//  Copyright (c) 2015 DailyBond. All rights reserved.
+//
+
+#ifndef DailyBond_DailyBond_PrefixHeader_pch
+#define DailyBond_DailyBond_PrefixHeader_pch
+
+
+#import <Bolts.h>
+#import <BFTask-Extras.h>
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif

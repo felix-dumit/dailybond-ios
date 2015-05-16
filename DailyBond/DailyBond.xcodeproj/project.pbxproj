@@ -18,7 +18,6 @@
 		EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8C11B07A61C009B8AB0 /* Images.xcassets */; };
 		EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8C31B07A61C009B8AB0 /* LaunchScreen.xib */; };
 		EB04D8D11B07A61C009B8AB0 /* DailyBondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */; };
-		EB04D8DB1B07A8D2009B8AB0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8DA1B07A8D2009B8AB0 /* Podfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +37,9 @@
 		2E9224991B07BCF200B5042E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2E92249B1B07BEEC00B5042E /* FBRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRequests.swift; sourceTree = "<group>"; };
 		B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.release.xcconfig"; sourceTree = "<group>"; };
-		D58F598A1B07BA8C00FAB188 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = DailyBond.xcodeproj/../DailyBond/User.h; sourceTree = "<group>"; };
-		D58F598B1B07BA8C00FAB188 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = DailyBond.xcodeproj/../DailyBond/User.m; sourceTree = "<group>"; };
+		D58F598A1B07BA8C00FAB188 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D58F598B1B07BA8C00FAB188 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D59549B51B07C1E400720A52 /* DailyBond-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-PrefixHeader.pch"; sourceTree = "<group>"; };
 		EB04D8B11B07A61C009B8AB0 /* DailyBond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyBond.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB04D8B51B07A61C009B8AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB04D8B61B07A61C009B8AB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,7 +53,6 @@
 		EB04D8CA1B07A61C009B8AB0 /* DailyBondTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyBondTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB04D8CF1B07A61C009B8AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyBondTests.m; sourceTree = "<group>"; };
-		EB04D8DA1B07A8D2009B8AB0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +104,8 @@
 		2E9224961B07BBDB00B5042E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D58F598A1B07BA8C00FAB188 /* User.h */,
+				D58F598B1B07BA8C00FAB188 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -128,9 +129,6 @@
 		EB04D8A81B07A61C009B8AB0 = {
 			isa = PBXGroup;
 			children = (
-				D58F598A1B07BA8C00FAB188 /* User.h */,
-				D58F598B1B07BA8C00FAB188 /* User.m */,
-				EB04D8DA1B07A8D2009B8AB0 /* Podfile */,
 				EB04D8B31B07A61C009B8AB0 /* DailyBond */,
 				EB04D8CD1B07A61C009B8AB0 /* DailyBondTests */,
 				EB04D8B21B07A61C009B8AB0 /* Products */,
@@ -157,6 +155,7 @@
 				2E9224941B07BBC300B5042E /* Controllers */,
 				EB04D8B81B07A61C009B8AB0 /* AppDelegate.h */,
 				EB04D8B91B07A61C009B8AB0 /* AppDelegate.m */,
+				D59549B51B07C1E400720A52 /* DailyBond-PrefixHeader.pch */,
 				EB04D8BE1B07A61C009B8AB0 /* Main.storyboard */,
 				EB04D8C11B07A61C009B8AB0 /* Images.xcassets */,
 				EB04D8C31B07A61C009B8AB0 /* LaunchScreen.xib */,
@@ -275,7 +274,6 @@
 			files = (
 				EB04D8C01B07A61C009B8AB0 /* Main.storyboard in Resources */,
 				EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */,
-				EB04D8DB1B07A8D2009B8AB0 /* Podfile in Resources */,
 				EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
