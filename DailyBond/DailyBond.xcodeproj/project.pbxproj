@@ -76,6 +76,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2E9224941B07BBC300B5042E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EB04D8BB1B07A61C009B8AB0 /* ViewController.h */,
+				EB04D8BC1B07A61C009B8AB0 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2E9224951B07BBD000B5042E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2E9224961B07BBDB00B5042E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2E9224971B07BBF700B5042E /* Web */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
 		9F2E155D3EC9A876E8380BEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,10 +138,12 @@
 		EB04D8B31B07A61C009B8AB0 /* DailyBond */ = {
 			isa = PBXGroup;
 			children = (
+				2E9224971B07BBF700B5042E /* Web */,
+				2E9224961B07BBDB00B5042E /* Model */,
+				2E9224951B07BBD000B5042E /* Views */,
+				2E9224941B07BBC300B5042E /* Controllers */,
 				EB04D8B81B07A61C009B8AB0 /* AppDelegate.h */,
 				EB04D8B91B07A61C009B8AB0 /* AppDelegate.m */,
-				EB04D8BB1B07A61C009B8AB0 /* ViewController.h */,
-				EB04D8BC1B07A61C009B8AB0 /* ViewController.m */,
 				EB04D8BE1B07A61C009B8AB0 /* Main.storyboard */,
 				EB04D8C11B07A61C009B8AB0 /* Images.xcassets */,
 				EB04D8C31B07A61C009B8AB0 /* LaunchScreen.xib */,
