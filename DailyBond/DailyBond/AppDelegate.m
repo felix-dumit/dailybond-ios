@@ -12,6 +12,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import "User.h"
+#import "Birthday.h"
 #import "CardsViewController.h"
 @interface AppDelegate ()
 
@@ -24,8 +25,9 @@
     // Override point for customization after application launch.
     
     [User registerSubclass];
+    [Birthday registerSubclass];
     
-    //    [Parse enableLocalDatastore];
+    [Parse enableLocalDatastore];
     [Parse setApplicationId:@"ioHHzrZSRJSMSTR0WZZETXjyjXfgKOZ3uefsMuG5" clientKey:@"M7vDYkWESocaASxvdf4UwYpZMDFaCey3yoyiDdPj"];
     
     

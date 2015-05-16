@@ -6,3 +6,6 @@
 #import "CCMBorderView.h"
 #import "CCMPlayNDropView.h"
 #import <FBSDKCoreKit.h>
+#import <FBSDKShareKit.h>
+#import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
+#import "Birthday.h"

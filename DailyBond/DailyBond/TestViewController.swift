@@ -14,4 +14,18 @@ class TestViewController: UIViewController {
         println("BUTTON CLICKED")
         FBRequests.sharedInstance.doSomething()
     }
+    
+    @IBAction func testBirthday(sender: AnyObject) {
+        
+        var birthdays:[Birthday] = Birthday.generateMockBirthDays() as! [Birthday]
+        
+        println("Birthdays: \(birthdays)")
+    }
+    
+//    @IBAction func shareOnMessenger(sender: AnyObject) {
+//        
+//        if Int(FBSDKMessengerSharer.messengerPlatformCapabilities()) & Int(FBSDKMessengerPlatformCapability.Image) {
+//            FBSDKMessengerSharer.shareImage(UIImage(named: "DailyBondCard"), withOptions: nil)
+//        }
+//    }
 }
