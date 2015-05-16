@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AE21B07D15A00DF99C6 /* CardViewController.m */; };
+		2E6D3AE61B07D68700DF99C6 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AE51B07D68700DF99C6 /* CardsViewController.m */; };
+		2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AE91B07D75500DF99C6 /* CardHelper.m */; };
 		2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224991B07BCF200B5042E /* TestViewController.swift */; };
 		2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92249B1B07BEEC00B5042E /* FBRequests.swift */; };
 		2E9224A41B07CCD800B5042E /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A21B07CCD800B5042E /* CardView.m */; };
@@ -42,6 +44,10 @@
 		06E9BB640064F12766596638 /* libPods-DailyBond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyBond.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6D3AE11B07D15A00DF99C6 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		2E6D3AE21B07D15A00DF99C6 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		2E6D3AE41B07D68700DF99C6 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
+		2E6D3AE51B07D68700DF99C6 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
+		2E6D3AE81B07D75500DF99C6 /* CardHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardHelper.h; sourceTree = "<group>"; };
+		2E6D3AE91B07D75500DF99C6 /* CardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardHelper.m; sourceTree = "<group>"; };
 		2E9224981B07BCF200B5042E /* DailyBond-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E9224991B07BCF200B5042E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2E92249B1B07BEEC00B5042E /* FBRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRequests.swift; sourceTree = "<group>"; };
@@ -102,9 +108,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2E6D3AE71B07D74D00DF99C6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2E6D3AE81B07D75500DF99C6 /* CardHelper.h */,
+				2E6D3AE91B07D75500DF99C6 /* CardHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		2E9224941B07BBC300B5042E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2E6D3AE41B07D68700DF99C6 /* CardsViewController.h */,
+				2E6D3AE51B07D68700DF99C6 /* CardsViewController.m */,
 				2E6D3AE11B07D15A00DF99C6 /* CardViewController.h */,
 				2E6D3AE21B07D15A00DF99C6 /* CardViewController.m */,
 				D59549B61B07C71700720A52 /* LoginViewController.h */,
@@ -179,6 +196,7 @@
 		EB04D8B31B07A61C009B8AB0 /* DailyBond */ = {
 			isa = PBXGroup;
 			children = (
+				2E6D3AE71B07D74D00DF99C6 /* Helpers */,
 				2E9224971B07BBF700B5042E /* Web */,
 				2E9224961B07BBDB00B5042E /* Model */,
 				2E9224951B07BBD000B5042E /* Views */,
@@ -364,8 +382,10 @@
 				2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */,
 				EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */,
 				2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */,
+				2E6D3AE61B07D68700DF99C6 /* CardsViewController.m in Sources */,
 				D59549B81B07C71700720A52 /* LoginViewController.m in Sources */,
 				EB04D8B71B07A61C009B8AB0 /* main.m in Sources */,
+				2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */,
 				2E9224A41B07CCD800B5042E /* CardView.m in Sources */,
 				2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */,
 				2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */,
