@@ -9,5 +9,6 @@
 #import "CardViewController.h"
 
 @interface CardBirthdayViewController : CardViewController
+@property (weak, nonatomic) IBOutlet CardView *cardView;
 
 @end
