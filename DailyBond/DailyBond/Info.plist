@@ -23,18 +23,20 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>FB</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb401848960002846
-</string>
+				<string>fb401848960002846</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
-	<string>401848960002846
-</string>
+	<string>401848960002846</string>
+	<key>FacebookDisplayName</key>
+	<string>DailyBond</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
