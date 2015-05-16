@@ -25,6 +25,8 @@
 		EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8C11B07A61C009B8AB0 /* Images.xcassets */; };
 		EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8C31B07A61C009B8AB0 /* LaunchScreen.xib */; };
 		EB04D8D11B07A61C009B8AB0 /* DailyBondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */; };
+		EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22C81B07D51A0095633A /* CardBirthdayViewController.m */; };
+		EBDA22CB1B07D51A0095633A /* CardBirthdayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22C91B07D51A0095633A /* CardBirthdayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,9 @@
 		EB04D8CA1B07A61C009B8AB0 /* DailyBondTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyBondTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB04D8CF1B07A61C009B8AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyBondTests.m; sourceTree = "<group>"; };
+		EBDA22C71B07D51A0095633A /* CardBirthdayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardBirthdayViewController.h; sourceTree = "<group>"; };
+		EBDA22C81B07D51A0095633A /* CardBirthdayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardBirthdayViewController.m; sourceTree = "<group>"; };
+		EBDA22C91B07D51A0095633A /* CardBirthdayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardBirthdayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,9 @@
 				EB04D8BB1B07A61C009B8AB0 /* ViewController.h */,
 				EB04D8BC1B07A61C009B8AB0 /* ViewController.m */,
 				2E9224991B07BCF200B5042E /* TestViewController.swift */,
+				EBDA22C71B07D51A0095633A /* CardBirthdayViewController.h */,
+				EBDA22C81B07D51A0095633A /* CardBirthdayViewController.m */,
+				EBDA22C91B07D51A0095633A /* CardBirthdayViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,6 +313,7 @@
 			files = (
 				EB04D8C01B07A61C009B8AB0 /* Main.storyboard in Resources */,
 				2E9224A51B07CCD800B5042E /* CardView.xib in Resources */,
+				EBDA22CB1B07D51A0095633A /* CardBirthdayViewController.xib in Resources */,
 				EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */,
 				EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */,
 			);
@@ -359,6 +368,7 @@
 			files = (
 				2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */,
 				D58F598C1B07BA8C00FAB188 /* User.m in Sources */,
+				EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */,
 				EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */,
 				2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */,
 				2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */,
