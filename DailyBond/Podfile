@@ -3,7 +3,12 @@
 platform :ios, '8.0'
 
 target 'DailyBond' do
-    
+    pod 'Parse'
+    pod 'ParseFacebookUtilsV4'
+    pod 'FBSDKCoreKit'
+    pod 'ParseUI'
+    pod 'ParseCrashReporting'
+    pod 'Bolts'
 end
 
 target 'DailyBondTests' do
