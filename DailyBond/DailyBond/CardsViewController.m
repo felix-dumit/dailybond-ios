@@ -36,6 +36,8 @@
     if (self.loading.boolValue) {
         self.loading = @NO;
         
+        
+        
         // LOAD CARD RIGHT HERE
         [self showCardAnimated:animated];
     }

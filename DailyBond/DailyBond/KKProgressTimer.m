@@ -89,10 +89,10 @@
 
 #pragma mark draw progress
 - (void)drawRect:(CGRect)rect {
-    [self drawFillPie:rect margin:0 color:self.circleBackgroundColor percentage:1];
+    //[self drawFillPie:rect margin:0 color:self.circleBackgroundColor percentage:1];
     [self drawFramePie:rect];
-    [self drawFillPie:rect margin:self.frameWidth color:self.progressBackgroundColor percentage:1];
-    [self drawFillPie:rect margin:self.frameWidth color:self.progressColor percentage:self.progress];
+    [self drawFillPie:rect margin:0 color:self.progressBackgroundColor percentage:1];
+    [self drawFillPie:rect margin:0 color:self.progressColor percentage:self.progress];
 }
 
 - (void)drawFillPie:(CGRect)rect margin:(CGFloat)margin color:(UIColor *)color percentage:(CGFloat)percentage {
