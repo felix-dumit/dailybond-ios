@@ -9,6 +9,9 @@
 #import "CardBirthdayViewController.h"
 
 @interface CardBirthdayViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
 
@@ -16,12 +19,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setDescriptionLabelWithName:@"Nicholas"];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UI Helper Methods
+- (void) setDescriptionLabelWithName:(NSString*)aName
+{
+    // TODO: Consider gender in message: Give %s congratulations for "his" birthday
+    [self.descriptionLabel setText:[NSString stringWithFormat:@"Give %@ congratulations!", aName]];
+    return;
+}
+
+#pragma mark - Buttons delegates
+- (IBAction)onDismissPressed:(id)sender {
+}
+
+- (IBAction)onSendPressed:(id)sender {
 }
 
 /*
