@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64B-tW-6Lw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64B-tW-6Lw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -318,7 +318,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICz-XY-sCZ" userLabel="EventProgress" customClass="KKProgressTimer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICz-XY-sCZ" userLabel="PostsProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="156" y="80" width="54" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconPosts" translatesAutoresizingMaskIntoConstraints="NO" id="9Bh-BG-nxB">
@@ -349,7 +349,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K19-UJ-h7A" userLabel="EventProgress" customClass="KKProgressTimer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K19-UJ-h7A" userLabel="ChatProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="226" y="80" width="54" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconChat" translatesAutoresizingMaskIntoConstraints="NO" id="XNK-ab-V9r">
@@ -380,7 +380,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMC-k0-aP7" userLabel="EventProgress" customClass="KKProgressTimer">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMC-k0-aP7" userLabel="WriteProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="296" y="80" width="54" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconWrite" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-Mc-Lfn">
@@ -439,6 +439,18 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="positionBirthday" destination="a04-gU-LuM" id="wF2-lF-zmR"/>
+                        <outlet property="positionChat" destination="7ow-d4-hqV" id="dYU-7g-HjE"/>
+                        <outlet property="positionEvent" destination="k6N-3N-bxx" id="YaN-Dn-NmH"/>
+                        <outlet property="positionPosts" destination="xSn-zI-nh0" id="6ed-EP-R9j"/>
+                        <outlet property="positionWrite" destination="ub3-NU-apN" id="pPh-Hb-HSx"/>
+                        <outlet property="progressBirthday" destination="6lI-KW-f7g" id="obl-T4-9nJ"/>
+                        <outlet property="progressChat" destination="K19-UJ-h7A" id="fzi-YE-u8y"/>
+                        <outlet property="progressEvent" destination="p8b-D6-8bW" id="ehJ-Dg-PAa"/>
+                        <outlet property="progressPosts" destination="ICz-XY-sCZ" id="l9d-pQ-AMg"/>
+                        <outlet property="progressWrite" destination="xMC-k0-aP7" id="eMx-70-N6j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8c-fj-Fkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
