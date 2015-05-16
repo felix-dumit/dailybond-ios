@@ -9,6 +9,7 @@
 #import "CardBirthdayViewController.h"
 
 @interface CardBirthdayViewController ()
+@property (weak, nonatomic) IBOutlet CardView *cardView;
 
 @end
 
@@ -33,5 +34,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(CardView *)getCardView;
+{
+    return self.cardView;
+}
 
 @end

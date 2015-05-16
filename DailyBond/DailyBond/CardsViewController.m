@@ -10,12 +10,9 @@
 #import "CCMPlayNDropView.h"
 #import "CardHelper.h"
 #import "DailyBond-Swift.h"
+#import "CardBirthdayViewController.h"
 
 @interface CardsViewController ()
-@property (weak, nonatomic) IBOutlet CCMPlayNDropView *mainCard;
-@property (weak, nonatomic) IBOutlet UIView *cardBackground;
-@property (weak, nonatomic) IBOutlet UIView *cardContentContainer;
-@property (weak, nonatomic) IBOutlet CCMPlayNDropView *viewCard;
 
 @property (strong, nonatomic) CardViewController *activeCard;
 
@@ -40,7 +37,7 @@
         self.loading = @NO;
         
         // LOAD CARD RIGHT HERE
-        //[self showCardAnimated:animated];
+        [self showCardAnimated:animated];
     }
 }
 
