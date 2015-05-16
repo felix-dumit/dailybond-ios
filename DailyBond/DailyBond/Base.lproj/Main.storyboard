@@ -1,10 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B8y-Db-nsw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64B-tW-6Lw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Test View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="QdH-sc-1ZT">
+            <objects>
+                <navigationController id="64B-tW-6Lw" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yES-4G-Axt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="U9T-Fs-UtI" kind="relationship" relationship="rootViewController" id="gGt-qd-7Hf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiO-Mm-fHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436" y="-151"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lzF-yJ-ur2">
+            <objects>
+                <viewController id="U9T-Fs-UtI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sg1-zd-xfD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ICQ-jz-fbA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="REh-Ak-X17">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rbl-OS-Q9R">
+                        <barButtonItem key="rightBarButtonItem" title="Test" id="XCm-4A-c2a">
+                            <connections>
+                                <segue destination="Yyx-As-DIT" kind="show" id="Rbx-Tf-hmu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OWQ-zg-6W2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.5" y="-151.5"/>
+        </scene>
+        <!--Tests-->
+        <scene sceneID="bBh-Dp-UJW">
+            <objects>
+                <viewController id="Yyx-As-DIT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XHk-ud-LoK"/>
+                        <viewControllerLayoutGuide type="bottom" id="GXv-zD-ZIj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gxg-gM-647">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wk-oL-wZ6">
+                                <rect key="frame" x="172" y="113" width="30" height="30"/>
+                                <state key="normal" title="Test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="YQg-We-Pnn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lE-oz-TAs">
+                                <rect key="frame" x="168" y="220" width="38" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B8y-Db-nsw" kind="show" id="nq9-1p-UXJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tests" id="Bk1-6Y-nOM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTL-YF-1uT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633.5" y="-151.5"/>
+        </scene>
+        <!--Web Tests-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TestViewController" customModule="DailyBond" customModuleProvider="target" sceneMemberID="viewController">
@@ -13,11 +94,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qtt-QR-mQl">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <rect key="frame" x="45" y="123" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -28,11 +109,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Web Tests" id="X0l-ZZ-VWe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1198.5" y="-423.5"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="FTw-kW-o36">
             <objects>
                 <viewController id="B8y-Db-nsw" customClass="LoginViewController" sceneMemberID="viewController">
@@ -41,11 +124,11 @@
                         <viewControllerLayoutGuide type="bottom" id="adj-gV-KM7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Yb1-Ef-7S7">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMq-G0-7Yx">
-                                <rect key="frame" x="75" y="53" width="141" height="30"/>
+                                <rect key="frame" x="45" y="123" width="141" height="30"/>
                                 <state key="normal" title="Login com facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,10 +139,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Login" id="iGv-6t-zff"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="var-8v-4ki" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230" y="975"/>
+            <point key="canvasLocation" x="1204" y="400"/>
         </scene>
     </scenes>
 </document>
