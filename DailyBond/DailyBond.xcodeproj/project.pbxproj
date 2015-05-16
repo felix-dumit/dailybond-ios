@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AE21B07D15A00DF99C6 /* CardViewController.m */; };
 		2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224991B07BCF200B5042E /* TestViewController.swift */; };
 		2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92249B1B07BEEC00B5042E /* FBRequests.swift */; };
-		2E9224A01B07CC7800B5042E /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92249F1B07CC7800B5042E /* CardViewController.m */; };
 		2E9224A41B07CCD800B5042E /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A21B07CCD800B5042E /* CardView.m */; };
 		2E9224A51B07CCD800B5042E /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9224A31B07CCD800B5042E /* CardView.xib */; };
 		2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A71B07CD1F00B5042E /* CCMBorderView.m */; };
@@ -40,11 +40,11 @@
 /* Begin PBXFileReference section */
 		02ECE7FA6D8B7D13F7A4EC0F /* Pods-DailyBond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.debug.xcconfig"; sourceTree = "<group>"; };
 		06E9BB640064F12766596638 /* libPods-DailyBond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyBond.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6D3AE11B07D15A00DF99C6 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		2E6D3AE21B07D15A00DF99C6 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		2E9224981B07BCF200B5042E /* DailyBond-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E9224991B07BCF200B5042E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2E92249B1B07BEEC00B5042E /* FBRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRequests.swift; sourceTree = "<group>"; };
-		2E92249E1B07CC7800B5042E /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
-		2E92249F1B07CC7800B5042E /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		2E9224A11B07CCD800B5042E /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
 		2E9224A21B07CCD800B5042E /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		2E9224A31B07CCD800B5042E /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
@@ -105,6 +105,8 @@
 		2E9224941B07BBC300B5042E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2E6D3AE11B07D15A00DF99C6 /* CardViewController.h */,
+				2E6D3AE21B07D15A00DF99C6 /* CardViewController.m */,
 				D59549B61B07C71700720A52 /* LoginViewController.h */,
 				D59549B71B07C71700720A52 /* LoginViewController.m */,
 				EB04D8BB1B07A61C009B8AB0 /* ViewController.h */,
@@ -144,15 +146,6 @@
 				2E92249B1B07BEEC00B5042E /* FBRequests.swift */,
 			);
 			name = Web;
-			sourceTree = "<group>";
-		};
-		2E92249D1B07CC6900B5042E /* Cards */ = {
-			isa = PBXGroup;
-			children = (
-				2E92249E1B07CC7800B5042E /* CardViewController.h */,
-				2E92249F1B07CC7800B5042E /* CardViewController.m */,
-			);
-			name = Cards;
 			sourceTree = "<group>";
 		};
 		9F2E155D3EC9A876E8380BEA /* Frameworks */ = {
@@ -374,7 +367,7 @@
 				D59549B81B07C71700720A52 /* LoginViewController.m in Sources */,
 				EB04D8B71B07A61C009B8AB0 /* main.m in Sources */,
 				2E9224A41B07CCD800B5042E /* CardView.m in Sources */,
-				2E9224A01B07CC7800B5042E /* CardViewController.m in Sources */,
+				2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */,
 				2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
