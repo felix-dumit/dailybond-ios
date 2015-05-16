@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardEventViewController">
+            <connections>
+                <outlet property="cardView" destination="wpx-1k-YY1" id="fIW-mg-8dX"/>
+                <outlet property="dateLabel" destination="o2K-tS-rhc" id="bKN-t3-jft"/>
+                <outlet property="eventImageView" destination="bqh-IR-wXB" id="eSo-ng-pVA"/>
+                <outlet property="eventNameLabel" destination="TEr-SO-18D" id="qeV-Wd-edd"/>
+                <outlet property="locationLabel" destination="omZ-fC-Ysn" id="RF7-Ua-YBa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpx-1k-YY1" customClass="CardView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4le-xC-dBC">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
+                            <color key="backgroundColor" red="0.45490196078431372" green="0.55686274509803924" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="rwu-EX-gAl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook EVENT" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEr-SO-18D">
+                            <rect key="frame" x="116" y="56" width="123" height="18"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting in 3 days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2K-tS-rhc">
+                            <rect key="frame" x="116" y="76" width="106" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.4549019608" green="0.5568627451" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYU-pA-tnp">
+                            <rect key="frame" x="16" y="562" width="276" height="30"/>
+                            <state key="normal" title="Dismiss">
+                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tb-Jb-Nxq">
+                            <rect key="frame" x="308" y="562" width="276" height="30"/>
+                            <state key="normal" title="Confirm">
+                                <color key="titleColor" red="0.51295727729999996" green="0.88030642989999996" blue="0.41191776759999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bqh-IR-wXB">
+                            <rect key="frame" x="8" y="56" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="100" id="jbR-l8-DhO"/>
+                                <constraint firstAttribute="width" constant="100" id="wBd-7x-ZcY"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook São Paulo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omZ-fC-Ysn">
+                            <rect key="frame" x="116" y="94" width="125" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="o2K-tS-rhc" firstAttribute="top" secondItem="TEr-SO-18D" secondAttribute="bottom" constant="2" id="7eS-Bi-1n9"/>
+                        <constraint firstAttribute="centerX" secondItem="4le-xC-dBC" secondAttribute="centerX" id="9U5-xK-A1F"/>
+                        <constraint firstItem="WYU-pA-tnp" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leading" constant="16" id="KZg-va-0uj"/>
+                        <constraint firstItem="o2K-tS-rhc" firstAttribute="leading" secondItem="TEr-SO-18D" secondAttribute="leading" id="Mbr-dA-Foo"/>
+                        <constraint firstItem="4le-xC-dBC" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leading" constant="8" id="Mcy-G4-ubz"/>
+                        <constraint firstItem="0Tb-Jb-Nxq" firstAttribute="width" secondItem="WYU-pA-tnp" secondAttribute="width" id="P6S-8I-lVr"/>
+                        <constraint firstItem="4le-xC-dBC" firstAttribute="top" secondItem="wpx-1k-YY1" secondAttribute="top" constant="8" id="Qha-NV-xIw"/>
+                        <constraint firstAttribute="bottom" secondItem="0Tb-Jb-Nxq" secondAttribute="bottom" constant="8" id="Qo7-qe-ivk"/>
+                        <constraint firstItem="TEr-SO-18D" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leadingMargin" id="U3Y-XW-oQ9"/>
+                        <constraint firstItem="bqh-IR-wXB" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leading" constant="8" id="VYC-qR-uQn"/>
+                        <constraint firstAttribute="trailing" secondItem="0Tb-Jb-Nxq" secondAttribute="trailing" constant="16" id="dFl-GU-0NN"/>
+                        <constraint firstItem="4le-xC-dBC" firstAttribute="top" secondItem="wpx-1k-YY1" secondAttribute="top" id="dLi-G1-DBE"/>
+                        <constraint firstAttribute="trailing" secondItem="4le-xC-dBC" secondAttribute="trailing" id="ebI-7V-3Ks"/>
+                        <constraint firstItem="TEr-SO-18D" firstAttribute="top" secondItem="4le-xC-dBC" secondAttribute="bottom" constant="16" id="gwx-G3-4v8"/>
+                        <constraint firstItem="omZ-fC-Ysn" firstAttribute="top" secondItem="o2K-tS-rhc" secondAttribute="bottom" constant="2" id="h0D-bS-dQS"/>
+                        <constraint firstItem="omZ-fC-Ysn" firstAttribute="leading" secondItem="TEr-SO-18D" secondAttribute="leading" id="iX7-rD-fyM"/>
+                        <constraint firstItem="4le-xC-dBC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wpx-1k-YY1" secondAttribute="leading" constant="8" id="ldl-CN-ApV"/>
+                        <constraint firstItem="4le-xC-dBC" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leading" id="meW-WU-YmF"/>
+                        <constraint firstItem="0Tb-Jb-Nxq" firstAttribute="leading" secondItem="WYU-pA-tnp" secondAttribute="trailing" constant="16" id="nsC-C8-Hwe"/>
+                        <constraint firstAttribute="bottom" secondItem="WYU-pA-tnp" secondAttribute="bottom" constant="8" id="qra-0Z-aym"/>
+                        <constraint firstItem="TEr-SO-18D" firstAttribute="leading" secondItem="bqh-IR-wXB" secondAttribute="trailing" constant="8" id="ytA-Qv-Rbt"/>
+                        <constraint firstItem="bqh-IR-wXB" firstAttribute="top" secondItem="4le-xC-dBC" secondAttribute="top" constant="56" id="zpS-up-y0C"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="9U5-xK-A1F"/>
+                            <exclude reference="Mcy-G4-ubz"/>
+                            <exclude reference="Qha-NV-xIw"/>
+                            <exclude reference="ldl-CN-ApV"/>
+                            <exclude reference="U3Y-XW-oQ9"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wpx-1k-YY1" secondAttribute="trailing" id="Fm8-nl-aXQ"/>
+                <constraint firstItem="wpx-1k-YY1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nDC-kJ-vld"/>
+                <constraint firstItem="wpx-1k-YY1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r4w-kO-yC0"/>
+                <constraint firstAttribute="bottom" secondItem="wpx-1k-YY1" secondAttribute="bottom" id="y2m-kV-D5k"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

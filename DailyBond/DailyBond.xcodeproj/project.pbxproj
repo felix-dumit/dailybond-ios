@@ -29,6 +29,8 @@
 		EB04D8D11B07A61C009B8AB0 /* DailyBondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */; };
 		EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22C81B07D51A0095633A /* CardBirthdayViewController.m */; };
 		EBDA22CB1B07D51A0095633A /* CardBirthdayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22C91B07D51A0095633A /* CardBirthdayViewController.xib */; };
+		EBDA22CF1B07EF050095633A /* CardEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22CD1B07EF050095633A /* CardEventViewController.m */; };
+		EBDA22D01B07EF050095633A /* CardEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22CE1B07EF050095633A /* CardEventViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +85,9 @@
 		EBDA22C71B07D51A0095633A /* CardBirthdayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardBirthdayViewController.h; sourceTree = "<group>"; };
 		EBDA22C81B07D51A0095633A /* CardBirthdayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardBirthdayViewController.m; sourceTree = "<group>"; };
 		EBDA22C91B07D51A0095633A /* CardBirthdayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardBirthdayViewController.xib; sourceTree = "<group>"; };
+		EBDA22CC1B07EF050095633A /* CardEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardEventViewController.h; sourceTree = "<group>"; };
+		EBDA22CD1B07EF050095633A /* CardEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardEventViewController.m; sourceTree = "<group>"; };
+		EBDA22CE1B07EF050095633A /* CardEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardEventViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +142,9 @@
 				EBDA22C71B07D51A0095633A /* CardBirthdayViewController.h */,
 				EBDA22C81B07D51A0095633A /* CardBirthdayViewController.m */,
 				EBDA22C91B07D51A0095633A /* CardBirthdayViewController.xib */,
+				EBDA22CC1B07EF050095633A /* CardEventViewController.h */,
+				EBDA22CD1B07EF050095633A /* CardEventViewController.m */,
+				EBDA22CE1B07EF050095633A /* CardEventViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -332,6 +340,7 @@
 				EB04D8C01B07A61C009B8AB0 /* Main.storyboard in Resources */,
 				2E9224A51B07CCD800B5042E /* CardView.xib in Resources */,
 				EBDA22CB1B07D51A0095633A /* CardBirthdayViewController.xib in Resources */,
+				EBDA22D01B07EF050095633A /* CardEventViewController.xib in Resources */,
 				EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */,
 				EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */,
 			);
@@ -399,6 +408,7 @@
 				2E9224A41B07CCD800B5042E /* CardView.m in Sources */,
 				2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */,
 				2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */,
+				EBDA22CF1B07EF050095633A /* CardEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
