@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64B-tW-6Lw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -59,7 +60,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -236,7 +237,44 @@
                     <view key="view" contentMode="scaleToFill" id="SYW-r4-iaR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-KW-f7g" customClass="KKProgressTimer">
+                                <rect key="frame" x="16" y="80" width="54" height="54"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconBirthday" translatesAutoresizingMaskIntoConstraints="NO" id="K0u-PS-7hX">
+                                        <rect key="frame" x="17" y="17" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="8jA-8R-1Td"/>
+                                            <constraint firstAttribute="width" secondItem="K0u-PS-7hX" secondAttribute="height" multiplier="1:1" id="kaV-CR-jii"/>
+                                            <constraint firstAttribute="width" constant="20" id="pEP-TU-fdr"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8jA-8R-1Td"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.24367885910000001" blue="0.1955868436" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="K0u-PS-7hX" secondAttribute="centerX" id="3Fj-6t-c73"/>
+                                    <constraint firstAttribute="width" secondItem="6lI-KW-f7g" secondAttribute="height" multiplier="1:1" id="6ay-Ra-aWg"/>
+                                    <constraint firstAttribute="width" constant="54" id="XB5-Sb-Kwq"/>
+                                    <constraint firstAttribute="height" constant="50" id="bY2-Cm-013"/>
+                                    <constraint firstAttribute="centerY" secondItem="K0u-PS-7hX" secondAttribute="centerY" id="nc5-fZ-gRf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bY2-Cm-013"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6lI-KW-f7g" firstAttribute="top" secondItem="ogR-eG-ka5" secondAttribute="bottom" constant="16" id="YwM-aa-9jO"/>
+                            <constraint firstItem="6lI-KW-f7g" firstAttribute="leading" secondItem="SYW-r4-iaR" secondAttribute="leadingMargin" id="a04-gU-LuM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8c-fj-Fkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,5 +285,6 @@
     <resources>
         <image name="ArrowOpenWhite" width="50" height="50"/>
         <image name="DailyBondCard" width="160" height="160"/>
+        <image name="IconBirthday" width="50" height="50"/>
     </resources>
 </document>
