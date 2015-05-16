@@ -25,8 +25,9 @@
     
     [User registerSubclass];
     
-    [Parse enableLocalDatastore];
+    //    [Parse enableLocalDatastore];
     [Parse setApplicationId:@"ioHHzrZSRJSMSTR0WZZETXjyjXfgKOZ3uefsMuG5" clientKey:@"M7vDYkWESocaASxvdf4UwYpZMDFaCey3yoyiDdPj"];
+    
     
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     

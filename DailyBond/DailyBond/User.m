@@ -20,11 +20,10 @@
 
 
 + (BFTask *)loginWithFacebookInBackground {
-    return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_likes"]].then ( ^id (id result) {
-        return [[User currentUser] loadFacebookInfo];
-    }).catch ( ^id (NSError *error) {
-        NSLog(@"Error login face: %@", error);
-        return nil;
+    return [User logOutInBackground].thenOnMain ( ^id (id result) {
+        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email"]];
+    }).thenOnMain ( ^id (User *user) {
+        return [user loadFacebookInfo];
     });
 }
 
@@ -38,8 +37,6 @@
              [taskCompletion trySetError:fbError];
              return;
          }
-         [taskCompletion trySetResult:@YES];
-         
          // Store the current user's Facebook ID on the user
          User *user = [User currentUser];
          
@@ -53,7 +50,10 @@
          [user setObject:[result objectForKey:@"gender"] forKey:@"gender"];
          
          
+         [user saveInBackground];
          
+         [taskCompletion trySetResult:@YES];
+       
          NSLog(@"Logou com usuario: %@", user.name);
          //         NSURL *imageURL = [NSURL URLWithString:[[[result objectForKey:@"picture"]
          //                                                  objectForKey:@"data"]
