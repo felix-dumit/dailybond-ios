@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64B-tW-6Lw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64B-tW-6Lw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -59,7 +60,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="4"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
@@ -71,14 +72,14 @@
                                 <rect key="frame" x="0.0" y="554" width="375" height="113"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowOpenWhite" translatesAutoresizingMaskIntoConstraints="NO" id="mji-8p-QBd">
-                                        <rect key="frame" x="342" y="40" width="25" height="25"/>
+                                        <rect key="frame" x="326" y="40" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="GAe-dB-HKh"/>
                                             <constraint firstAttribute="width" constant="25" id="zew-bY-nCG"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdb-Qb-IoS">
-                                        <rect key="frame" x="295" y="40" width="68" height="25"/>
+                                        <rect key="frame" x="279" y="40" width="68" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="164" id="J6w-CN-d63"/>
                                             <constraint firstAttribute="height" constant="25" id="T47-A0-6fI"/>
@@ -104,7 +105,7 @@
                                     <constraint firstAttribute="bottom" secondItem="Zdb-Qb-IoS" secondAttribute="bottom" constant="48" id="QAl-HE-MmS"/>
                                     <constraint firstItem="Zdb-Qb-IoS" firstAttribute="trailing" secondItem="mji-8p-QBd" secondAttribute="trailing" constant="-4" id="RPx-gk-CEb"/>
                                     <constraint firstAttribute="bottom" secondItem="mji-8p-QBd" secondAttribute="bottom" constant="48" id="bVg-M9-UI9"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="mji-8p-QBd" secondAttribute="trailing" id="pWR-3N-7qz"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="mji-8p-QBd" secondAttribute="trailing" constant="16" id="pWR-3N-7qz"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -216,6 +217,24 @@
                                     <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zXj-f4-BLT"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQU-qO-Vhi">
+                                <rect key="frame" x="51" y="175" width="64" height="30"/>
+                                <state key="normal" title="Share FB">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareOnMessenger:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xY1-BE-kb9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEV-Gi-2Bp">
+                                <rect key="frame" x="51" y="224" width="90" height="30"/>
+                                <state key="normal" title="Test Birthday">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testBirthday:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6vG-7c-vDT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -236,7 +255,189 @@
                     <view key="view" contentMode="scaleToFill" id="SYW-r4-iaR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-KW-f7g" userLabel="BirthdayProgress" customClass="KKProgressTimer">
+                                <rect key="frame" x="16" y="80" width="54" height="54"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconBirthday" translatesAutoresizingMaskIntoConstraints="NO" id="K0u-PS-7hX">
+                                        <rect key="frame" x="17" y="17" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="8jA-8R-1Td"/>
+                                            <constraint firstAttribute="width" secondItem="K0u-PS-7hX" secondAttribute="height" multiplier="1:1" id="kaV-CR-jii"/>
+                                            <constraint firstAttribute="width" constant="20" id="pEP-TU-fdr"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8jA-8R-1Td"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="K0u-PS-7hX" secondAttribute="centerX" id="3Fj-6t-c73"/>
+                                    <constraint firstAttribute="width" secondItem="6lI-KW-f7g" secondAttribute="height" multiplier="1:1" id="6ay-Ra-aWg"/>
+                                    <constraint firstAttribute="width" constant="54" id="XB5-Sb-Kwq"/>
+                                    <constraint firstAttribute="height" constant="50" id="bY2-Cm-013"/>
+                                    <constraint firstAttribute="centerY" secondItem="K0u-PS-7hX" secondAttribute="centerY" id="nc5-fZ-gRf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bY2-Cm-013"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8b-D6-8bW" userLabel="EventProgress" customClass="KKProgressTimer">
+                                <rect key="frame" x="86" y="80" width="54" height="54"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconCalendar" translatesAutoresizingMaskIntoConstraints="NO" id="Ds6-Ki-n3n">
+                                        <rect key="frame" x="17" y="17" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Ds6-Ki-n3n" secondAttribute="height" multiplier="1:1" id="Fdf-CE-g7K"/>
+                                            <constraint firstAttribute="width" constant="20" id="ara-eW-fWP"/>
+                                            <constraint firstAttribute="height" constant="25" id="dRa-U4-0qc"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="dRa-U4-0qc"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="67B-49-uzP"/>
+                                    <constraint firstAttribute="centerX" secondItem="Ds6-Ki-n3n" secondAttribute="centerX" id="gwq-17-v6n"/>
+                                    <constraint firstAttribute="width" secondItem="p8b-D6-8bW" secondAttribute="height" multiplier="1:1" id="p9s-fr-BAk"/>
+                                    <constraint firstAttribute="width" constant="54" id="qPc-YZ-1tw"/>
+                                    <constraint firstAttribute="centerY" secondItem="Ds6-Ki-n3n" secondAttribute="centerY" id="x81-rm-hQy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="67B-49-uzP"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICz-XY-sCZ" userLabel="EventProgress" customClass="KKProgressTimer">
+                                <rect key="frame" x="156" y="80" width="54" height="54"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconPosts" translatesAutoresizingMaskIntoConstraints="NO" id="9Bh-BG-nxB">
+                                        <rect key="frame" x="17" y="17" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9Bh-BG-nxB" secondAttribute="height" multiplier="1:1" id="Blj-xe-NXx"/>
+                                            <constraint firstAttribute="height" constant="25" id="fel-wq-eaH"/>
+                                            <constraint firstAttribute="width" constant="20" id="wdZ-ia-YQR"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="fel-wq-eaH"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="9Bh-BG-nxB" secondAttribute="centerY" id="CjP-f1-mqE"/>
+                                    <constraint firstAttribute="centerX" secondItem="9Bh-BG-nxB" secondAttribute="centerX" id="JFj-Tz-aTL"/>
+                                    <constraint firstAttribute="width" constant="54" id="fPr-gL-Xg9"/>
+                                    <constraint firstAttribute="height" constant="50" id="uik-hH-dvN"/>
+                                    <constraint firstAttribute="width" secondItem="ICz-XY-sCZ" secondAttribute="height" multiplier="1:1" id="uje-LQ-6fG"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="uik-hH-dvN"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K19-UJ-h7A" userLabel="EventProgress" customClass="KKProgressTimer">
+                                <rect key="frame" x="226" y="80" width="54" height="54"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconChat" translatesAutoresizingMaskIntoConstraints="NO" id="XNK-ab-V9r">
+                                        <rect key="frame" x="17" y="17" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XNK-ab-V9r" secondAttribute="height" multiplier="1:1" id="Cfz-UH-nzd"/>
+                                            <constraint firstAttribute="height" constant="25" id="MDx-uu-oJC"/>
+                                            <constraint firstAttribute="width" constant="20" id="nSH-nU-gtm"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="MDx-uu-oJC"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="EgT-TL-59d"/>
+                                    <constraint firstAttribute="centerX" secondItem="XNK-ab-V9r" secondAttribute="centerX" id="JU8-dv-r5l"/>
+                                    <constraint firstAttribute="centerY" secondItem="XNK-ab-V9r" secondAttribute="centerY" id="MgE-mP-1PG"/>
+                                    <constraint firstAttribute="height" constant="50" id="t1q-gy-tQy"/>
+                                    <constraint firstAttribute="width" secondItem="K19-UJ-h7A" secondAttribute="height" multiplier="1:1" id="z51-zk-dhT"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="t1q-gy-tQy"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMC-k0-aP7" userLabel="EventProgress" customClass="KKProgressTimer">
+                                <rect key="frame" x="296" y="80" width="54" height="54"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconWrite" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-Mc-Lfn">
+                                        <rect key="frame" x="17" y="17" width="20" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="FDi-LF-zhZ"/>
+                                            <constraint firstAttribute="width" secondItem="dmd-Mc-Lfn" secondAttribute="height" multiplier="1:1" id="fRE-Rf-aOu"/>
+                                            <constraint firstAttribute="width" constant="20" id="lal-ul-K7q"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="FDi-LF-zhZ"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="DpI-TT-tlJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="Lg8-bb-9Hf"/>
+                                    <constraint firstAttribute="width" secondItem="xMC-k0-aP7" secondAttribute="height" multiplier="1:1" id="YET-0A-3yp"/>
+                                    <constraint firstAttribute="centerY" secondItem="dmd-Mc-Lfn" secondAttribute="centerY" id="mrd-FR-qpP"/>
+                                    <constraint firstAttribute="centerX" secondItem="dmd-Mc-Lfn" secondAttribute="centerX" id="tB9-c4-LFD"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Lg8-bb-9Hf"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K19-UJ-h7A" firstAttribute="leading" secondItem="SYW-r4-iaR" secondAttribute="leadingMargin" constant="210" id="7ow-d4-hqV"/>
+                            <constraint firstItem="ICz-XY-sCZ" firstAttribute="width" secondItem="ICz-XY-sCZ" secondAttribute="height" multiplier="1:1" id="Ir0-fI-QLe"/>
+                            <constraint firstItem="p8b-D6-8bW" firstAttribute="top" secondItem="ogR-eG-ka5" secondAttribute="bottom" constant="16" id="JlO-nB-u2V"/>
+                            <constraint firstItem="ICz-XY-sCZ" firstAttribute="width" secondItem="ICz-XY-sCZ" secondAttribute="height" multiplier="1:1" id="SUo-S7-Sl6"/>
+                            <constraint firstItem="6lI-KW-f7g" firstAttribute="top" secondItem="ogR-eG-ka5" secondAttribute="bottom" constant="16" id="YwM-aa-9jO"/>
+                            <constraint firstItem="6lI-KW-f7g" firstAttribute="leading" secondItem="SYW-r4-iaR" secondAttribute="leadingMargin" id="a04-gU-LuM"/>
+                            <constraint firstItem="xMC-k0-aP7" firstAttribute="width" secondItem="xMC-k0-aP7" secondAttribute="height" multiplier="1:1" id="afQ-vv-2la"/>
+                            <constraint firstItem="K19-UJ-h7A" firstAttribute="width" secondItem="K19-UJ-h7A" secondAttribute="height" multiplier="1:1" id="bmo-xo-e8t"/>
+                            <constraint firstItem="K19-UJ-h7A" firstAttribute="width" secondItem="K19-UJ-h7A" secondAttribute="height" multiplier="1:1" id="eSo-e0-ZXI"/>
+                            <constraint firstItem="p8b-D6-8bW" firstAttribute="leading" secondItem="SYW-r4-iaR" secondAttribute="leadingMargin" constant="70" id="k6N-3N-bxx"/>
+                            <constraint firstItem="xMC-k0-aP7" firstAttribute="top" secondItem="ogR-eG-ka5" secondAttribute="bottom" constant="16" id="kh4-xo-6OL"/>
+                            <constraint firstItem="K19-UJ-h7A" firstAttribute="top" secondItem="ogR-eG-ka5" secondAttribute="bottom" constant="16" id="lI9-aH-EhS"/>
+                            <constraint firstItem="xMC-k0-aP7" firstAttribute="leading" secondItem="SYW-r4-iaR" secondAttribute="leadingMargin" constant="280" id="ub3-NU-apN"/>
+                            <constraint firstItem="p8b-D6-8bW" firstAttribute="width" secondItem="p8b-D6-8bW" secondAttribute="height" multiplier="1:1" id="vOT-ym-1b8"/>
+                            <constraint firstItem="ICz-XY-sCZ" firstAttribute="top" secondItem="ogR-eG-ka5" secondAttribute="bottom" constant="16" id="vQa-jG-4aC"/>
+                            <constraint firstItem="ICz-XY-sCZ" firstAttribute="leading" secondItem="SYW-r4-iaR" secondAttribute="leadingMargin" constant="140" id="xSn-zI-nh0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vOT-ym-1b8"/>
+                                <exclude reference="Ir0-fI-QLe"/>
+                                <exclude reference="SUo-S7-Sl6"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8c-fj-Fkt" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -247,5 +448,10 @@
     <resources>
         <image name="ArrowOpenWhite" width="50" height="50"/>
         <image name="DailyBondCard" width="160" height="160"/>
+        <image name="IconBirthday" width="50" height="50"/>
+        <image name="IconCalendar" width="50" height="50"/>
+        <image name="IconChat" width="50" height="50"/>
+        <image name="IconPosts" width="50" height="50"/>
+        <image name="IconWrite" width="50" height="50"/>
     </resources>
 </document>

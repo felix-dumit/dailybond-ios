@@ -10,7 +10,6 @@
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import <FBSDKGraphRequest.h>
 
-
 @implementation User
 
 @dynamic name;
@@ -21,9 +20,11 @@
 
 + (BFTask *)loginWithFacebookInBackground {
     return [User logOutInBackground].thenOnMain ( ^id (id result) {
-        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email"]];
+        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_friends"]];
     }).thenOnMain ( ^id (User *user) {
         return [user loadFacebookInfo];
+    }).thenOnMain ( ^id (id result) {
+        return nil;
     });
 }
 
@@ -53,7 +54,7 @@
          [user saveInBackground];
          
          [taskCompletion trySetResult:@YES];
-       
+         
          NSLog(@"Logou com usuario: %@", user.name);
          //         NSURL *imageURL = [NSURL URLWithString:[[[result objectForKey:@"picture"]
          //                                                  objectForKey:@"data"]
