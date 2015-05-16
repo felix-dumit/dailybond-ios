@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224991B07BCF200B5042E /* TestViewController.swift */; };
 		2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92249B1B07BEEC00B5042E /* FBRequests.swift */; };
+		2E9224A01B07CC7800B5042E /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E92249F1B07CC7800B5042E /* CardViewController.m */; };
+		2E9224A41B07CCD800B5042E /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A21B07CCD800B5042E /* CardView.m */; };
+		2E9224A51B07CCD800B5042E /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9224A31B07CCD800B5042E /* CardView.xib */; };
+		2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A71B07CD1F00B5042E /* CCMBorderView.m */; };
+		2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */; };
+		2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224AC1B07CD2A00B5042E /* DraggableView.swift */; };
 		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
 		D58F598C1B07BA8C00FAB188 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D58F598B1B07BA8C00FAB188 /* User.m */; };
 		EB04D8B71B07A61C009B8AB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8B61B07A61C009B8AB0 /* main.m */; };
@@ -36,6 +42,16 @@
 		2E9224981B07BCF200B5042E /* DailyBond-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E9224991B07BCF200B5042E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2E92249B1B07BEEC00B5042E /* FBRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRequests.swift; sourceTree = "<group>"; };
+		2E92249E1B07CC7800B5042E /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		2E92249F1B07CC7800B5042E /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		2E9224A11B07CCD800B5042E /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		2E9224A21B07CCD800B5042E /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		2E9224A31B07CCD800B5042E /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		2E9224A61B07CD1F00B5042E /* CCMBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMBorderView.h; sourceTree = "<group>"; };
+		2E9224A71B07CD1F00B5042E /* CCMBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMBorderView.m; sourceTree = "<group>"; };
+		2E9224A81B07CD1F00B5042E /* CCMPlayNDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMPlayNDropView.h; sourceTree = "<group>"; };
+		2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMPlayNDropView.m; sourceTree = "<group>"; };
+		2E9224AC1B07CD2A00B5042E /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.release.xcconfig"; sourceTree = "<group>"; };
 		D58F598A1B07BA8C00FAB188 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D58F598B1B07BA8C00FAB188 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
@@ -86,6 +102,7 @@
 		2E9224941B07BBC300B5042E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2E92249D1B07CC6900B5042E /* Cards */,
 				EB04D8BB1B07A61C009B8AB0 /* ViewController.h */,
 				EB04D8BC1B07A61C009B8AB0 /* ViewController.m */,
 				2E9224991B07BCF200B5042E /* TestViewController.swift */,
@@ -96,6 +113,14 @@
 		2E9224951B07BBD000B5042E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2E9224A11B07CCD800B5042E /* CardView.h */,
+				2E9224A21B07CCD800B5042E /* CardView.m */,
+				2E9224A31B07CCD800B5042E /* CardView.xib */,
+				2E9224A61B07CD1F00B5042E /* CCMBorderView.h */,
+				2E9224A71B07CD1F00B5042E /* CCMBorderView.m */,
+				2E9224A81B07CD1F00B5042E /* CCMPlayNDropView.h */,
+				2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */,
+				2E9224AC1B07CD2A00B5042E /* DraggableView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -115,6 +140,15 @@
 				2E92249B1B07BEEC00B5042E /* FBRequests.swift */,
 			);
 			name = Web;
+			sourceTree = "<group>";
+		};
+		2E92249D1B07CC6900B5042E /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				2E92249E1B07CC7800B5042E /* CardViewController.h */,
+				2E92249F1B07CC7800B5042E /* CardViewController.m */,
+			);
+			name = Cards;
 			sourceTree = "<group>";
 		};
 		9F2E155D3EC9A876E8380BEA /* Frameworks */ = {
@@ -273,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB04D8C01B07A61C009B8AB0 /* Main.storyboard in Resources */,
+				2E9224A51B07CCD800B5042E /* CardView.xib in Resources */,
 				EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */,
 				EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */,
 			);
@@ -325,11 +360,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */,
 				D58F598C1B07BA8C00FAB188 /* User.m in Sources */,
 				EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */,
+				2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */,
+				2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */,
 				EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */,
 				2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */,
 				EB04D8B71B07A61C009B8AB0 /* main.m in Sources */,
+				2E9224A41B07CCD800B5042E /* CardView.m in Sources */,
+				2E9224A01B07CC7800B5042E /* CardViewController.m in Sources */,
 				2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
