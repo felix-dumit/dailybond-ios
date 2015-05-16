@@ -11,7 +11,6 @@
 #import <FBSDKGraphRequest.h>
 
 
-
 @implementation User
 
 @dynamic name;
@@ -19,6 +18,15 @@
 @dynamic facebookID;
 @dynamic birthday;
 
+
++ (BFTask *)loginWithFacebookInBackground {
+    return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_likes"]].then ( ^id (id result) {
+        return [[User currentUser] loadFacebookInfo];
+    }).catch ( ^id (NSError *error) {
+        NSLog(@"Error login face: %@", error);
+        return nil;
+    });
+}
 
 - (BFTask *)loadFacebookInfo {
     BFTaskCompletionSource *taskCompletion = [BFTaskCompletionSource taskCompletionSource];
@@ -45,6 +53,8 @@
          [user setObject:[result objectForKey:@"gender"] forKey:@"gender"];
          
          
+         
+         NSLog(@"Logou com usuario: %@", user.name);
          //         NSURL *imageURL = [NSURL URLWithString:[[[result objectForKey:@"picture"]
          //                                                  objectForKey:@"data"]
          //                                                 objectForKey:@"url"]];
