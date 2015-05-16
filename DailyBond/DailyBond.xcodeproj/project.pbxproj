@@ -89,7 +89,6 @@
 				EB04D8BB1B07A61C009B8AB0 /* ViewController.h */,
 				EB04D8BC1B07A61C009B8AB0 /* ViewController.m */,
 				2E9224991B07BCF200B5042E /* TestViewController.swift */,
-				2E9224981B07BCF200B5042E /* DailyBond-Bridging-Header.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -156,6 +155,7 @@
 				EB04D8B81B07A61C009B8AB0 /* AppDelegate.h */,
 				EB04D8B91B07A61C009B8AB0 /* AppDelegate.m */,
 				D59549B51B07C1E400720A52 /* DailyBond-PrefixHeader.pch */,
+				2E9224981B07BCF200B5042E /* DailyBond-Bridging-Header.h */,
 				EB04D8BE1B07A61C009B8AB0 /* Main.storyboard */,
 				EB04D8C11B07A61C009B8AB0 /* Images.xcassets */,
 				EB04D8C31B07A61C009B8AB0 /* LaunchScreen.xib */,
