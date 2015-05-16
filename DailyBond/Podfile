@@ -14,6 +14,7 @@ target 'DailyBond' do
     pod 'Bolts'
     pod 'BFTask-Extras'
     pod 'MaryPopin'
+    pod 'DateTools'
 end
 
 target 'DailyBondTests' do
