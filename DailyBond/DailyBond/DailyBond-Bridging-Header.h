@@ -11,6 +11,7 @@
 #import "Birthday.h"
 #import "User.h"
 #import "UserPost.h"
+#import "Event.h"
 #import "MessengerSharer.h"
 #import <DateTools.h>
 #import "CardKeepInTouchViewController.h"

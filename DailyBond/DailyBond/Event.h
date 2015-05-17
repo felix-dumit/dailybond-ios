@@ -16,6 +16,8 @@
 
 + (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId;
 + (NSArray *)generateMockData;
++ (BFTask *)allEvents;
+
 
 
 @end
