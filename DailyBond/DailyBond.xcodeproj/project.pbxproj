@@ -49,6 +49,8 @@
 		EBDA22E61B082D430095633A /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22E51B082D430095633A /* NSDate+Formatter.m */; };
 		EBDA22E91B0830E40095633A /* UserPost.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22E81B0830E40095633A /* UserPost.m */; };
 		EBDA22EC1B084C030095633A /* UserMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22EB1B084C030095633A /* UserMessage.m */; };
+		EBDA22F01B087E2C0095633A /* CardShowPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22EE1B087E2C0095633A /* CardShowPostViewController.m */; };
+		EBDA22F11B087E2C0095633A /* CardShowPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22EF1B087E2C0095633A /* CardShowPostViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,9 @@
 		EBDA22E81B0830E40095633A /* UserPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPost.m; sourceTree = "<group>"; };
 		EBDA22EA1B084C030095633A /* UserMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMessage.h; sourceTree = "<group>"; };
 		EBDA22EB1B084C030095633A /* UserMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMessage.m; sourceTree = "<group>"; };
+		EBDA22ED1B087E2C0095633A /* CardShowPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardShowPostViewController.h; sourceTree = "<group>"; };
+		EBDA22EE1B087E2C0095633A /* CardShowPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardShowPostViewController.m; sourceTree = "<group>"; };
+		EBDA22EF1B087E2C0095633A /* CardShowPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardShowPostViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +220,9 @@
 				EBDA22DC1B08198B0095633A /* CardKeepInTouchViewController.h */,
 				EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */,
 				EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */,
+				EBDA22ED1B087E2C0095633A /* CardShowPostViewController.h */,
+				EBDA22EE1B087E2C0095633A /* CardShowPostViewController.m */,
+				EBDA22EF1B087E2C0095633A /* CardShowPostViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -426,6 +434,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDA22F11B087E2C0095633A /* CardShowPostViewController.xib in Resources */,
 				EB04D8C01B07A61C009B8AB0 /* Main.storyboard in Resources */,
 				2E9224A51B07CCD800B5042E /* CardView.xib in Resources */,
 				EBDA22CB1B07D51A0095633A /* CardBirthdayViewController.xib in Resources */,
@@ -507,6 +516,7 @@
 				2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */,
 				D55A00681B084E8A004FD5DC /* NSString+NSURL.m in Sources */,
 				D59549BB1B07EEE000720A52 /* Birthday.m in Sources */,
+				EBDA22F01B087E2C0095633A /* CardShowPostViewController.m in Sources */,
 				D59549C41B07FCAB00720A52 /* MessengerSharer.m in Sources */,
 				D59549C71B07FFF400720A52 /* KeepInTouch.m in Sources */,
 				D59549C11B07F85C00720A52 /* NSDate+Random.m in Sources */,
