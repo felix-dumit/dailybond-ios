@@ -12,14 +12,14 @@
 @implementation MessengerSharer
 
 + (void)testShare {
-        if ([FBSDKMessengerSharer messengerPlatformCapabilities] & FBSDKMessengerPlatformCapabilityImage) {
-            UIImage *image = [UIImage imageNamed:@"DailyBondCard"];
-            [FBSDKMessengerSharer shareImage:image withOptions:nil];
-        }
+    if ([FBSDKMessengerSharer messengerPlatformCapabilities] & FBSDKMessengerPlatformCapabilityImage) {
+        UIImage *image = [UIImage imageNamed:@"HappyBirthday-6"];
+        [FBSDKMessengerSharer shareImage:image withOptions:nil];
+    }
     
-//    if ([FBSDKMessengerSharer messengerPlatformCapabilities] & FBSDKMessengerPlatformCapabilityOpen) {
-//        [FBSDKMessengerSharer openMessenger];
-//    }
+    //    if ([FBSDKMessengerSharer messengerPlatformCapabilities] & FBSDKMessengerPlatformCapabilityOpen) {
+    //        [FBSDKMessengerSharer openMessenger];
+    //    }
 }
 
 @end

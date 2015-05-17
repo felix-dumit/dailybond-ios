@@ -8,6 +8,7 @@
 
 #import "CardBirthdayViewController.h"
 #import "Birthday.h"
+#import "MessengerSharer.h"
 
 @interface CardBirthdayViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
@@ -42,7 +43,8 @@
 
 #pragma mark - Buttons delegates
 - (IBAction)onDismissPressed:(id)sender {
-    [self dismissAnimated];
+    [MessengerSharer testShare];
+//    [self dismissAnimated];
 }
 
 - (IBAction)onSendPressed:(id)sender {

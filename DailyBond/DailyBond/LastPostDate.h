@@ -13,7 +13,7 @@
 @property (strong, nonatomic) NSString *message;
 @property (strong, nonatomic) NSDate *date;
 
-+ (instancetype)createLastPostDateWithDate:(NSString *)date andMessage:(NSString *)message;
++ (instancetype)createLastPostDateWithDate:(NSDate *)date andMessage:(NSString *)message;
 + (BFTask *)lastPostDate;
 
 @end
