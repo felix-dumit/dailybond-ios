@@ -52,20 +52,20 @@
     [self.navigationController showProgress];
     [self.navigationController setIndeterminate:YES];
 
-    self.progressBirthday.progressBackgroundColor = [UIColor birthdayColor];
-    self.progressBirthday.progressColor = [UIColor birthdayDarkColor];
+    self.progressBirthday.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressBirthday.progressColor = [UIColor birthdayColor];
 
-    self.progressEvent.progressBackgroundColor = [UIColor eventColor];
-    self.progressEvent.progressColor = [UIColor eventDarkColor];
+    self.progressEvent.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressEvent.progressColor = [UIColor eventColor];
     
-    self.progressPosts.progressBackgroundColor = [UIColor topPostColor];
-    self.progressPosts.progressColor = [UIColor topPostDarkColor];
+    self.progressPosts.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressPosts.progressColor = [UIColor topPostColor];
     
-    self.progressChat.progressBackgroundColor = [UIColor chatColor];
-    self.progressChat.progressColor = [UIColor chatDarkColor];
+    self.progressChat.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressChat.progressColor = [UIColor chatColor];
 
-    self.progressWrite.progressBackgroundColor = [UIColor writeColor];
-    self.progressWrite.progressColor = [UIColor writeDarkColor];
+    self.progressWrite.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressWrite.progressColor = [UIColor writeColor];
     
     [self.progressBirthday startWithBlock: ^CGFloat {
         return [[CardsManager sharedInstance] progress:CardsManager.BIRTHDAY];

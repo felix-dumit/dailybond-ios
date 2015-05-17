@@ -9,15 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface UIColor (Custom)
++ (UIColor*) semitransparentColor;
 + (UIColor*) birthdayColor;
-+ (UIColor*) birthdayDarkColor;
 + (UIColor*) eventColor;
-+ (UIColor*) eventDarkColor;
 + (UIColor*) topPostColor;
-+ (UIColor*) topPostDarkColor;
 + (UIColor*) chatColor;
-+ (UIColor*) chatDarkColor;
 + (UIColor*) writeColor;
-+ (UIColor*) writeDarkColor;
 
 @end

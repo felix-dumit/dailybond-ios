@@ -16,24 +16,19 @@ alpha:1.0]
 
 @implementation UIColor (Custom)
 
-+ (UIColor*) birthdayColor
++ (UIColor*) semitransparentColor
 {
-    return UIColorFromRGB(0xFFCC4C);
+    return [UIColor colorWithWhite:1.0 alpha:0.4];
 }
 
-+ (UIColor*) birthdayDarkColor
++ (UIColor*) birthdayColor
 {
-    return UIColorFromRGB(0xDB8C10);
+    return UIColorFromRGB(0x7AACD0);
 }
 
 + (UIColor*) eventColor
 {
-    return UIColorFromRGB(0xFBB17B);
-}
-
-+ (UIColor*) eventDarkColor
-{
-    return UIColorFromRGB(0xE14A17);
+    return UIColorFromRGB(0x7662AE);
 }
 
 + (UIColor*) topPostColor
@@ -41,29 +36,14 @@ alpha:1.0]
     return UIColorFromRGB(0xB46CAE);
 }
 
-+ (UIColor*) topPostDarkColor
-{
-    return UIColorFromRGB(0x7C2B8D);
-}
-
 + (UIColor*) chatColor
 {
-    return UIColorFromRGB(0x7AACD0);
-}
-
-+ (UIColor*) chatDarkColor
-{
-    return UIColorFromRGB(0x748EC4);
+    return UIColorFromRGB(0xF57C87);
 }
 
 + (UIColor*) writeColor
 {
-    return UIColorFromRGB(0x90CD98);
-}
-
-+ (UIColor*) writeDarkColor
-{
-    return UIColorFromRGB(0x358944);
+    return UIColorFromRGB(0xFBB17B);
 }
 
 @end
