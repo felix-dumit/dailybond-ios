@@ -9,6 +9,7 @@
 #import "User.h"
 #import "LoginViewController.h"
 #import "FXBlurView.h"
+#import <UIImageView+WebCache.h>
 
 @interface LoginViewController ()
 
@@ -25,6 +26,9 @@
     //[self.imageBackground setImage:[image blurredImageWithRadius:8.0 iterations:20 tintColor:nil]];
     //self.imageBackground.hidden = NO;
     //self.imageProfile.hidden = NO;
+    if ([User currentUser] != nil) {
+        [self showUserInfoAnimated:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,8 +37,11 @@
 }
 
 - (IBAction)loginWithFacebook:(id)sender {
-    //    [User loginWithFacebookInBackground];
-    [self showUserInfoAnimated:YES];
+    [User loginWithFacebookInBackground].then(^id(id result) {
+        [self showUserInfoAnimated:YES];
+        return nil;
+    });
+//    [self showUserInfoAnimated:YES];
 }
 
 - (void) showUserInfoAnimated:(BOOL)animated {
@@ -55,11 +62,14 @@
     
     // SET IMAGES
     
+    
+    User *user = [User currentUser];
     UIImage *image = [UIImage imageNamed:@"mockCover"];
     [self.imageBackground setImage:[image blurredImageWithRadius:8.0 iterations:20 tintColor:nil]];
-    UIImage *picture = [UIImage imageNamed:@"mockProfile"];
-    [self.imageProfile setImage:picture];
-    self.labelName.text = @"André Vitor Terron";
+    //UIImage *picture = [UIImage imageNamed:@"mockProfile"];
+    //[self.imageProfile setImage:picture];
+    [self.imageProfile sd_setImageWithURL:user.profileImageURL];
+    self.labelName.text = user.name;
     
     // ANIMATE
     
@@ -80,6 +90,9 @@
         self.groupStart.alpha = 1.0;
         self.groupStart.transform = CGAffineTransformIdentity;
         self.buttonLogin.alpha = 0.0;
+        self.labelAppName.hidden = YES;
+        self.groupUserInfo.alpha = 1.0;
+        self.groupUserInfo.hidden = NO;
         self.imageProfile.hidden = NO;
         self.imageBackground.hidden = NO;
         self.groupStart.hidden = NO;

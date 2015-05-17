@@ -20,6 +20,8 @@
 @property (strong, nonatomic) NSDate *birthday;
 
 
+-(NSURL*)profileImageURL;
+
 + (BFTask *)loginWithFacebookInBackground;
 
 - (UIImage *)profileImage;
