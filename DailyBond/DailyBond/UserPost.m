@@ -24,7 +24,6 @@
 @dynamic date;
 @dynamic dateString;
 @dynamic imageUrl;
-@dynamic title;
 
 + (NSString *)parseClassName {
     return @"UserPost";
@@ -35,8 +34,7 @@
     
     [UserPost setupReplacedKeyFromPropertyName: ^NSDictionary *{
         return @{
-                 @"content": @"caption",
-                 @"title" : @"",
+                 @"content": @"message",
                  @"imageUrl" : @"picture",
                  @"facebookId": @"id",
                  @"dateString": @"created_time"

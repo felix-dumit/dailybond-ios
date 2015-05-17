@@ -21,6 +21,7 @@
 @dynamic message;
 @dynamic unread;
 @dynamic dateString;
+@dynamic profileImageUrl;
 
 
 + (NSString *)parseClassName {
@@ -52,7 +53,7 @@
     }];
 }
 
-+ (instancetype)createWithName:(NSString *)friendName andId:(NSString *)friendId  andDate:(NSDate *)receivedDate andMessage:(NSString *)message andUnread:(BOOL)unread {
++ (instancetype)createWithName:(NSString *)friendName andId:(NSString *)friendId andDate:(NSDate *)receivedDate andMessage:(NSString *)message andUnread:(BOOL)unread {
     UserMessage *user_msg = [UserMessage object];
     user_msg.friendId = friendId;
     user_msg.friendName = friendName;
@@ -85,7 +86,8 @@
     return arr;
 }
 
--(NSURL*)profileImageURL {
+- (NSURL *)profileImageURL {
     return [NSURL URLWithString:[NSString stringWithFormat:@"graph.facebook.com/%@/picture?type=square", self.friendId]];
 }
+
 @end
