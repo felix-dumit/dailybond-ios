@@ -11,25 +11,58 @@
 #import <Bolts/Bolts.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
+#import <FBSDKMessengerUrlHandler.h>
+#import <FBSDKMessengerURLHandlerOpenFromComposerContext.h>
+#import <FBSDKMessengerURLHandlerReplyContext.h>
 #import "User.h"
+#import "Birthday.h"
+#import "LastPostDate.h"
+#import "KeepInTouch.h"
+#import "Event.h"
+#import "UserPost.h"
+#import "UserMessage.h"
 #import "CardsViewController.h"
-@interface AppDelegate ()
+#import <MJExtension.h>
+
+enum MessengerShareMode { MessengerShareModeSend,
+    MessengerShareModeComposer,
+    MessengerShareModeReply};
+
+
+@interface AppDelegate () <FBSDKMessengerURLHandlerDelegate>
+
+@property (strong, nonatomic) FBSDKMessengerURLHandler *messengerURLHandler;
+@property (strong, nonatomic) FBSDKMessengerURLHandlerOpenFromComposerContext *composeContext;
+@property (strong, nonatomic) FBSDKMessengerURLHandlerReplyContext *replyContext;
 
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    enum MessengerShareMode shareMode;
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
     [User registerSubclass];
+    [Birthday registerSubclass];
+    [KeepInTouch registerSubclass];
+    [UserPost registerSubclass];
+    [UserMessage registerSubclass];
+    [Event registerSubclass];
+    [LastPostDate registerSubclass];
     
-    //    [Parse enableLocalDatastore];
+    
+    [Parse enableLocalDatastore];
     [Parse setApplicationId:@"ioHHzrZSRJSMSTR0WZZETXjyjXfgKOZ3uefsMuG5" clientKey:@"M7vDYkWESocaASxvdf4UwYpZMDFaCey3yoyiDdPj"];
     
     
     [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
+    
+    
+    _messengerURLHandler = [[FBSDKMessengerURLHandler alloc] init];
+    _messengerURLHandler.delegate = self;
     
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                     didFinishLaunchingWithOptions:launchOptions];
@@ -63,10 +96,79 @@
     sourceApplication:(NSString *)sourceApplication
            annotation:(id)annotation {
     // attempt to extract a token from the url
+    // Check if the handler knows what to do with this url
+    if ([self.messengerURLHandler canOpenURL:url sourceApplication:sourceApplication]) {
+        // Handle the url
+        [self.messengerURLHandler openURL:url sourceApplication:sourceApplication];
+        
+        return YES;
+    }
+    
     return [[FBSDKApplicationDelegate sharedInstance] application:application
                                                           openURL:url
                                                 sourceApplication:sourceApplication
                                                        annotation:annotation];
+}
+
+#pragma mark - FBSDKMessengerURLHandlerDelegate
+/*
+ * When people enter your app through the composer in Messenger,
+ * this delegate function will be called.
+ */
+- (void)             messengerURLHandler:(FBSDKMessengerURLHandler *)messengerURLHandler
+    didHandleOpenFromComposerWithContext:(FBSDKMessengerURLHandlerOpenFromComposerContext *)context;
+{
+    _composeContext = context;
+    shareMode = MessengerShareModeComposer;
+}
+
+/*
+ * When people enter your app through the "Reply" button on content
+ * this delegate function will be called.
+ */
+- (void)  messengerURLHandler:(FBSDKMessengerURLHandler *)messengerURLHandler
+    didHandleReplyWithContext:(FBSDKMessengerURLHandlerReplyContext *)context;
+{
+    _replyContext = context;
+    shareMode = MessengerShareModeReply;
+}
+
+
+#pragma mark - Private
+- (void)shareReply {
+    NSString *metadata = @"{ \"image\" : \"pedro\" }";
+    
+    if ([FBSDKMessengerSharer messengerPlatformCapabilities] & FBSDKMessengerPlatformCapabilityImage) {
+        UIImage *image = [UIImage imageNamed:@"selfie_pic"];
+        
+        // getContextForShareMode is a helper method
+        FBSDKMessengerShareOptions *options = [[FBSDKMessengerShareOptions alloc] init];
+        options.metadata = metadata;
+        options.contextOverride = [self getContextForShareMode];
+        
+        [FBSDKMessengerSharer shareImage:image withOptions:options];
+    }
+}
+
+- (FBSDKMessengerContext *)getContextForShareMode {
+    // shareMode holds state indicating which flow the user is in.
+    // Return the corresponding FBSDKMessengerContext based on that state.
+    
+    if (shareMode == MessengerShareModeSend) {
+        // Force a send flow by returning a broadcast context.
+        return [[FBSDKMessengerBroadcastContext alloc] init];
+    }
+    else if (shareMode == MessengerShareModeComposer) {
+        // Force the composer flow by returning the composer context.
+        return _composeContext;
+    }
+    else if (shareMode == MessengerShareModeReply) {
+        // Force the reply flow by returning the reply context.
+        return _replyContext;
+    }
+    
+    
+    return nil;
 }
 
 @end

@@ -9,21 +9,49 @@
 #import "User.h"
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import <FBSDKGraphRequest.h>
+#import <SDWebImageManager.h>
 
+@interface User ()
+
+
+
+@end
 
 @implementation User
 
 @dynamic name;
-@dynamic profileImage;
 @dynamic facebookID;
 @dynamic birthday;
+@dynamic profileImageUrl;
+@dynamic coverImageUrl;
 
 
 + (BFTask *)loginWithFacebookInBackground {
     return [User logOutInBackground].thenOnMain ( ^id (id result) {
-        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_friends"]];
+        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_friends", @"user_birthday", @"user_events", @"read_stream", @"read_mailbox"]];
     }).thenOnMain ( ^id (User *user) {
         return [user loadFacebookInfo];
+    }).thenOnMain ( ^id (id result) {
+        return nil;
+    });
+}
+
++ (BFTask *)publishMessage:(NSString *)message {
+    //    ParseFacebookUtils.getSession().requestNewPublishPermissions().
+    
+    BFTask *authTask = [BFTask taskWithResult:nil];
+    if ([[FBSDKAccessToken currentAccessToken] hasGranted:@"publish_actions"]) {
+        authTask = [PFFacebookUtils logInInBackgroundWithPublishPermissions:@[@"publish_actions"]];
+    }
+    
+    return authTask.then ( ^id (id result) {
+        return [[FBRequests sharedInstance] postToTimeline:message];
+    }).then ( ^id (id result) {
+        NSLog(@"publicou: %@", result);
+        return nil;
+    }).catch ( ^id (NSError *error) {
+        NSLog(@"public error: %@", error);
+        return nil;
     });
 }
 
@@ -31,7 +59,7 @@
     BFTaskCompletionSource *taskCompletion = [BFTaskCompletionSource taskCompletionSource];
     
     [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me"
-                                       parameters:@{ @"fields": @"name,email,gender,picture.width(961)" }]
+                                       parameters:@{ @"fields": @"name,email,gender,cover,picture.width(500)" }]
      startWithCompletionHandler: ^(FBSDKGraphRequestConnection *connection, id result, NSError *fbError) {
          if (fbError) {
              [taskCompletion trySetError:fbError];
@@ -46,22 +74,30 @@
          
          user.email = [result objectForKey:@"email"];
          
-         
          [user setObject:[result objectForKey:@"gender"] forKey:@"gender"];
          
          
-         [user saveInBackground];
+         NSLog(@"Logou com usuario: %@", user.name);
+         
+         
+         self.coverImageUrl = [result objectForKey:@"cover"][@"source"];
+         
+         self.profileImageUrl = [result objectForKey:@"picture"][@"data"][@"url"];
+         
+         [[SDWebImageManager sharedManager] downloadImageWithURL:self.profileImageUrl.URL options:0 progress:nil completed: ^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+	            NSLog(@"finished!");
+	            [[SDImageCache sharedImageCache] storeImage:image forKey:@"profileImage"];
+         }];
          
          [taskCompletion trySetResult:@YES];
-       
-         NSLog(@"Logou com usuario: %@", user.name);
-         //         NSURL *imageURL = [NSURL URLWithString:[[[result objectForKey:@"picture"]
-         //                                                  objectForKey:@"data"]
-         //                                                 objectForKey:@"url"]];
-         //
-         //         NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+         
+         [user saveInBackground];
      }];
     return taskCompletion.task;
+}
+
+- (UIImage *)profileImage {
+    return [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:@"profileImage"];
 }
 
 @end

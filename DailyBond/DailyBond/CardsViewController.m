@@ -11,13 +11,25 @@
 #import "CardHelper.h"
 #import "DailyBond-Swift.h"
 #import "CardBirthdayViewController.h"
+#import "CardEventViewController.h"
+#import "CardNewPostViewController.h"
+#import "CardKeepInTouchViewController.h"
+#import "Birthday.h"
+#import "Event.h"
+#import "UserPost.h"
+#import "UserMessage.h"
+#import "User.h"
+#import <POP.h>
+#import <UINavigationController+M13ProgressViewBar.h>
+#import "UIColor+Custom.h"
 
-@interface CardsViewController ()
+@interface CardsViewController () {
+    BOOL animatedOnce;
+}
 
 @property (strong, nonatomic) CardViewController *activeCard;
 
 @property (strong, nonatomic) NSNumber *loading;
-
 @end
 
 @implementation CardsViewController
@@ -28,16 +40,59 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     //[[SFTaskManager sharedInstance] requestGroupTasks:[[SFUser currentUser] root]];
+    [self initProgressIndicators];
     self.loading = @YES;
+    animatedOnce = NO;
+    [self.progressBirthday setHidden:true];
+    [self.progressEvent setHidden:true];
+    [self.progressPosts setHidden:true];
+    [self.progressChat setHidden:true];
+    [self.progressWrite setHidden:true];
+}
+
+- (void)initProgressIndicators {
+    [self.navigationController showProgress];
+    [self.navigationController setIndeterminate:YES];
+
+    self.progressBirthday.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressBirthday.progressColor = [UIColor birthdayColor];
+//    self.progressBirthday.
+
+    self.progressEvent.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressEvent.progressColor = [UIColor eventColor];
     
+    self.progressPosts.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressPosts.progressColor = [UIColor topPostColor];
+    
+    self.progressChat.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressChat.progressColor = [UIColor chatColor];
+
+    self.progressWrite.progressBackgroundColor = [UIColor semitransparentColor];
+    self.progressWrite.progressColor = [UIColor writeColor];
+    
+    [self.progressBirthday startWithBlock: ^CGFloat {
+        return [[CardsManager sharedInstance] progress:CardsManager.BIRTHDAY];
+    }];
+    [self.progressEvent startWithBlock: ^CGFloat {
+        return [[CardsManager sharedInstance] progress:CardsManager.EVENTS];
+    }];
+    [self.progressPosts startWithBlock: ^CGFloat {
+        return [[CardsManager sharedInstance] progress:CardsManager.POSTS];
+    }];
+    [self.progressChat startWithBlock: ^CGFloat {
+        return [[CardsManager sharedInstance] progress:CardsManager.CHATS];
+    }];
+    [self.progressWrite startWithBlock: ^CGFloat {
+        return [[CardsManager sharedInstance] progress:CardsManager.WRITE];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     if (self.loading.boolValue) {
         self.loading = @NO;
-        
-        // LOAD CARD RIGHT HERE
-        [self showCardAnimated:animated];
+    }
+    else {
+        [self.navigationController finishProgress];
     }
 }
 
@@ -48,69 +103,145 @@
 
 #pragma mark - Cards methods
 
-- (void)showCard {
-    [self showCardAnimated:YES];
+
+- (void)updateProgress {
+    [self.progressBirthday updateProgress];
+    [self.progressEvent updateProgress];
+    [self.progressPosts updateProgress];
+    [self.progressChat updateProgress];
+    [self.progressWrite updateProgress];
 }
-- (void)showCardAnimated:(BOOL) animated {
+
+- (void)showCard:(CardViewController *)popin animated:(BOOL)animated {
+    [self updateProgress];
+    if (popin != nil) {
+        NSLog(@"Showing card animated...");
+        [popin setDelegate:self];
+        self.activeCard = popin;
+        [CardHelper displayCard:popin fromController:self animated:animated];
+        
+        
+        //        UserMessage* message = [[UserMessage alloc] init];
+        //        message.friendName = @"Andre Terron";
+        //        message.friendId = @"828648753872660";
+        //        message.receivedDate = [NSDate date];
+        //        message.read = true;
+        //        message.message = @"Loaded from mock: Hey are you going to Facebook Hackathon today? I'm thinking about driving early this morning, but I'm still not sure. What time are you thinking about arriving there? And what about going back??";
+        //        message.profileImageUrl = [[User currentUser] profileImageUrl];
+    } else {
+        
+
+        
+        
+        
+        self.doneCheck.layer.borderColor = [[UIColor whiteColor] CGColor];
+        self.doneCheck.layer.borderWidth = 2.0;
+        self.groupFinished.alpha = 0.0;
+        self.groupFinished.transform = CGAffineTransformMakeScale(0.5, 0.5);
+        [UIView animateWithDuration:0.5 animations:^{
+            self.groupFinished.alpha = 1.0;
+            self.groupFinished.transform = CGAffineTransformIdentity;
+        }];
+    }
+}
+
+- (void)didStartCards {
     
-    if (self.activeCard) {
-        [self.activeCard dismissAnimated];
-        return;
+    if(!animatedOnce) {
+    
+        // LOAD CARD RIGHT HERE
+        [self animateProgressBadges];
+        [[CardsManager sharedInstance] loadCurrentCard].then ( ^id (id result) {
+            NSLog(@"Finished loading");
+            [self.navigationController finishProgress];
+            [self showCard:(CardViewController *)result animated:YES];
+            return nil;
+        });
+        animatedOnce = YES;
     }
     
-    NSLog(@"Showing card...");
-    
-    // TODO : LOAD CONTROLLER HERE RIGHT NOWWW!!!
-    CardViewController *popin = nil;//[[SFCardFlowManager sharedInstance] getNextCardController];
-    
-    //SFCardViewController *popin = [[SFCardManager sharedInstance] getNextCard]; //[[SFTutorialViewController alloc] initWithNibName:@"SFTutorialViewController" bundle:nil];
-    //popin.view.frame = CGRectMake(0, 0, 320, 500);
-    
-    [popin setDelegate:self];
-    
-    //[popin setPopinOptions:BKTPopinBlurryDimmingView];
-    //[popin setPopinTransitionStyle:BKTPopinTransitionStyleSnap];
-    //[popin setPopinOptions:BKTPopinDisableAutoDismiss];
-    //BKTBlurParameters *blurParameters = [[BKTBlurParameters alloc] init];
-    //blurParameters.alpha = 0.5;
-//    blurParameters.tintColor = [UIColor colorWithWhite:0 alpha:0.5];
-//    blurParameters.radius = 0.3;
-//    [popin setBlurParameters:blurParameters];
-    //[popin setPopinOptions:BKTPopinDimmingViewStyleNone | BKTPopinDisableAutoDismiss];
-    //popin.presentingController = self;
-    
-    //Present popin on the desired controller
-    //Note that if you are using a UINavigationController, the navigation bar will be active if you present
-    // the popin on the visible controller instead of presenting it on the navigation controller
-    
-    self.activeCard = popin;
-    [CardHelper displayCard:popin fromController:self animated:animated];
-
-    //NSLog(@"ready to show!");
-    //[self presentPopinController:popin animated:YES completion:^{
-    //    NSLog(@"Popin presented !");
-    //}];
 }
 
 - (void)cardDismissed {
     NSLog(@"Card dismissed 2");
     self.activeCard = nil;
-    [self showCard];
+    [[CardsManager sharedInstance] loadNextCard].then ( ^id (id result) {
+        NSLog(@"Finished loading");
+        [self showCard:(CardViewController *)result animated:YES];
+        return nil;
+    });
+    //[self showCard];
     //[self dismissCurrentPopinControllerAnimated:NO completion:^{
-        
+    
     //    NSLog(@"Card dismissed 4");
-        //[self showCard];
+    //[self showCard];
     //}];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)goToFacebook:(id)sender {
+    
+    NSString* url = @"fb://";
+    
+    [[UIApplication sharedApplication] openURL:url.URL];
 }
-*/
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+
+- (void) animateProgressBadges
+{
+    float delayInSeconds = 0.1;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
+        POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+        sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+        sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+        sprintAnimation.springBounciness = 20.f;
+        [self.progressBirthday setHidden:false];
+        [self.progressBirthday pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
+        POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+        sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+        sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+        sprintAnimation.springBounciness = 20.f;
+        [self.progressEvent setHidden:false];
+        [self.progressEvent pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
+        POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+        sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+        sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+        sprintAnimation.springBounciness = 20.f;
+        [self.progressPosts setHidden:false];
+        [self.progressPosts pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
+        POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+        sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+        sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+        sprintAnimation.springBounciness = 20.f;
+        [self.progressChat setHidden:false];
+        [self.progressChat pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+    });
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
+        POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+        sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+        sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+        sprintAnimation.springBounciness = 20.f;
+        [self.progressWrite setHidden:false];
+        [self.progressWrite pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+    });
+}
 
 @end

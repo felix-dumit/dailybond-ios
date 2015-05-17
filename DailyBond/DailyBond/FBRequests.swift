@@ -12,19 +12,53 @@ import Foundation
     
     static let sharedInstance = FBRequests()
     
-    func doSomething() -> Void {
-    
+    private func getRequest(graphPath : String, params : Dictionary<String,String>, method : String) -> BFTask {
+        var task = BFTaskCompletionSource()
         if (FBSDKAccessToken.currentAccessToken() != nil) {
-            FBSDKGraphRequest(graphPath: "me/friends", parameters: ["fields" : "id,name,birthday"]).startWithCompletionHandler({ (connection, data, error) -> Void in
-                println(data)
-                println(error)
+            
+            FBSDKGraphRequest(graphPath: graphPath, parameters: params, HTTPMethod: method).startWithCompletionHandler({
+                (connection, result:AnyObject?, error) -> Void in
+                
+                if error != nil {
+                    task.trySetError(error)
+                }
+                else {
+                    if let a = result as? Dictionary<String,AnyObject>{
+                        task.trySetResult(a["data"])
+                    } else {
+                        task.trySetResult(0)
+                    }
+
+                }
             })
+            
         }
         
+        return task.task
+    }
+
+    func getFriends() -> BFTask {
+        return getRequest("me/friends", params : ["fields" : "id,name,birthday,picture,cover"], method: "GET")
+    }
+
+    func getNewsFeed() -> BFTask {
+        return getRequest("me/home", params : ["limit":"5"], method: "GET")
     }
     
-    func formatString(name: String) -> String {
-        return "Hello! your name is \(name)"
+    func getEvents() -> BFTask {
+        return getRequest("me/events", params : ["fields": "place,name,start_time,id,rsvp_status,cover"], method: "GET")
+    }
+ 
+    func getLastPostDate() -> BFTask {
+        return getRequest("me/feed", params : ["limit":"1","fields":"created_time,message"], method: "GET")
+    }
+
+    func getInbox() -> BFTask {
+        return getRequest("me/inbox", params : ["limit":"5"], method: "GET")
+    }
+    
+    func postToTimeline(message : String) -> BFTask {
+        return  getRequest("me/feed", params : ["message":message], method: "POST")
     }
     
 }

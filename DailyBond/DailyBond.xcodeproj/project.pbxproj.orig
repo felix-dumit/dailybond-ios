@@ -1,0 +1,762 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AE21B07D15A00DF99C6 /* CardViewController.m */; };
+		2E6D3AE61B07D68700DF99C6 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AE51B07D68700DF99C6 /* CardsViewController.m */; };
+		2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AE91B07D75500DF99C6 /* CardHelper.m */; };
+		2E6D3AED1B07F30B00DF99C6 /* KKProgressTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AEC1B07F30B00DF99C6 /* KKProgressTimer.m */; };
+		2E6D3AF11B0820E200DF99C6 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AF01B0820E200DF99C6 /* FXBlurView.m */; };
+		2E6D3AF31B0820F200DF99C6 /* ILTranslucentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AF21B0820F200DF99C6 /* ILTranslucentView.swift */; };
+		2E6D3AF91B08473A00DF99C6 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AF81B08473A00DF99C6 /* CardsManager.swift */; };
+		2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224991B07BCF200B5042E /* TestViewController.swift */; };
+		2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92249B1B07BEEC00B5042E /* FBRequests.swift */; };
+		2E9224A41B07CCD800B5042E /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A21B07CCD800B5042E /* CardView.m */; };
+		2E9224A51B07CCD800B5042E /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E9224A31B07CCD800B5042E /* CardView.xib */; };
+		2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A71B07CD1F00B5042E /* CCMBorderView.m */; };
+		2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */; };
+		2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224AC1B07CD2A00B5042E /* DraggableView.swift */; };
+		2EFEB66A1B0873A800071497 /* CDSideBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB6691B0873A800071497 /* CDSideBarController.m */; };
+		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
+		D5392F3B1B080B7900129D45 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D5392F3A1B080B7900129D45 /* Event.m */; };
+		D5392F3D1B08172200129D45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5392F3C1B08172200129D45 /* Foundation.framework */; };
+		D55A00681B084E8A004FD5DC /* NSString+NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = D55A00671B084E8A004FD5DC /* NSString+NSURL.m */; };
+		D58F598C1B07BA8C00FAB188 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D58F598B1B07BA8C00FAB188 /* User.m */; };
+		D59549B81B07C71700720A52 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549B71B07C71700720A52 /* LoginViewController.m */; };
+		D59549BB1B07EEE000720A52 /* Birthday.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549BA1B07EEE000720A52 /* Birthday.m */; };
+		D59549C11B07F85C00720A52 /* NSDate+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549C01B07F85C00720A52 /* NSDate+Random.m */; };
+		D59549C41B07FCAB00720A52 /* MessengerSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549C31B07FCAB00720A52 /* MessengerSharer.m */; };
+		D59549C71B07FFF400720A52 /* KeepInTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549C61B07FFF400720A52 /* KeepInTouch.m */; };
+		EB04D8B71B07A61C009B8AB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8B61B07A61C009B8AB0 /* main.m */; };
+		EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8B91B07A61C009B8AB0 /* AppDelegate.m */; };
+		EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8BC1B07A61C009B8AB0 /* ViewController.m */; };
+		EB04D8C01B07A61C009B8AB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8BE1B07A61C009B8AB0 /* Main.storyboard */; };
+		EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8C11B07A61C009B8AB0 /* Images.xcassets */; };
+		EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB04D8C31B07A61C009B8AB0 /* LaunchScreen.xib */; };
+		EB04D8D11B07A61C009B8AB0 /* DailyBondTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */; };
+		EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22C81B07D51A0095633A /* CardBirthdayViewController.m */; };
+		EBDA22CB1B07D51A0095633A /* CardBirthdayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22C91B07D51A0095633A /* CardBirthdayViewController.xib */; };
+		EBDA22CF1B07EF050095633A /* CardEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22CD1B07EF050095633A /* CardEventViewController.m */; };
+		EBDA22D01B07EF050095633A /* CardEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22CE1B07EF050095633A /* CardEventViewController.xib */; };
+		EBDA22D41B07F97B0095633A /* CardNewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22D21B07F97B0095633A /* CardNewPostViewController.m */; };
+		EBDA22D51B07F97B0095633A /* CardNewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22D31B07F97B0095633A /* CardNewPostViewController.xib */; };
+		EBDA22DF1B08198B0095633A /* CardKeepInTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */; };
+		EBDA22E01B08198B0095633A /* CardKeepInTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */; };
+		EBDA22E61B082D430095633A /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22E51B082D430095633A /* NSDate+Formatter.m */; };
+		EBDA22E91B0830E40095633A /* UserPost.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22E81B0830E40095633A /* UserPost.m */; };
+		EBDA22EC1B084C030095633A /* UserMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22EB1B084C030095633A /* UserMessage.m */; };
+		EBDA22F01B087E2C0095633A /* CardShowPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22EE1B087E2C0095633A /* CardShowPostViewController.m */; };
+		EBDA22F11B087E2C0095633A /* CardShowPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22EF1B087E2C0095633A /* CardShowPostViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB04D8CB1B07A61C009B8AB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB04D8A91B07A61C009B8AB0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB04D8B01B07A61C009B8AB0;
+			remoteInfo = DailyBond;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02ECE7FA6D8B7D13F7A4EC0F /* Pods-DailyBond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.debug.xcconfig"; sourceTree = "<group>"; };
+		06E9BB640064F12766596638 /* libPods-DailyBond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DailyBond.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E6D3AE11B07D15A00DF99C6 /* CardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
+		2E6D3AE21B07D15A00DF99C6 /* CardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		2E6D3AE41B07D68700DF99C6 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
+		2E6D3AE51B07D68700DF99C6 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
+		2E6D3AE81B07D75500DF99C6 /* CardHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardHelper.h; sourceTree = "<group>"; };
+		2E6D3AE91B07D75500DF99C6 /* CardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardHelper.m; sourceTree = "<group>"; };
+		2E6D3AEB1B07F30B00DF99C6 /* KKProgressTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKProgressTimer.h; sourceTree = "<group>"; };
+		2E6D3AEC1B07F30B00DF99C6 /* KKProgressTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKProgressTimer.m; sourceTree = "<group>"; };
+		2E6D3AEF1B0820E200DF99C6 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		2E6D3AF01B0820E200DF99C6 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		2E6D3AF21B0820F200DF99C6 /* ILTranslucentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILTranslucentView.swift; sourceTree = "<group>"; };
+		2E6D3AF81B08473A00DF99C6 /* CardsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
+		2E9224981B07BCF200B5042E /* DailyBond-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E9224991B07BCF200B5042E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		2E92249B1B07BEEC00B5042E /* FBRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRequests.swift; sourceTree = "<group>"; };
+		2E9224A11B07CCD800B5042E /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		2E9224A21B07CCD800B5042E /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		2E9224A31B07CCD800B5042E /* CardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		2E9224A61B07CD1F00B5042E /* CCMBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMBorderView.h; sourceTree = "<group>"; };
+		2E9224A71B07CD1F00B5042E /* CCMBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMBorderView.m; sourceTree = "<group>"; };
+		2E9224A81B07CD1F00B5042E /* CCMPlayNDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMPlayNDropView.h; sourceTree = "<group>"; };
+		2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMPlayNDropView.m; sourceTree = "<group>"; };
+		2E9224AC1B07CD2A00B5042E /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		2EFEB6681B0873A800071497 /* CDSideBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSideBarController.h; sourceTree = "<group>"; };
+		2EFEB6691B0873A800071497 /* CDSideBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSideBarController.m; sourceTree = "<group>"; };
+		B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.release.xcconfig"; sourceTree = "<group>"; };
+		D5392F391B080B7900129D45 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		D5392F3A1B080B7900129D45 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		D5392F3C1B08172200129D45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D55A00661B084E8A004FD5DC /* NSString+NSURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+NSURL.h"; path = "DailyBond/NSString+NSURL.h"; sourceTree = "<group>"; };
+		D55A00671B084E8A004FD5DC /* NSString+NSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+NSURL.m"; path = "DailyBond/NSString+NSURL.m"; sourceTree = "<group>"; };
+		D58F598A1B07BA8C00FAB188 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D58F598B1B07BA8C00FAB188 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D59549B51B07C1E400720A52 /* DailyBond-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-PrefixHeader.pch"; sourceTree = "<group>"; };
+		D59549B61B07C71700720A52 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D59549B71B07C71700720A52 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D59549B91B07EEE000720A52 /* Birthday.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Birthday.h; sourceTree = "<group>"; };
+		D59549BA1B07EEE000720A52 /* Birthday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Birthday.m; sourceTree = "<group>"; };
+		D59549BF1B07F85C00720A52 /* NSDate+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Random.h"; sourceTree = "<group>"; };
+		D59549C01B07F85C00720A52 /* NSDate+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Random.m"; sourceTree = "<group>"; };
+		D59549C21B07FCAB00720A52 /* MessengerSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessengerSharer.h; sourceTree = "<group>"; };
+		D59549C31B07FCAB00720A52 /* MessengerSharer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessengerSharer.m; sourceTree = "<group>"; };
+		D59549C51B07FFF400720A52 /* KeepInTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeepInTouch.h; sourceTree = "<group>"; };
+		D59549C61B07FFF400720A52 /* KeepInTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeepInTouch.m; sourceTree = "<group>"; };
+		EB04D8B11B07A61C009B8AB0 /* DailyBond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyBond.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB04D8B51B07A61C009B8AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB04D8B61B07A61C009B8AB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EB04D8B81B07A61C009B8AB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EB04D8B91B07A61C009B8AB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EB04D8BB1B07A61C009B8AB0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EB04D8BC1B07A61C009B8AB0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EB04D8BF1B07A61C009B8AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB04D8C11B07A61C009B8AB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EB04D8C41B07A61C009B8AB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EB04D8CA1B07A61C009B8AB0 /* DailyBondTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DailyBondTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB04D8CF1B07A61C009B8AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyBondTests.m; sourceTree = "<group>"; };
+		EBDA22C71B07D51A0095633A /* CardBirthdayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardBirthdayViewController.h; sourceTree = "<group>"; };
+		EBDA22C81B07D51A0095633A /* CardBirthdayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardBirthdayViewController.m; sourceTree = "<group>"; };
+		EBDA22C91B07D51A0095633A /* CardBirthdayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardBirthdayViewController.xib; sourceTree = "<group>"; };
+		EBDA22CC1B07EF050095633A /* CardEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardEventViewController.h; sourceTree = "<group>"; };
+		EBDA22CD1B07EF050095633A /* CardEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardEventViewController.m; sourceTree = "<group>"; };
+		EBDA22CE1B07EF050095633A /* CardEventViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardEventViewController.xib; sourceTree = "<group>"; };
+		EBDA22D11B07F97B0095633A /* CardNewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardNewPostViewController.h; sourceTree = "<group>"; };
+		EBDA22D21B07F97B0095633A /* CardNewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardNewPostViewController.m; sourceTree = "<group>"; };
+		EBDA22D31B07F97B0095633A /* CardNewPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardNewPostViewController.xib; sourceTree = "<group>"; };
+		EBDA22DC1B08198B0095633A /* CardKeepInTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardKeepInTouchViewController.h; sourceTree = "<group>"; };
+		EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardKeepInTouchViewController.m; sourceTree = "<group>"; };
+		EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardKeepInTouchViewController.xib; sourceTree = "<group>"; };
+		EBDA22E41B082D430095633A /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		EBDA22E51B082D430095633A /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		EBDA22E71B0830E40095633A /* UserPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPost.h; sourceTree = "<group>"; };
+		EBDA22E81B0830E40095633A /* UserPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPost.m; sourceTree = "<group>"; };
+		EBDA22EA1B084C030095633A /* UserMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserMessage.h; sourceTree = "<group>"; };
+		EBDA22EB1B084C030095633A /* UserMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserMessage.m; sourceTree = "<group>"; };
+		EBDA22ED1B087E2C0095633A /* CardShowPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardShowPostViewController.h; sourceTree = "<group>"; };
+		EBDA22EE1B087E2C0095633A /* CardShowPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardShowPostViewController.m; sourceTree = "<group>"; };
+		EBDA22EF1B087E2C0095633A /* CardShowPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardShowPostViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB04D8AE1B07A61C009B8AB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5392F3D1B08172200129D45 /* Foundation.framework in Frameworks */,
+				908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB04D8C71B07A61C009B8AB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A5AD829A6AFC897EB1112F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02ECE7FA6D8B7D13F7A4EC0F /* Pods-DailyBond.debug.xcconfig */,
+				B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2E6D3AE71B07D74D00DF99C6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D59549C21B07FCAB00720A52 /* MessengerSharer.h */,
+				D59549C31B07FCAB00720A52 /* MessengerSharer.m */,
+				2E6D3AE81B07D75500DF99C6 /* CardHelper.h */,
+				2E6D3AE91B07D75500DF99C6 /* CardHelper.m */,
+				D59549BF1B07F85C00720A52 /* NSDate+Random.h */,
+				D59549C01B07F85C00720A52 /* NSDate+Random.m */,
+				EBDA22E41B082D430095633A /* NSDate+Formatter.h */,
+				EBDA22E51B082D430095633A /* NSDate+Formatter.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		2E6D3AF41B0836D200DF99C6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2E6D3AF81B08473A00DF99C6 /* CardsManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		2E9224941B07BBC300B5042E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E6D3AE41B07D68700DF99C6 /* CardsViewController.h */,
+				2E6D3AE51B07D68700DF99C6 /* CardsViewController.m */,
+				2E6D3AE11B07D15A00DF99C6 /* CardViewController.h */,
+				2E6D3AE21B07D15A00DF99C6 /* CardViewController.m */,
+				D59549B61B07C71700720A52 /* LoginViewController.h */,
+				D59549B71B07C71700720A52 /* LoginViewController.m */,
+				EB04D8BB1B07A61C009B8AB0 /* ViewController.h */,
+				EB04D8BC1B07A61C009B8AB0 /* ViewController.m */,
+				2E9224991B07BCF200B5042E /* TestViewController.swift */,
+				EBDA22C71B07D51A0095633A /* CardBirthdayViewController.h */,
+				EBDA22C81B07D51A0095633A /* CardBirthdayViewController.m */,
+				EBDA22C91B07D51A0095633A /* CardBirthdayViewController.xib */,
+				EBDA22CC1B07EF050095633A /* CardEventViewController.h */,
+				EBDA22CD1B07EF050095633A /* CardEventViewController.m */,
+				EBDA22CE1B07EF050095633A /* CardEventViewController.xib */,
+				EBDA22D11B07F97B0095633A /* CardNewPostViewController.h */,
+				EBDA22D21B07F97B0095633A /* CardNewPostViewController.m */,
+				EBDA22D31B07F97B0095633A /* CardNewPostViewController.xib */,
+				EBDA22DC1B08198B0095633A /* CardKeepInTouchViewController.h */,
+				EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */,
+				EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */,
+<<<<<<< HEAD
+				EBDA22ED1B087E2C0095633A /* CardShowPostViewController.h */,
+				EBDA22EE1B087E2C0095633A /* CardShowPostViewController.m */,
+				EBDA22EF1B087E2C0095633A /* CardShowPostViewController.xib */,
+=======
+				2EFEB6681B0873A800071497 /* CDSideBarController.h */,
+				2EFEB6691B0873A800071497 /* CDSideBarController.m */,
+>>>>>>> 1a59f413aee65ba9219a8d7e835c0cfbeaf25bb6
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2E9224951B07BBD000B5042E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E6D3AEB1B07F30B00DF99C6 /* KKProgressTimer.h */,
+				2E6D3AEC1B07F30B00DF99C6 /* KKProgressTimer.m */,
+				2E6D3AEF1B0820E200DF99C6 /* FXBlurView.h */,
+				2E6D3AF01B0820E200DF99C6 /* FXBlurView.m */,
+				2E6D3AF21B0820F200DF99C6 /* ILTranslucentView.swift */,
+				2E9224A11B07CCD800B5042E /* CardView.h */,
+				2E9224A21B07CCD800B5042E /* CardView.m */,
+				2E9224A31B07CCD800B5042E /* CardView.xib */,
+				2E9224A61B07CD1F00B5042E /* CCMBorderView.h */,
+				2E9224A71B07CD1F00B5042E /* CCMBorderView.m */,
+				2E9224A81B07CD1F00B5042E /* CCMPlayNDropView.h */,
+				2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */,
+				2E9224AC1B07CD2A00B5042E /* DraggableView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		2E9224961B07BBDB00B5042E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D59549B91B07EEE000720A52 /* Birthday.h */,
+				D59549BA1B07EEE000720A52 /* Birthday.m */,
+				D59549C51B07FFF400720A52 /* KeepInTouch.h */,
+				D59549C61B07FFF400720A52 /* KeepInTouch.m */,
+				D58F598A1B07BA8C00FAB188 /* User.h */,
+				D58F598B1B07BA8C00FAB188 /* User.m */,
+				D5392F391B080B7900129D45 /* Event.h */,
+				D5392F3A1B080B7900129D45 /* Event.m */,
+				EBDA22E71B0830E40095633A /* UserPost.h */,
+				EBDA22E81B0830E40095633A /* UserPost.m */,
+				EBDA22EA1B084C030095633A /* UserMessage.h */,
+				EBDA22EB1B084C030095633A /* UserMessage.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2E9224971B07BBF700B5042E /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				2E92249B1B07BEEC00B5042E /* FBRequests.swift */,
+			);
+			name = Web;
+			sourceTree = "<group>";
+		};
+		9F2E155D3EC9A876E8380BEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5392F3C1B08172200129D45 /* Foundation.framework */,
+				06E9BB640064F12766596638 /* libPods-DailyBond.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB04D8A81B07A61C009B8AB0 = {
+			isa = PBXGroup;
+			children = (
+				D55A00661B084E8A004FD5DC /* NSString+NSURL.h */,
+				D55A00671B084E8A004FD5DC /* NSString+NSURL.m */,
+				EB04D8B31B07A61C009B8AB0 /* DailyBond */,
+				EB04D8CD1B07A61C009B8AB0 /* DailyBondTests */,
+				EB04D8B21B07A61C009B8AB0 /* Products */,
+				2A5AD829A6AFC897EB1112F1 /* Pods */,
+				9F2E155D3EC9A876E8380BEA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EB04D8B21B07A61C009B8AB0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB04D8B11B07A61C009B8AB0 /* DailyBond.app */,
+				EB04D8CA1B07A61C009B8AB0 /* DailyBondTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB04D8B31B07A61C009B8AB0 /* DailyBond */ = {
+			isa = PBXGroup;
+			children = (
+				2E6D3AF41B0836D200DF99C6 /* Manager */,
+				2E6D3AE71B07D74D00DF99C6 /* Helpers */,
+				2E9224971B07BBF700B5042E /* Web */,
+				2E9224961B07BBDB00B5042E /* Model */,
+				2E9224951B07BBD000B5042E /* Views */,
+				2E9224941B07BBC300B5042E /* Controllers */,
+				EB04D8B81B07A61C009B8AB0 /* AppDelegate.h */,
+				EB04D8B91B07A61C009B8AB0 /* AppDelegate.m */,
+				D59549B51B07C1E400720A52 /* DailyBond-PrefixHeader.pch */,
+				2E9224981B07BCF200B5042E /* DailyBond-Bridging-Header.h */,
+				EB04D8BE1B07A61C009B8AB0 /* Main.storyboard */,
+				EB04D8C11B07A61C009B8AB0 /* Images.xcassets */,
+				EB04D8C31B07A61C009B8AB0 /* LaunchScreen.xib */,
+				EB04D8B41B07A61C009B8AB0 /* Supporting Files */,
+			);
+			path = DailyBond;
+			sourceTree = "<group>";
+		};
+		EB04D8B41B07A61C009B8AB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB04D8B51B07A61C009B8AB0 /* Info.plist */,
+				EB04D8B61B07A61C009B8AB0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB04D8CD1B07A61C009B8AB0 /* DailyBondTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB04D8D01B07A61C009B8AB0 /* DailyBondTests.m */,
+				EB04D8CE1B07A61C009B8AB0 /* Supporting Files */,
+			);
+			path = DailyBondTests;
+			sourceTree = "<group>";
+		};
+		EB04D8CE1B07A61C009B8AB0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB04D8CF1B07A61C009B8AB0 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB04D8B01B07A61C009B8AB0 /* DailyBond */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB04D8D41B07A61C009B8AB0 /* Build configuration list for PBXNativeTarget "DailyBond" */;
+			buildPhases = (
+				DFF7D278A2780D4408E6643A /* Check Pods Manifest.lock */,
+				EB04D8AD1B07A61C009B8AB0 /* Sources */,
+				EB04D8AE1B07A61C009B8AB0 /* Frameworks */,
+				EB04D8AF1B07A61C009B8AB0 /* Resources */,
+				684AC1B964AC688FDE51F950 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DailyBond;
+			productName = DailyBond;
+			productReference = EB04D8B11B07A61C009B8AB0 /* DailyBond.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB04D8C91B07A61C009B8AB0 /* DailyBondTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB04D8D71B07A61C009B8AB0 /* Build configuration list for PBXNativeTarget "DailyBondTests" */;
+			buildPhases = (
+				EB04D8C61B07A61C009B8AB0 /* Sources */,
+				EB04D8C71B07A61C009B8AB0 /* Frameworks */,
+				EB04D8C81B07A61C009B8AB0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB04D8CC1B07A61C009B8AB0 /* PBXTargetDependency */,
+			);
+			name = DailyBondTests;
+			productName = DailyBondTests;
+			productReference = EB04D8CA1B07A61C009B8AB0 /* DailyBondTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB04D8A91B07A61C009B8AB0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = DailyBond;
+				TargetAttributes = {
+					EB04D8B01B07A61C009B8AB0 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					EB04D8C91B07A61C009B8AB0 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = EB04D8B01B07A61C009B8AB0;
+					};
+				};
+			};
+			buildConfigurationList = EB04D8AC1B07A61C009B8AB0 /* Build configuration list for PBXProject "DailyBond" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB04D8A81B07A61C009B8AB0;
+			productRefGroup = EB04D8B21B07A61C009B8AB0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB04D8B01B07A61C009B8AB0 /* DailyBond */,
+				EB04D8C91B07A61C009B8AB0 /* DailyBondTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB04D8AF1B07A61C009B8AB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDA22F11B087E2C0095633A /* CardShowPostViewController.xib in Resources */,
+				EB04D8C01B07A61C009B8AB0 /* Main.storyboard in Resources */,
+				2E9224A51B07CCD800B5042E /* CardView.xib in Resources */,
+				EBDA22CB1B07D51A0095633A /* CardBirthdayViewController.xib in Resources */,
+				EBDA22D01B07EF050095633A /* CardEventViewController.xib in Resources */,
+				EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */,
+				EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */,
+				EBDA22E01B08198B0095633A /* CardKeepInTouchViewController.xib in Resources */,
+				EBDA22D51B07F97B0095633A /* CardNewPostViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB04D8C81B07A61C009B8AB0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		684AC1B964AC688FDE51F950 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFF7D278A2780D4408E6643A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB04D8AD1B07A61C009B8AB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBDA22EC1B084C030095633A /* UserMessage.m in Sources */,
+				EBDA22E61B082D430095633A /* NSDate+Formatter.m in Sources */,
+				2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */,
+				D58F598C1B07BA8C00FAB188 /* User.m in Sources */,
+				EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */,
+				2E6D3AF91B08473A00DF99C6 /* CardsManager.swift in Sources */,
+				EBDA22E91B0830E40095633A /* UserPost.m in Sources */,
+				EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */,
+				2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */,
+				2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */,
+				D5392F3B1B080B7900129D45 /* Event.m in Sources */,
+				EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */,
+				2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */,
+				2E6D3AED1B07F30B00DF99C6 /* KKProgressTimer.m in Sources */,
+				EBDA22DF1B08198B0095633A /* CardKeepInTouchViewController.m in Sources */,
+				2E6D3AE61B07D68700DF99C6 /* CardsViewController.m in Sources */,
+				2E6D3AF11B0820E200DF99C6 /* FXBlurView.m in Sources */,
+				EBDA22D41B07F97B0095633A /* CardNewPostViewController.m in Sources */,
+				D59549B81B07C71700720A52 /* LoginViewController.m in Sources */,
+				EB04D8B71B07A61C009B8AB0 /* main.m in Sources */,
+				2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */,
+				2EFEB66A1B0873A800071497 /* CDSideBarController.m in Sources */,
+				D55A00681B084E8A004FD5DC /* NSString+NSURL.m in Sources */,
+				D59549BB1B07EEE000720A52 /* Birthday.m in Sources */,
+				EBDA22F01B087E2C0095633A /* CardShowPostViewController.m in Sources */,
+				D59549C41B07FCAB00720A52 /* MessengerSharer.m in Sources */,
+				D59549C71B07FFF400720A52 /* KeepInTouch.m in Sources */,
+				D59549C11B07F85C00720A52 /* NSDate+Random.m in Sources */,
+				2E9224A41B07CCD800B5042E /* CardView.m in Sources */,
+				2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */,
+				2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */,
+				EBDA22CF1B07EF050095633A /* CardEventViewController.m in Sources */,
+				2E6D3AF31B0820F200DF99C6 /* ILTranslucentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB04D8C61B07A61C009B8AB0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB04D8D11B07A61C009B8AB0 /* DailyBondTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB04D8CC1B07A61C009B8AB0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB04D8B01B07A61C009B8AB0 /* DailyBond */;
+			targetProxy = EB04D8CB1B07A61C009B8AB0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB04D8BE1B07A61C009B8AB0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB04D8BF1B07A61C009B8AB0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB04D8C31B07A61C009B8AB0 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB04D8C41B07A61C009B8AB0 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB04D8D21B07A61C009B8AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB04D8D31B07A61C009B8AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB04D8D51B07A61C009B8AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02ECE7FA6D8B7D13F7A4EC0F /* Pods-DailyBond.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DailyBond/DailyBond-PrefixHeader.pch";
+				INFOPLIST_FILE = DailyBond/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyBond/DailyBond-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB04D8D61B07A61C009B8AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DailyBond/DailyBond-PrefixHeader.pch";
+				INFOPLIST_FILE = DailyBond/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyBond/DailyBond-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		EB04D8D81B07A61C009B8AB0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DailyBondTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyBond.app/DailyBond";
+			};
+			name = Debug;
+		};
+		EB04D8D91B07A61C009B8AB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DailyBondTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DailyBond.app/DailyBond";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB04D8AC1B07A61C009B8AB0 /* Build configuration list for PBXProject "DailyBond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB04D8D21B07A61C009B8AB0 /* Debug */,
+				EB04D8D31B07A61C009B8AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB04D8D41B07A61C009B8AB0 /* Build configuration list for PBXNativeTarget "DailyBond" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB04D8D51B07A61C009B8AB0 /* Debug */,
+				EB04D8D61B07A61C009B8AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB04D8D71B07A61C009B8AB0 /* Build configuration list for PBXNativeTarget "DailyBondTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB04D8D81B07A61C009B8AB0 /* Debug */,
+				EB04D8D91B07A61C009B8AB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB04D8A91B07A61C009B8AB0 /* Project object */;
+}

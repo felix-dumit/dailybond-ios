@@ -12,6 +12,10 @@
 
 @interface CardView : CCMPlayNDropView
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+//@property (weak, nonatomic) IBInspectable NSString *title;
+//@property (weak, nonatomic) IBInspectable UIColor *titleColor;
+//@property (weak, nonatomic) IBInspectable UIColor *titleBackgroundColor;
 
 - (BFTask *) dismiss;
 
