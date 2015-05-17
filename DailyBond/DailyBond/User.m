@@ -28,7 +28,7 @@
 
 + (BFTask *)loginWithFacebookInBackground {
     return [User logOutInBackground].thenOnMain ( ^id (id result) {
-        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_friends", @"user_birthday", @"user_events"]];
+        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_friends", @"user_birthday", @"user_events", @"read_stream"]];
     }).thenOnMain ( ^id (User *user) {
         return [user loadFacebookInfo];
     }).thenOnMain ( ^id (id result) {
