@@ -78,7 +78,10 @@
     if (!currentTask) {
         currentTask = [[FBRequests sharedInstance] getNewsFeed].then ( ^id (NSArray *result) {
             NSArray *array = [UserPost processPostsArray:result];
+            [self saveToLDS:array];
             return array;
+        }).catch ( ^id (NSError *error) {
+            return [self loadFromLDS];
         }).catch ( ^id (NSError *error) {
             return @[[self generateMockData]];
         });
@@ -110,6 +113,17 @@
     }
     
     return array;
+}
+
++ (BFTask *)loadFromLDS {
+    PFQuery *query = [[UserPost query] fromLocalDatastore];
+    return [query findObjectsInBackground];
+}
+
++ (BFTask *)saveToLDS:(NSArray *)array {
+    return [UserPost unpinAllObjectsInBackground].then ( ^id (id result) {
+        return [UserPost pinAllInBackground:array];
+    });
 }
 
 @end

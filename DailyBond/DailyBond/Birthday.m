@@ -48,7 +48,7 @@
     for (NSInteger i = 0; i < 10; i++) {
         NSDate *date = [NSDate randomDate];
         NSString *userId = @"944048308948647";
-
+        
         
         Birthday *b = [Birthday createBirthdayWithDate:date andUserId:userId];
         
@@ -69,13 +69,28 @@
     
     if (!currentTask) {
         currentTask = [[FBRequests sharedInstance] getFriends].then ( ^id (NSArray *result) {
-            return [Birthday objectArrayWithKeyValuesArray:result];
+            NSArray *array = [Birthday objectArrayWithKeyValuesArray:result];
+            [self saveToLDS:array];
+            return array;
+        }).catch ( ^id (NSError *error) {
+            return [self loadFromLDS];
         }).catch ( ^id (NSError *error) {
             return [self generateMockBirthDays];
         });
     }
     
     return currentTask;
+}
+
++ (BFTask *)loadFromLDS {
+    PFQuery *query = [[Birthday query] fromLocalDatastore];
+    return [query findObjectsInBackground];
+}
+
++ (BFTask *)saveToLDS:(NSArray *)array {
+    return [Birthday unpinAllObjectsInBackground].then ( ^id (id result) {
+        return [Birthday pinAllInBackground:array];
+    });
 }
 
 - (NSArray *)createBirthDayArrayFromJSONArray:(NSArray *)array {

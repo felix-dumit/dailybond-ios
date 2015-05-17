@@ -52,7 +52,6 @@
     return [dateFormatter dateFromString:dateString];
 }
 
-
 - (void)setDateString:(NSString *)dateString {
     [self setObject:dateString forKey:@"dateString"];
     self.date = [LastPostDate dateForDateString:dateString];
@@ -61,7 +60,7 @@
 + (LastPostDate *)generateMockLastPostDate {
     NSDate *date = [NSDate dateWithYear:2015 month:5 day:17];
     NSString *message = @"Oi Facebook!";
-        
+    
     LastPostDate *lpd = [LastPostDate createLastPostDateWithDate:date andMessage:message];
     
     return lpd;
@@ -72,14 +71,26 @@
     
     if (!currentTask) {
         currentTask = [[FBRequests sharedInstance] getLastPostDate].then ( ^id (NSArray *result) {
-            //NSLog(@"%@", result);
-            return [LastPostDate objectArrayWithKeyValuesArray:result];
+            NSArray *array = [LastPostDate objectArrayWithKeyValuesArray:result];
+            [self saveToLDS:array];
+            return array;
         }).catch ( ^id (NSError *error) {
             return [self generateMockLastPostDate];
         });
     }
     
     return currentTask;
+}
+
++ (BFTask *)loadFromLDS {
+    PFQuery *query = [[LastPostDate query] fromLocalDatastore];
+    return [query findObjectsInBackground];
+}
+
++ (BFTask *)saveToLDS:(NSArray *)array {
+    return [LastPostDate unpinAllObjectsInBackground].then ( ^id (id result) {
+        return [LastPostDate pinAllInBackground:array];
+    });
 }
 
 - (NSArray *)createLastPostDateArrayFromJSONArray:(NSArray *)array {
