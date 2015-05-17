@@ -33,5 +33,9 @@ import Foundation
     func getEvents() -> BFTask {
         return getRequest("me/events", params : ["":""])
     }
+ 
+    func getLastPostDate() -> BFTask {
+        return getRequest("me/feed", params : ["limit":"1","fields":"created_time,message"])
+    }
     
 }
