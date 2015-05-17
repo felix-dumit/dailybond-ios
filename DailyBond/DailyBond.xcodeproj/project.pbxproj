@@ -41,6 +41,7 @@
 		EBDA22D51B07F97B0095633A /* CardNewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22D31B07F97B0095633A /* CardNewPostViewController.xib */; };
 		EBDA22DF1B08198B0095633A /* CardKeepInTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */; };
 		EBDA22E01B08198B0095633A /* CardKeepInTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */; };
+		EBDA22E61B082D430095633A /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22E51B082D430095633A /* NSDate+Formatter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		EBDA22DC1B08198B0095633A /* CardKeepInTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardKeepInTouchViewController.h; sourceTree = "<group>"; };
 		EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardKeepInTouchViewController.m; sourceTree = "<group>"; };
 		EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardKeepInTouchViewController.xib; sourceTree = "<group>"; };
+		EBDA22E41B082D430095633A /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
+		EBDA22E51B082D430095633A /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 				2E6D3AE91B07D75500DF99C6 /* CardHelper.m */,
 				D59549BF1B07F85C00720A52 /* NSDate+Random.h */,
 				D59549C01B07F85C00720A52 /* NSDate+Random.m */,
+				EBDA22E41B082D430095633A /* NSDate+Formatter.h */,
+				EBDA22E51B082D430095633A /* NSDate+Formatter.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDA22E61B082D430095633A /* NSDate+Formatter.m in Sources */,
 				2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */,
 				D58F598C1B07BA8C00FAB188 /* User.m in Sources */,
 				EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */,

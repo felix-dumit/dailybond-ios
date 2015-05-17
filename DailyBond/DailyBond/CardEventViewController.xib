@@ -93,6 +93,11 @@
                 <constraint firstItem="TEr-SO-18D" firstAttribute="leading" secondItem="bqh-IR-wXB" secondAttribute="trailing" constant="8" id="ytA-Qv-Rbt"/>
                 <constraint firstItem="bqh-IR-wXB" firstAttribute="top" secondItem="4le-xC-dBC" secondAttribute="top" constant="56" id="zpS-up-y0C"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="9U5-xK-A1F"/>

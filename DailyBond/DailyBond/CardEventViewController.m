@@ -7,8 +7,12 @@
 //
 
 #import "CardEventViewController.h"
+#import "NSDate+Formatter.h"
+#import "Event.h"
 
-@interface CardEventViewController ()
+@interface CardEventViewController () {
+    Event *event;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *eventImageView;
 @property (weak, nonatomic) IBOutlet UILabel *eventNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -20,7 +24,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    event = self.cardData;
+    
+    self.eventNameLabel.text = event.name;
+    [self setEventDate:event.date];
     // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,6 +42,13 @@
 -(void) setEventName:(NSString*)aName;
 {
     [self.eventNameLabel setText:aName];
+}
+
+-(void) setEventDate:(NSDate*)aDate;
+{
+    // TODO: numbered
+    self.dateLabel.text = [NSString stringWithFormat:@"Starting in %ld days",
+                           (long)[NSDate daysBetweenDate:[NSDate date] andDate:event.date]];
 }
 
 /*

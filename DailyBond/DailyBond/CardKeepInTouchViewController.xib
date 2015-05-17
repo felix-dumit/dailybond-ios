@@ -92,6 +92,11 @@
                 <constraint firstItem="rPK-AF-6BN" firstAttribute="top" secondItem="2R5-pz-6ph" secondAttribute="top" id="vGz-k3-3tb"/>
                 <constraint firstItem="nYR-WN-edL" firstAttribute="width" secondItem="tPv-BJ-cnu" secondAttribute="width" id="w8M-lf-BQG"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="UJy-Zt-Uc7"/>

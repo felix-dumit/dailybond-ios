@@ -14,6 +14,7 @@
 #import "User.h"
 #import "Birthday.h"
 #import "KeepInTouch.h"
+#import "Event.h"
 #import "CardsViewController.h"
 @interface AppDelegate ()
 
@@ -28,6 +29,7 @@
     [User registerSubclass];
     [Birthday registerSubclass];
     [KeepInTouch registerSubclass];
+    [Event registerSubclass];
     
     [Parse enableLocalDatastore];
     [Parse setApplicationId:@"ioHHzrZSRJSMSTR0WZZETXjyjXfgKOZ3uefsMuG5" clientKey:@"M7vDYkWESocaASxvdf4UwYpZMDFaCey3yoyiDdPj"];

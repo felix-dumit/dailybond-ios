@@ -93,6 +93,11 @@
                 <constraint firstItem="z2H-mi-5Qp" firstAttribute="top" secondItem="bd7-ar-C3l" secondAttribute="bottom" constant="8" id="uNm-xN-CXu"/>
                 <constraint firstItem="E90-4K-WYC" firstAttribute="top" secondItem="kAE-0u-qn2" secondAttribute="bottom" constant="2" id="zji-Rn-FBU"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="O6s-Ap-FAn"/>

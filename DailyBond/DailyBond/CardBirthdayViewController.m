@@ -7,12 +7,12 @@
 //
 
 #import "CardBirthdayViewController.h"
+#import "Birthday.h"
 
 @interface CardBirthdayViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-
 @end
 
 @implementation CardBirthdayViewController
@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setDescriptionLabelWithName:@"Nicholas"];
+    Birthday *birthday = (Birthday*) self.cardData;
     // Do any additional setup after loading the view from its nib.
 }
 

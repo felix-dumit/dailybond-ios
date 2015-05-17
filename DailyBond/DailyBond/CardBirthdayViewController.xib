@@ -93,6 +93,12 @@
                 <constraint firstItem="4Bm-PP-rV7" firstAttribute="top" secondItem="M7v-28-Llz" secondAttribute="top" constant="8" id="uzR-29-nKA"/>
                 <constraint firstItem="Sax-Zk-jQw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="x5f-Tp-oYb" secondAttribute="bottom" constant="8" id="wPF-9B-R8y"/>
             </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="12"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Title"/>
+            </userDefinedRuntimeAttributes>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="0e7-CG-3XZ"/>

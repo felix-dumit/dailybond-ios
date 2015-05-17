@@ -34,5 +34,6 @@
 -(void)show;
 
 -(CardView *)getCardView;
+@property (strong,nonatomic) id cardData;
 
 @end

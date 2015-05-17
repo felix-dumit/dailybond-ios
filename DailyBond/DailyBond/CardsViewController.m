@@ -14,6 +14,8 @@
 #import "CardEventViewController.h"
 #import "CardNewPostViewController.h"
 #import "CardKeepInTouchViewController.h"
+#import "Birthday.h"
+#import "Event.h"
 
 @interface CardsViewController ()
 
@@ -65,7 +67,27 @@
     NSLog(@"Showing card...");
     
     // TODO : LOAD CONTROLLER HERE RIGHT NOWWW!!!
-    CardViewController *popin = [[CardKeepInTouchViewController alloc] init];//[[SFCardFlowManager sharedInstance] getNextCardController];
+    CardViewController *popin;
+    switch(1) {
+        case 0:
+            popin = [[CardBirthdayViewController alloc] init];
+            popin.cardData = [Birthday generateMockBirthDays][0];
+            break;
+        case 1:
+            popin = [[CardEventViewController alloc] init];
+            popin.cardData = [Event generateMockData][0];
+            break;
+        case 2:
+            popin = [[CardNewPostViewController alloc] init];
+            popin.cardData = nil;
+            break;
+        case 3:
+            popin = [[CardKeepInTouchViewController alloc] init];
+            popin.cardData = nil;
+            break;
+    }
+    
+    //[[SFCardFlowManager sharedInstance] getNextCardController];
     
     //SFCardViewController *popin = [[SFCardManager sharedInstance] getNextCard]; //[[SFTutorialViewController alloc] initWithNibName:@"SFTutorialViewController" bundle:nil];
     //popin.view.frame = CGRectMake(0, 0, 320, 500);
