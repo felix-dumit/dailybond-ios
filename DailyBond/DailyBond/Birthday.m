@@ -8,11 +8,13 @@
 
 #import "Birthday.h"
 #import "NSDate+Random.h"
+#import <MJExtension.h>
 
 @implementation Birthday
 
 @dynamic birthdayDate;
 @dynamic friendId;
+@dynamic friendName;
 
 + (NSString *)parseClassName {
     return @"Birthday";
@@ -35,6 +37,11 @@
     }
     
     return array;
+}
+
+- (NSArray *)createBirthDayArrayFromJSONArray:(NSArray *)array {
+    NSArray *arr = [Birthday objectArrayWithKeyValuesArray:array];
+    return arr;
 }
 
 @end

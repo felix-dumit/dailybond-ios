@@ -10,6 +10,15 @@ import UIKit
 
 class TestViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let image = User.currentUser()?.profileImage()
+        imageView.image = image
+    }
+    
     @IBAction func buttonClick(sender: AnyObject) {
         println("BUTTON CLICKED")
         FBRequests.sharedInstance.getFriends()
@@ -24,5 +33,6 @@ class TestViewController: UIViewController {
     
     @IBAction func shareOnMessenger(sender: AnyObject) {
         MessengerSharer.testShare()
+
     }
 }

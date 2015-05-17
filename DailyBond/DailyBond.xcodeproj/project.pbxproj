@@ -20,6 +20,7 @@
 		2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224AC1B07CD2A00B5042E /* DraggableView.swift */; };
 		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
 		D5392F3B1B080B7900129D45 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D5392F3A1B080B7900129D45 /* Event.m */; };
+		D5392F3D1B08172200129D45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5392F3C1B08172200129D45 /* Foundation.framework */; };
 		D58F598C1B07BA8C00FAB188 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D58F598B1B07BA8C00FAB188 /* User.m */; };
 		D59549B81B07C71700720A52 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549B71B07C71700720A52 /* LoginViewController.m */; };
 		D59549BB1B07EEE000720A52 /* Birthday.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549BA1B07EEE000720A52 /* Birthday.m */; };
@@ -78,6 +79,7 @@
 		B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.release.xcconfig"; sourceTree = "<group>"; };
 		D5392F391B080B7900129D45 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		D5392F3A1B080B7900129D45 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		D5392F3C1B08172200129D45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D58F598A1B07BA8C00FAB188 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D58F598B1B07BA8C00FAB188 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D59549B51B07C1E400720A52 /* DailyBond-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-PrefixHeader.pch"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5392F3D1B08172200129D45 /* Foundation.framework in Frameworks */,
 				908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +233,7 @@
 		9F2E155D3EC9A876E8380BEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5392F3C1B08172200129D45 /* Foundation.framework */,
 				06E9BB640064F12766596638 /* libPods-DailyBond.a */,
 			);
 			name = Frameworks;
