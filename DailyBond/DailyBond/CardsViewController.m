@@ -34,7 +34,6 @@
     // Do any additional setup after loading the view.
     //[[SFTaskManager sharedInstance] requestGroupTasks:[[SFUser currentUser] root]];
     self.loading = @YES;
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -57,8 +56,8 @@
 - (void)showCard {
     [self showCardAnimated:YES];
 }
-- (void)showCardAnimated:(BOOL) animated {
-    
+
+- (void)showCardAnimated:(BOOL)animated {
     if (self.activeCard) {
         [self.activeCard dismissAnimated];
         return;
@@ -68,19 +67,22 @@
     
     // TODO : LOAD CONTROLLER HERE RIGHT NOWWW!!!
     CardViewController *popin;
-    switch(1) {
+    switch (1) {
         case 0:
             popin = [[CardBirthdayViewController alloc] init];
             popin.cardData = [Birthday generateMockBirthDays][0];
             break;
+            
         case 1:
             popin = [[CardEventViewController alloc] init];
             popin.cardData = [Event generateMockData][0];
             break;
+            
         case 2:
             popin = [[CardNewPostViewController alloc] init];
             popin.cardData = nil;
             break;
+            
         case 3:
             popin = [[CardKeepInTouchViewController alloc] init];
             popin.cardData = nil;
@@ -99,9 +101,9 @@
     //[popin setPopinOptions:BKTPopinDisableAutoDismiss];
     //BKTBlurParameters *blurParameters = [[BKTBlurParameters alloc] init];
     //blurParameters.alpha = 0.5;
-//    blurParameters.tintColor = [UIColor colorWithWhite:0 alpha:0.5];
-//    blurParameters.radius = 0.3;
-//    [popin setBlurParameters:blurParameters];
+    //    blurParameters.tintColor = [UIColor colorWithWhite:0 alpha:0.5];
+    //    blurParameters.radius = 0.3;
+    //    [popin setBlurParameters:blurParameters];
     //[popin setPopinOptions:BKTPopinDimmingViewStyleNone | BKTPopinDisableAutoDismiss];
     //popin.presentingController = self;
     
@@ -111,7 +113,7 @@
     
     self.activeCard = popin;
     [CardHelper displayCard:popin fromController:self animated:animated];
-
+    
     //NSLog(@"ready to show!");
     //[self presentPopinController:popin animated:YES completion:^{
     //    NSLog(@"Popin presented !");
@@ -123,20 +125,20 @@
     self.activeCard = nil;
     [self showCard];
     //[self dismissCurrentPopinControllerAnimated:NO completion:^{
-        
+    
     //    NSLog(@"Card dismissed 4");
-        //[self showCard];
+    //[self showCard];
     //}];
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
