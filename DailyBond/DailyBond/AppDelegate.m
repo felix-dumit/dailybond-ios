@@ -18,6 +18,8 @@
 #import "Birthday.h"
 #import "KeepInTouch.h"
 #import "Event.h"
+#import "UserPost.h"
+#import "UserMessage.h"
 #import "CardsViewController.h"
 #import <MJExtension.h>
 
@@ -45,6 +47,8 @@ enum MessengerShareMode { MessengerShareModeSend,
     [User registerSubclass];
     [Birthday registerSubclass];
     [KeepInTouch registerSubclass];
+    [UserPost registerSubclass];
+    [UserMessage registerSubclass];
     [Event registerSubclass];
     
     
