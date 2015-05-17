@@ -12,7 +12,7 @@ class TestViewController: UIViewController {
     
     @IBAction func buttonClick(sender: AnyObject) {
         println("BUTTON CLICKED")
-        FBRequests.sharedInstance.doSomething()
+        FBRequests.sharedInstance.getFriends()
     }
     
     @IBAction func testBirthday(sender: AnyObject) {

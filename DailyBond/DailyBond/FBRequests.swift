@@ -12,19 +12,35 @@ import Foundation
     
     static let sharedInstance = FBRequests()
     
-    func doSomething() -> Void {
-    
+    private func getRequest(graphPath : String, parameters : String) -> Void {
+            if (FBSDKAccessToken.currentAccessToken() != nil) {
+            FBSDKGraphRequest(graphPath: graphPath, parameters: ["fields" : parameters]).startWithCompletionHandler({ (connection, data, error) -> Void in
+                    println(data[1])
+                    println(error)
+
+            })
+            
+        }
+    }
+
+    func getFriends() -> BFTask {
+        var task = BFTaskCompletionSource()
         if (FBSDKAccessToken.currentAccessToken() != nil) {
-            FBSDKGraphRequest(graphPath: "me/friends", parameters: ["fields" : "id,name,birthday"]).startWithCompletionHandler({ (connection, data, error) -> Void in
-                println(data)
-                println(error)
+            FBSDKGraphRequest(graphPath: "me/friends", parameters: ["fields" : "id,name,birthday"]).startWithCompletionHandler({ (connection, result:AnyObject!, error) -> Void in
+                task.setResult(result as! Dictionary<String,AnyObject>)
             })
         }
-        
+        return task.task
     }
-    
-    func formatString(name: String) -> String {
-        return "Hello! your name is \(name)"
+
+    func getNewsFeed() -> BFTask {
+        var task = BFTaskCompletionSource()
+        if (FBSDKAccessToken.currentAccessToken() != nil) {
+            FBSDKGraphRequest(graphPath: "me/home", parameters: nil).startWithCompletionHandler({ (connection, result, error) -> Void in
+                task.setResult(result as! Dictionary<String,AnyObject>)
+            })
+        }
+        return task.task
     }
     
 }
