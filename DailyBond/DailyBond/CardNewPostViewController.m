@@ -24,8 +24,7 @@
     [self.cardView.titleLabel setBackgroundColor:[UIColor writeColor]];
     
     // Do any additional setup after loading the view from its nib.
-    NSNumber *days = self.cardData;
-    [self.descriptionLabel setText:[NSString stringWithFormat:@"It's been %@ days since you don't post in your timeline! What about posting something to your friends?", days]];
+    [self.descriptionLabel setText:[NSString stringWithFormat:@"It's been 6 days since you don't post in your timeline! What about posting something to your friends?"]];
     [self.profileImageView sd_setImageWithURL:[User currentUser].profileImageUrl.URL];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
