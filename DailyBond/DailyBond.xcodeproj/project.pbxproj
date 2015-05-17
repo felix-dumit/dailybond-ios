@@ -21,6 +21,7 @@
 		2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A71B07CD1F00B5042E /* CCMBorderView.m */; };
 		2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */; };
 		2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224AC1B07CD2A00B5042E /* DraggableView.swift */; };
+		2EFEB66A1B0873A800071497 /* CDSideBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB6691B0873A800071497 /* CDSideBarController.m */; };
 		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
 		D5392F3B1B080B7900129D45 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D5392F3A1B080B7900129D45 /* Event.m */; };
 		D5392F3D1B08172200129D45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5392F3C1B08172200129D45 /* Foundation.framework */; };
@@ -87,6 +88,8 @@
 		2E9224A81B07CD1F00B5042E /* CCMPlayNDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMPlayNDropView.h; sourceTree = "<group>"; };
 		2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMPlayNDropView.m; sourceTree = "<group>"; };
 		2E9224AC1B07CD2A00B5042E /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		2EFEB6681B0873A800071497 /* CDSideBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSideBarController.h; sourceTree = "<group>"; };
+		2EFEB6691B0873A800071497 /* CDSideBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSideBarController.m; sourceTree = "<group>"; };
 		B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.release.xcconfig"; sourceTree = "<group>"; };
 		D5392F391B080B7900129D45 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		D5392F3A1B080B7900129D45 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				EBDA22DC1B08198B0095633A /* CardKeepInTouchViewController.h */,
 				EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */,
 				EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */,
+				2EFEB6681B0873A800071497 /* CDSideBarController.h */,
+				2EFEB6691B0873A800071497 /* CDSideBarController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				D59549B81B07C71700720A52 /* LoginViewController.m in Sources */,
 				EB04D8B71B07A61C009B8AB0 /* main.m in Sources */,
 				2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */,
+				2EFEB66A1B0873A800071497 /* CDSideBarController.m in Sources */,
 				D55A00681B084E8A004FD5DC /* NSString+NSURL.m in Sources */,
 				D59549BB1B07EEE000720A52 /* Birthday.m in Sources */,
 				D59549C41B07FCAB00720A52 /* MessengerSharer.m in Sources */,
