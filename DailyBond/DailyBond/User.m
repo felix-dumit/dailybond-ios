@@ -58,7 +58,7 @@
     BFTaskCompletionSource *taskCompletion = [BFTaskCompletionSource taskCompletionSource];
     
     [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me"
-                                       parameters:@{ @"fields": @"name,email,gender,picture.width(500)" }]
+                                       parameters:@{ @"fields": @"name,email,gender,cover,picture.width(500)" }]
      startWithCompletionHandler: ^(FBSDKGraphRequestConnection *connection, id result, NSError *fbError) {
          if (fbError) {
              [taskCompletion trySetError:fbError];
@@ -78,13 +78,12 @@
          
          NSLog(@"Logou com usuario: %@", user.name);
          
-         NSString *imageUrl = [result objectForKey:@"picture"][@"data"][@"url"];
          
-         self.profileImageUrl = imageUrl;
+         self.coverImageUrl = [result objectForKey:@"cover"][@"source"];
          
-         NSURL *imageURL = [NSURL URLWithString:imageUrl];
+         self.profileImageUrl = [result objectForKey:@"picture"][@"data"][@"url"];
          
-         [[SDWebImageManager sharedManager] downloadImageWithURL:imageURL options:0 progress:nil completed: ^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+         [[SDWebImageManager sharedManager] downloadImageWithURL:self.profileImageUrl.URL options:0 progress:nil completed: ^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
 	            NSLog(@"finished!");
 	            [[SDImageCache sharedImageCache] storeImage:image forKey:@"profileImage"];
          }];
