@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CDSideBarController.h"
+#import "PagesViewController.h"
 
 @interface LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackground;
@@ -17,5 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelAppName;
 @property (weak, nonatomic) IBOutlet UIView *groupUserInfo;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
+@property (weak, nonatomic) IBOutlet UIView *groupMenu;
+- (IBAction)openMenu:(id)sender;
+
+@property (strong, nonatomic) PagesViewController *pagesController;
 
 @end
