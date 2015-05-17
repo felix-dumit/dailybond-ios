@@ -27,6 +27,7 @@
     // Do any additional setup after loading the view from its nib.
     [self setDescriptionLabelWithName:birthday.friendName];
     [self.userImageView sd_setImageWithURL:birthday.pictureURL.URL];
+    [self.userImageView sd_setImageWithURL:birthday.pictureURL.URL placeholderImage:[UIImage imageNamed:@"DailyBondCard"] options:0 completed:nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +45,7 @@
 #pragma mark - Buttons delegates
 - (IBAction)onDismissPressed:(id)sender {
     [MessengerSharer testShare];
-//    [self dismissAnimated];
+    //    [self dismissAnimated];
 }
 
 - (IBAction)onSendPressed:(id)sender {
