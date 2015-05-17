@@ -42,7 +42,15 @@
     [self.scrollView setContentOffset:CGPointMake(self.view.frame.size.width, 0.0) animated:YES];
 }
 
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self scrollViewStopped:scrollView];
+}
+
 -(void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    [self scrollViewStopped:scrollView];
+}
+
+-(void)scrollViewStopped:(UIScrollView *)scrollView {
     if (round(self.scrollView.contentOffset.x / (float) self.view.bounds.size.width) >= 1) {
         [self.cardController didStartCards];
     }

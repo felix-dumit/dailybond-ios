@@ -15,6 +15,7 @@
 
 - (void) startCards;
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView;
 
 @end
