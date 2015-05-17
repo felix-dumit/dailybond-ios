@@ -65,7 +65,7 @@
     NSLog(@"Showing card...");
     
     // TODO : LOAD CONTROLLER HERE RIGHT NOWWW!!!
-    CardViewController *popin = [[CardKeepInTouchViewController alloc] init];//[[SFCardFlowManager sharedInstance] getNextCardController];
+    CardViewController *popin = [[CardBirthdayViewController alloc] init];//[[SFCardFlowManager sharedInstance] getNextCardController];
     
     //SFCardViewController *popin = [[SFCardManager sharedInstance] getNextCard]; //[[SFTutorialViewController alloc] initWithNibName:@"SFTutorialViewController" bundle:nil];
     //popin.view.frame = CGRectMake(0, 0, 320, 500);
