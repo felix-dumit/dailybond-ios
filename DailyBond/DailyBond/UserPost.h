@@ -16,5 +16,6 @@
 @property (strong, nonatomic) NSString *imageUrl;
 
 + (instancetype)createWithContent:(NSString *)content andDate:(NSDate *)date andId:(NSString *)facebookId;
-+ (UserPost*) generateMockData;
++ (UserPost *)generateMockData;
++ (BFTask *)allPosts;
 @end
