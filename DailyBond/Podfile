@@ -15,6 +15,9 @@ target 'DailyBond' do
     pod 'BFTask-Extras'
     pod 'MaryPopin'
     pod 'DateTools'
+    pod 'MJExtension'
+    pod 'SDWebImage'
+
 end
 
 target 'DailyBondTests' do

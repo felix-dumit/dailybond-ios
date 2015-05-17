@@ -12,19 +12,22 @@ import Foundation
     
     static let sharedInstance = FBRequests()
     
-    func doSomething() -> Void {
-    
+    private func getRequest(graphPath : String, params : Dictionary<String,String>) -> BFTask {
+        var task = BFTaskCompletionSource()
         if (FBSDKAccessToken.currentAccessToken() != nil) {
-            FBSDKGraphRequest(graphPath: "me/friends", parameters: ["fields" : "id,name,birthday"]).startWithCompletionHandler({ (connection, data, error) -> Void in
-                println(data)
-                println(error)
+            FBSDKGraphRequest(graphPath: graphPath, parameters : params).startWithCompletionHandler({ (connection, result, error) -> Void in
+                task.setResult(result as! Dictionary<String,AnyObject>)
             })
         }
-        
+        return task.task
     }
-    
-    func formatString(name: String) -> String {
-        return "Hello! your name is \(name)"
+
+    func getFriends() -> BFTask {
+        return getRequest("me/friends", params : ["fields" : "id,name,birthday,picture,cover"])
+    }
+
+    func getNewsFeed() -> BFTask {
+        return getRequest("me/home", params : ["":""])
     }
     
 }

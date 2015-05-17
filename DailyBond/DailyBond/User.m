@@ -9,18 +9,25 @@
 #import "User.h"
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import <FBSDKGraphRequest.h>
+#import <SDWebImageManager.h>
+
+@interface User ()
+
+@property (strong, nonatomic) NSString *profileImageURL;
+
+@end
 
 @implementation User
 
 @dynamic name;
-@dynamic profileImage;
 @dynamic facebookID;
 @dynamic birthday;
+@dynamic profileImageURL;
 
 
 + (BFTask *)loginWithFacebookInBackground {
     return [User logOutInBackground].thenOnMain ( ^id (id result) {
-        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_friends", @"read_stream"]];
+        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_friends", @"user_birthday"]];
     }).thenOnMain ( ^id (User *user) {
         return [user loadFacebookInfo];
     }).thenOnMain ( ^id (id result) {
@@ -32,7 +39,7 @@
     BFTaskCompletionSource *taskCompletion = [BFTaskCompletionSource taskCompletionSource];
     
     [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me"
-                                       parameters:@{ @"fields": @"name,email,gender,picture.width(961)" }]
+                                       parameters:@{ @"fields": @"name,email,gender,picture.width(500)" }]
      startWithCompletionHandler: ^(FBSDKGraphRequestConnection *connection, id result, NSError *fbError) {
          if (fbError) {
              [taskCompletion trySetError:fbError];
@@ -47,22 +54,27 @@
          
          user.email = [result objectForKey:@"email"];
          
-         
          [user setObject:[result objectForKey:@"gender"] forKey:@"gender"];
-         
-         
-         [user saveInBackground];
          
          [taskCompletion trySetResult:@YES];
          
          NSLog(@"Logou com usuario: %@", user.name);
-         //         NSURL *imageURL = [NSURL URLWithString:[[[result objectForKey:@"picture"]
-         //                                                  objectForKey:@"data"]
-         //                                                 objectForKey:@"url"]];
-         //
-         //         NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+         
+         NSString *imageUrl = [result objectForKey:@"picture"][@"data"][@"url"];
+         NSURL *imageURL = [NSURL URLWithString:imageUrl];
+         
+         [[SDWebImageManager sharedManager] downloadImageWithURL:imageURL options:0 progress:nil completed: ^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+	            NSLog(@"finished!");
+	            [[SDImageCache sharedImageCache] storeImage:image forKey:@"profileImage"];
+         }];
+         
+         [user saveInBackground];
      }];
     return taskCompletion.task;
+}
+
+- (UIImage *)profileImage {
+    return [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:@"profileImage"];
 }
 
 @end

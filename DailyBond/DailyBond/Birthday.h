@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *friendId;
 @property (strong, nonatomic) NSDate *birthdayDate;
+@property (strong, nonatomic) NSString *friendName;
 
 + (instancetype)createBirthdayWithDate:(NSDate *)date andUserId:(NSString *)userId;
 
