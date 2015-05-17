@@ -13,6 +13,7 @@
 #import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import "User.h"
 #import "Birthday.h"
+#import "KeepInTouch.h"
 #import "CardsViewController.h"
 @interface AppDelegate ()
 
@@ -26,6 +27,7 @@
     
     [User registerSubclass];
     [Birthday registerSubclass];
+    [KeepInTouch registerSubclass];
     
     [Parse enableLocalDatastore];
     [Parse setApplicationId:@"ioHHzrZSRJSMSTR0WZZETXjyjXfgKOZ3uefsMuG5" clientKey:@"M7vDYkWESocaASxvdf4UwYpZMDFaCey3yoyiDdPj"];

@@ -22,10 +22,7 @@ class TestViewController: UIViewController {
         println("Birthdays: \(birthdays)")
     }
     
-//    @IBAction func shareOnMessenger(sender: AnyObject) {
-//        
-//        if Int(FBSDKMessengerSharer.messengerPlatformCapabilities()) & Int(FBSDKMessengerPlatformCapability.Image) {
-//            FBSDKMessengerSharer.shareImage(UIImage(named: "DailyBondCard"), withOptions: nil)
-//        }
-//    }
+    @IBAction func shareOnMessenger(sender: AnyObject) {
+        MessengerSharer.testShare()
+    }
 }

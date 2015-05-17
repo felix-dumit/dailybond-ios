@@ -19,10 +19,13 @@
 		2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */; };
 		2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224AC1B07CD2A00B5042E /* DraggableView.swift */; };
 		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
+		D5392F3B1B080B7900129D45 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D5392F3A1B080B7900129D45 /* Event.m */; };
 		D58F598C1B07BA8C00FAB188 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D58F598B1B07BA8C00FAB188 /* User.m */; };
 		D59549B81B07C71700720A52 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549B71B07C71700720A52 /* LoginViewController.m */; };
 		D59549BB1B07EEE000720A52 /* Birthday.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549BA1B07EEE000720A52 /* Birthday.m */; };
 		D59549C11B07F85C00720A52 /* NSDate+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549C01B07F85C00720A52 /* NSDate+Random.m */; };
+		D59549C41B07FCAB00720A52 /* MessengerSharer.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549C31B07FCAB00720A52 /* MessengerSharer.m */; };
+		D59549C71B07FFF400720A52 /* KeepInTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549C61B07FFF400720A52 /* KeepInTouch.m */; };
 		EB04D8B71B07A61C009B8AB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8B61B07A61C009B8AB0 /* main.m */; };
 		EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8B91B07A61C009B8AB0 /* AppDelegate.m */; };
 		EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB04D8BC1B07A61C009B8AB0 /* ViewController.m */; };
@@ -73,6 +76,8 @@
 		2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMPlayNDropView.m; sourceTree = "<group>"; };
 		2E9224AC1B07CD2A00B5042E /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
 		B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.release.xcconfig"; sourceTree = "<group>"; };
+		D5392F391B080B7900129D45 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		D5392F3A1B080B7900129D45 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		D58F598A1B07BA8C00FAB188 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D58F598B1B07BA8C00FAB188 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D59549B51B07C1E400720A52 /* DailyBond-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-PrefixHeader.pch"; sourceTree = "<group>"; };
@@ -82,6 +87,10 @@
 		D59549BA1B07EEE000720A52 /* Birthday.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Birthday.m; sourceTree = "<group>"; };
 		D59549BF1B07F85C00720A52 /* NSDate+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Random.h"; sourceTree = "<group>"; };
 		D59549C01B07F85C00720A52 /* NSDate+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Random.m"; sourceTree = "<group>"; };
+		D59549C21B07FCAB00720A52 /* MessengerSharer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessengerSharer.h; sourceTree = "<group>"; };
+		D59549C31B07FCAB00720A52 /* MessengerSharer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessengerSharer.m; sourceTree = "<group>"; };
+		D59549C51B07FFF400720A52 /* KeepInTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeepInTouch.h; sourceTree = "<group>"; };
+		D59549C61B07FFF400720A52 /* KeepInTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeepInTouch.m; sourceTree = "<group>"; };
 		EB04D8B11B07A61C009B8AB0 /* DailyBond.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyBond.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB04D8B51B07A61C009B8AB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB04D8B61B07A61C009B8AB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -140,6 +149,8 @@
 		2E6D3AE71B07D74D00DF99C6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D59549C21B07FCAB00720A52 /* MessengerSharer.h */,
+				D59549C31B07FCAB00720A52 /* MessengerSharer.m */,
 				2E6D3AE81B07D75500DF99C6 /* CardHelper.h */,
 				2E6D3AE91B07D75500DF99C6 /* CardHelper.m */,
 				D59549BF1B07F85C00720A52 /* NSDate+Random.h */,
@@ -198,8 +209,12 @@
 			children = (
 				D59549B91B07EEE000720A52 /* Birthday.h */,
 				D59549BA1B07EEE000720A52 /* Birthday.m */,
+				D59549C51B07FFF400720A52 /* KeepInTouch.h */,
+				D59549C61B07FFF400720A52 /* KeepInTouch.m */,
 				D58F598A1B07BA8C00FAB188 /* User.h */,
 				D58F598B1B07BA8C00FAB188 /* User.m */,
+				D5392F391B080B7900129D45 /* Event.h */,
+				D5392F3A1B080B7900129D45 /* Event.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -433,6 +448,7 @@
 				EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */,
 				2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */,
 				2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */,
+				D5392F3B1B080B7900129D45 /* Event.m in Sources */,
 				EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */,
 				2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */,
 				2E6D3AED1B07F30B00DF99C6 /* KKProgressTimer.m in Sources */,
@@ -442,6 +458,8 @@
 				EB04D8B71B07A61C009B8AB0 /* main.m in Sources */,
 				2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */,
 				D59549BB1B07EEE000720A52 /* Birthday.m in Sources */,
+				D59549C41B07FCAB00720A52 /* MessengerSharer.m in Sources */,
+				D59549C71B07FFF400720A52 /* KeepInTouch.m in Sources */,
 				D59549C11B07F85C00720A52 /* NSDate+Random.m in Sources */,
 				2E9224A41B07CCD800B5042E /* CardView.m in Sources */,
 				2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */,
