@@ -13,9 +13,12 @@
 @property (strong, nonatomic) NSString *friendId;
 @property (strong, nonatomic) NSDate *birthdayDate;
 @property (strong, nonatomic) NSString *friendName;
+@property (strong, nonatomic) NSString *pictureURL;
+@property (strong, nonatomic) NSString *coverURL;
 
 + (instancetype)createBirthdayWithDate:(NSDate *)date andUserId:(NSString *)userId;
 
-+ (NSArray *)generateMockBirthDays;
++ (BFTask *)allBirthdays;
++ (NSMutableArray *)generateMockBirthDays;
 
 @end

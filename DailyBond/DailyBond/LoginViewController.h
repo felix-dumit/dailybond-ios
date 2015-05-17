@@ -13,5 +13,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageProfile;
 @property (weak, nonatomic) IBOutlet UIButton *buttonLogin;
 @property (weak, nonatomic) IBOutlet UIView *groupStart;
+@property (weak, nonatomic) IBOutlet UILabel *labelAppName;
+@property (weak, nonatomic) IBOutlet UIView *groupUserInfo;
+@property (weak, nonatomic) IBOutlet UILabel *labelName;
 
 @end

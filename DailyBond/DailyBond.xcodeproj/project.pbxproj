@@ -11,6 +11,8 @@
 		2E6D3AE61B07D68700DF99C6 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AE51B07D68700DF99C6 /* CardsViewController.m */; };
 		2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AE91B07D75500DF99C6 /* CardHelper.m */; };
 		2E6D3AED1B07F30B00DF99C6 /* KKProgressTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AEC1B07F30B00DF99C6 /* KKProgressTimer.m */; };
+		2E6D3AF11B0820E200DF99C6 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AF01B0820E200DF99C6 /* FXBlurView.m */; };
+		2E6D3AF31B0820F200DF99C6 /* ILTranslucentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AF21B0820F200DF99C6 /* ILTranslucentView.swift */; };
 		2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224991B07BCF200B5042E /* TestViewController.swift */; };
 		2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92249B1B07BEEC00B5042E /* FBRequests.swift */; };
 		2E9224A41B07CCD800B5042E /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A21B07CCD800B5042E /* CardView.m */; };
@@ -67,6 +69,9 @@
 		2E6D3AE91B07D75500DF99C6 /* CardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardHelper.m; sourceTree = "<group>"; };
 		2E6D3AEB1B07F30B00DF99C6 /* KKProgressTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKProgressTimer.h; sourceTree = "<group>"; };
 		2E6D3AEC1B07F30B00DF99C6 /* KKProgressTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKProgressTimer.m; sourceTree = "<group>"; };
+		2E6D3AEF1B0820E200DF99C6 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		2E6D3AF01B0820E200DF99C6 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		2E6D3AF21B0820F200DF99C6 /* ILTranslucentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILTranslucentView.swift; sourceTree = "<group>"; };
 		2E9224981B07BCF200B5042E /* DailyBond-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E9224991B07BCF200B5042E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2E92249B1B07BEEC00B5042E /* FBRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRequests.swift; sourceTree = "<group>"; };
@@ -203,6 +208,9 @@
 			children = (
 				2E6D3AEB1B07F30B00DF99C6 /* KKProgressTimer.h */,
 				2E6D3AEC1B07F30B00DF99C6 /* KKProgressTimer.m */,
+				2E6D3AEF1B0820E200DF99C6 /* FXBlurView.h */,
+				2E6D3AF01B0820E200DF99C6 /* FXBlurView.m */,
+				2E6D3AF21B0820F200DF99C6 /* ILTranslucentView.swift */,
 				2E9224A11B07CCD800B5042E /* CardView.h */,
 				2E9224A21B07CCD800B5042E /* CardView.m */,
 				2E9224A31B07CCD800B5042E /* CardView.xib */,
@@ -469,6 +477,7 @@
 				2E6D3AED1B07F30B00DF99C6 /* KKProgressTimer.m in Sources */,
 				EBDA22DF1B08198B0095633A /* CardKeepInTouchViewController.m in Sources */,
 				2E6D3AE61B07D68700DF99C6 /* CardsViewController.m in Sources */,
+				2E6D3AF11B0820E200DF99C6 /* FXBlurView.m in Sources */,
 				EBDA22D41B07F97B0095633A /* CardNewPostViewController.m in Sources */,
 				D59549B81B07C71700720A52 /* LoginViewController.m in Sources */,
 				EB04D8B71B07A61C009B8AB0 /* main.m in Sources */,
@@ -481,6 +490,7 @@
 				2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */,
 				2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */,
 				EBDA22CF1B07EF050095633A /* CardEventViewController.m in Sources */,
+				2E6D3AF31B0820F200DF99C6 /* ILTranslucentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +620,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = DailyBond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -625,6 +637,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = DailyBond/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

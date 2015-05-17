@@ -26,9 +26,15 @@ class TestViewController: UIViewController {
     
     @IBAction func testBirthday(sender: AnyObject) {
         
-        var birthdays:[Birthday] = Birthday.generateMockBirthDays() as! [Birthday]
+        Birthday.allBirthdays().continueWithSuccessResultBlock { (result) -> AnyObject! in
+            
+            if let birthdays = result as? [Birthday] {
+                println("Got bidays \(birthdays)")
+            }
+            
+            return nil
+        }
         
-        println("Birthdays: \(birthdays)")
     }
     
     @IBAction func shareOnMessenger(sender: AnyObject) {

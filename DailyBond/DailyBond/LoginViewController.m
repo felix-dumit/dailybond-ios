@@ -8,6 +8,7 @@
 
 #import "User.h"
 #import "LoginViewController.h"
+#import "FXBlurView.h"
 
 @interface LoginViewController ()
 
@@ -20,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //UIImage *image = [UIImage imageNamed:@"mockCover"];
+    //[self.imageBackground setImage:[image blurredImageWithRadius:8.0 iterations:20 tintColor:nil]];
+    //self.imageBackground.hidden = NO;
+    //self.imageProfile.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,7 +33,64 @@
 }
 
 - (IBAction)loginWithFacebook:(id)sender {
-    [User loginWithFacebookInBackground];
+    //    [User loginWithFacebookInBackground];
+    [self showUserInfoAnimated:YES];
+}
+
+- (void) showUserInfoAnimated:(BOOL)animated {
+    // PREPARE
+    if (animated) {
+        self.imageProfile.alpha = 0.0;
+        self.imageProfile.hidden = NO;
+        self.imageBackground.alpha = 0.0;
+        self.imageBackground.hidden = NO;
+        //self.groupStart.alpha = 0.0;
+        self.groupStart.alpha = 1.0;
+        self.groupStart.hidden = NO;
+        UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+        self.groupStart.transform = CGAffineTransformMakeTranslation(-keyWindow.bounds.size.width, 0.0);
+        self.groupUserInfo.alpha = 0.0;
+        self.groupUserInfo.hidden = NO;
+    }
+    
+    // SET IMAGES
+    
+    UIImage *image = [UIImage imageNamed:@"mockCover"];
+    [self.imageBackground setImage:[image blurredImageWithRadius:8.0 iterations:20 tintColor:nil]];
+    UIImage *picture = [UIImage imageNamed:@"mockProfile"];
+    [self.imageProfile setImage:picture];
+    self.labelName.text = @"André Vitor Terron";
+    
+    // ANIMATE
+    
+    if (animated) {
+        [UIView animateWithDuration:0.5 animations:^{
+            self.imageProfile.alpha = 1.0;
+            self.imageBackground.alpha = 1.0;
+            self.buttonLogin.alpha = 0.0;
+            self.groupStart.transform = CGAffineTransformIdentity;
+            self.labelAppName.alpha = 0.0;
+            self.groupUserInfo.alpha = 1.0;
+        } completion:^(BOOL finished) {
+            
+        }];
+    } else {
+        self.imageProfile.alpha = 1.0;
+        self.imageBackground.alpha = 1.0;
+        self.groupStart.alpha = 1.0;
+        self.groupStart.transform = CGAffineTransformIdentity;
+        self.buttonLogin.alpha = 0.0;
+        self.imageProfile.hidden = NO;
+        self.imageBackground.hidden = NO;
+        self.groupStart.hidden = NO;
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    [super prepareForSegue:segue sender:sender];
+    if ([segue.identifier isEqualToString:@"segueStart"]) {
+        
+    }
 }
 
 /*
