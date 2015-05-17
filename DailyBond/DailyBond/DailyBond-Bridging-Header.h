@@ -19,3 +19,7 @@
 #import <DateTools.h>
 #import "CardKeepInTouchViewController.h"
 #import <BFTask-Extras.h>
+#import "CardBirthdayViewController.h"
+#import "CardEventViewController.h"
+#import "CardNewPostViewController.h"
+#import "CardKeepInTouchViewController.h"
