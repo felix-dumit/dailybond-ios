@@ -148,6 +148,9 @@
     [self hideUserInfo];
     [self openMenu];
 }
+- (IBAction)start:(id)sender {
+    [self.pagesController startCards];
+}
 
 /*
  #pragma mark - Navigation

@@ -66,7 +66,9 @@ import Foundation
                 println("HELLO2")
                 if let ctrl = self.newSectionController(section) {
                     println("HELLO3")
-                    if (list.count > 0 && self.index < list.count) {
+                    if (list.count == 0) {
+                        return self.loadNextCard()
+                    } else if (self.index < list.count) {
                         println("HELLO4")
                         ctrl.cardData = list[self.index]
                         return ctrl
@@ -83,6 +85,12 @@ import Foundation
             return CardBirthdayViewController()
         case CardsManager.EVENTS:
             return CardEventViewController()
+        case CardsManager.POSTS:
+            return CardShowPostViewController()
+        case CardsManager.CHATS:
+            return CardKeepInTouchViewController()
+        case CardsManager.WRITE:
+            return CardNewPostViewController()
         default:
             return nil
         }
@@ -94,6 +102,12 @@ import Foundation
             return loadBirthdays()
         case CardsManager.EVENTS:
             return loadEvents()
+        case CardsManager.POSTS:
+            return loadPosts()
+        case CardsManager.CHATS:
+            return loadChats()
+        case CardsManager.WRITE:
+            return loadWrite()
         default:
             return BFTask(result: nil)
         }
@@ -102,7 +116,10 @@ import Foundation
     func loadCards() -> BFTask {
         return BFTask(forCompletionOfAllTasks: [
                 loadBirthdays(),
-                loadEvents()
+                loadEvents(),
+                loadPosts(),
+                loadChats(),
+                loadWrite()
             ])
     }
     
@@ -124,6 +141,45 @@ import Foundation
             }
             println("WORLD 3")
             return result;
+        })
+    }
+    
+    func loadPosts() -> BFTask {
+        return UserPost.allPosts().continueWithSuccessResultBlock({ (result:AnyObject!) -> AnyObject! in
+            
+            if let list = result as? Array<AnyObject> {
+                println("POSTS 2")
+                self.sizes[CardsManager.POSTS] = list.count
+            }
+            println("POSTS 3")
+            return result;
+            
+        })
+    }
+    
+    func loadChats() -> BFTask {
+        return UserMessage.allMessages().continueWithSuccessResultBlock({ (result:AnyObject!) -> AnyObject! in
+            
+            if let list = result as? Array<AnyObject> {
+                println("POSTS 2")
+                self.sizes[CardsManager.CHATS] = list.count
+            }
+            println("POSTS 3")
+            return result;
+            
+        })
+    }
+    
+    func loadWrite() -> BFTask {
+        return UserMessage.allMessages().continueWithSuccessResultBlock({ (result:AnyObject!) -> AnyObject! in
+            
+            if let list = result as? Array<AnyObject> {
+                println("POSTS 2")
+                self.sizes[CardsManager.WRITE] = list.count
+            }
+            println("POSTS 3")
+            return result;
+            
         })
     }
 }

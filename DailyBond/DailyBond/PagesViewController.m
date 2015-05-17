@@ -9,6 +9,13 @@
 #import "PagesViewController.h"
 #import "LoginViewController.h"
 
+@interface PagesViewController ()
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
+
+@end
+
 @implementation PagesViewController
 
 -(UIStatusBarStyle)preferredStatusBarStyle {
@@ -21,6 +28,10 @@
         LoginViewController *controller = (LoginViewController *) [segue destinationViewController];
         controller.pagesController = self;
     }
+}
+
+- (void)startCards {
+    [self.scrollView setContentOffset:CGPointMake(self.view.frame.size.width, 0.0) animated:YES];
 }
 
 @end

@@ -24,4 +24,5 @@
 #import "CardEventViewController.h"
 #import "CardNewPostViewController.h"
 #import "CardKeepInTouchViewController.h"
+#import "CardShowPostViewController.h"
 #import <M13ProgressViewBar.h>
