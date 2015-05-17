@@ -10,6 +10,7 @@
 #import "CardView.h"
 #import "CCMPlayNDropView.h"
 #import "UIViewController+MaryPopin.h"
+#import <UIImageView+WebCache.h>
 
 @protocol SFCardViewControllerDelegate <NSObject>
 

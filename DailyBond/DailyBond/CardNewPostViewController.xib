@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="cardView" destination="hV3-Ep-Z7B" id="At9-KX-kQi"/>
                 <outlet property="descriptionLabel" destination="E90-4K-WYC" id="zT6-Eg-0YP"/>
+                <outlet property="profileImageView" destination="bd7-ar-C3l" id="coI-3L-InN"/>
                 <outlet property="titleLabel" destination="kAE-0u-qn2" id="RiF-Ht-fd4"/>
                 <outlet property="view" destination="hV3-Ep-Z7B" id="hpU-Fw-XC9"/>
             </connections>
@@ -18,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-ar-C3l">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-ar-C3l">
                     <rect key="frame" x="8" y="56" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="Kvg-u9-Ag1"/>

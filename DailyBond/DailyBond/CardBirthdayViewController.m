@@ -10,7 +10,6 @@
 #import "Birthday.h"
 
 @interface CardBirthdayViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *messageTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @end
@@ -23,6 +22,7 @@
     Birthday *birthday = (Birthday*) self.cardData;
     // Do any additional setup after loading the view from its nib.
     [self setDescriptionLabelWithName:birthday.friendName];
+    [self.userImageView sd_setImageWithURL:birthday.pictureURL.URL];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,7 +34,7 @@
 - (void) setDescriptionLabelWithName:(NSString*)aName
 {
     // TODO: Consider gender in message: Give %s congratulations for "his" birthday
-    [self.descriptionLabel setText:[NSString stringWithFormat:@"Give %@ congratulations for his birthday!", aName]];
+    [self.descriptionLabel setText:[NSString stringWithFormat:@"Send %@ congratulations!", aName]];
     return;
 }
 

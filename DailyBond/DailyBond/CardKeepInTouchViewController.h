@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CardViewController.h"
 @interface CardKeepInTouchViewController : CardViewController
+@property (weak, nonatomic) IBOutlet UILabel *messageTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *messageContentLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 
 @end

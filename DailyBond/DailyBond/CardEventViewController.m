@@ -31,6 +31,7 @@
     [self setEventDate:event.date];
     // Do any additional setup after loading the view from its nib.
     
+//    [self.eventImageView sd_setImageWithURL:event.];
 }
 
 - (void)didReceiveMemoryWarning {

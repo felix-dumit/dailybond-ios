@@ -7,6 +7,8 @@
 //
 
 #import "CardKeepInTouchViewController.h"
+#import "UserMessage.h"
+#import "User.h"
 
 @interface CardKeepInTouchViewController ()
 
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UserMessage *message = self.cardData;
+    
+    [self.profileImageView sd_setImageWithURL:message.profileImageUrl.URL];
+    [self.messageTitleLabel setText:message.friendName];
+    [self.messageContentLabel setText:message.message];
 }
 
 - (void)didReceiveMemoryWarning {

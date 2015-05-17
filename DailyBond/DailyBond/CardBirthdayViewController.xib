@@ -8,7 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardBirthdayViewController">
             <connections>
                 <outlet property="cardView" destination="M7v-28-Llz" id="7GK-2z-goo"/>
-                <outlet property="descriptionLabel" destination="x5f-Tp-oYb" id="1yo-Lz-VgG"/>
+                <outlet property="descriptionLabel" destination="x5f-Tp-oYb" id="LX1-os-SSx"/>
                 <outlet property="userImageView" destination="VXi-9r-6Uh" id="Jvo-DY-ex0"/>
                 <outlet property="view" destination="M7v-28-Llz" id="Y2P-Rf-dcf"/>
             </connections>
@@ -52,7 +52,7 @@
                         <action selector="onSendPressed:" destination="-1" eventType="touchUpInside" id="NYV-QT-14Q"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VXi-9r-6Uh">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VXi-9r-6Uh">
                     <rect key="frame" x="8" y="56" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="NDM-UJ-ubI"/>

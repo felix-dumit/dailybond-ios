@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardKeepInTouchViewController">
             <connections>
+                <outlet property="messageContentLabel" destination="ZVi-cl-Omy" id="p0q-Ki-qWk"/>
+                <outlet property="messageTitleLabel" destination="mUk-3Y-Aac" id="T1D-x0-qdK"/>
+                <outlet property="profileImageView" destination="SE3-Cg-ReT" id="mDa-qD-4Zu"/>
                 <outlet property="view" destination="2R5-pz-6ph" id="Q7G-P8-hfw"/>
             </connections>
         </placeholder>
@@ -57,7 +60,7 @@
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SE3-Cg-ReT">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SE3-Cg-ReT">
                             <rect key="frame" x="8" y="8" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="Lt1-P8-sJm"/>

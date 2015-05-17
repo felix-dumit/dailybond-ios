@@ -17,6 +17,8 @@
 #import "Birthday.h"
 #import "Event.h"
 #import "UserPost.h"
+#import "UserMessage.h"
+#import "User.h"
 
 @interface CardsViewController ()
 
@@ -68,7 +70,7 @@
     
     // TODO : LOAD CONTROLLER HERE RIGHT NOWWW!!!
     CardViewController *popin;
-    switch (2) {
+    switch (3) {
         case 0:
             popin = [[CardBirthdayViewController alloc] init];
             popin.cardData = [Birthday generateMockBirthDays][0];
@@ -88,7 +90,14 @@
             
         case 3:
             popin = [[CardKeepInTouchViewController alloc] init];
-            popin.cardData = nil;
+            UserMessage* message = [[UserMessage alloc] init];
+            message.friendName = @"Andre Terron";
+            message.friendId = @"828648753872660";
+            message.receivedDate = [NSDate date];
+            message.read = true;
+            message.message = @"Loaded from mock: Hey are you going to Facebook Hackathon today? I'm thinking about driving early this morning, but I'm still not sure. What time are you thinking about arriving there? And what about going back??";
+            message.profileImageUrl = [[User currentUser] profileImageUrl];
+            popin.cardData = message;
             break;
     }
     
