@@ -16,6 +16,7 @@
 #import "CardKeepInTouchViewController.h"
 #import "Birthday.h"
 #import "Event.h"
+#import "UserPost.h"
 
 @interface CardsViewController ()
 
@@ -68,7 +69,7 @@
     
     // TODO : LOAD CONTROLLER HERE RIGHT NOWWW!!!
     CardViewController *popin;
-    switch(2) {
+    switch(0) {
         case 0:
             popin = [[CardBirthdayViewController alloc] init];
             popin.cardData = [Birthday generateMockBirthDays][0];
@@ -77,11 +78,12 @@
             popin = [[CardEventViewController alloc] init];
             popin.cardData = [Event generateMockData][0];
             break;
-        case 2:
+        case 2: {
             popin = [[CardNewPostViewController alloc] init];
-            UserPost *post = [
-            popin.cardData = ;
+            UserPost *post = [UserPost generateMockData];
+            popin.cardData = post;
             break;
+        }
         case 3:
             popin = [[CardKeepInTouchViewController alloc] init];
             popin.cardData = nil;

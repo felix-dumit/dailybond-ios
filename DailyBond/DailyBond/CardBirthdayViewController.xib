@@ -9,7 +9,6 @@
             <connections>
                 <outlet property="cardView" destination="M7v-28-Llz" id="7GK-2z-goo"/>
                 <outlet property="descriptionLabel" destination="x5f-Tp-oYb" id="1yo-Lz-VgG"/>
-                <outlet property="messageTextField" destination="Sax-Zk-jQw" id="84s-m2-30h"/>
                 <outlet property="userImageView" destination="VXi-9r-6Uh" id="Jvo-DY-ex0"/>
                 <outlet property="view" destination="M7v-28-Llz" id="Y2P-Rf-dcf"/>
             </connections>
@@ -34,15 +33,9 @@
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="200" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Write a message..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sax-Zk-jQw">
-                    <rect key="frame" x="8" y="124" width="584" height="430"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMo-94-7Xx">
                     <rect key="frame" x="16" y="562" width="276" height="30"/>
-                    <state key="normal" title="Dismiss">
-                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Send a message">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -51,7 +44,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUc-ag-LNJ">
                     <rect key="frame" x="308" y="562" width="276" height="30"/>
-                    <state key="normal" title="Send">
+                    <state key="normal" title="Post on timeline">
                         <color key="titleColor" red="0.51295727729999996" green="0.88030642989999996" blue="0.41191776759999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -72,10 +65,10 @@
                 <constraint firstItem="4Bm-PP-rV7" firstAttribute="leading" secondItem="M7v-28-Llz" secondAttribute="leading" constant="8" id="0e7-CG-3XZ"/>
                 <constraint firstAttribute="trailing" secondItem="4Bm-PP-rV7" secondAttribute="trailing" id="1C3-a6-bNT"/>
                 <constraint firstItem="VXi-9r-6Uh" firstAttribute="leading" secondItem="M7v-28-Llz" secondAttribute="leading" constant="8" id="1mh-wS-sUS"/>
-                <constraint firstAttribute="trailing" secondItem="Sax-Zk-jQw" secondAttribute="trailing" constant="8" id="25a-d0-Ndg"/>
+                <constraint firstItem="eMo-94-7Xx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="x5f-Tp-oYb" secondAttribute="bottom" constant="8" id="2GQ-In-JWi"/>
                 <constraint firstAttribute="trailing" secondItem="zUc-ag-LNJ" secondAttribute="trailing" constant="16" id="5Ec-W2-6xy"/>
                 <constraint firstItem="4Bm-PP-rV7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M7v-28-Llz" secondAttribute="leading" constant="8" id="9NN-iA-tGL"/>
-                <constraint firstItem="eMo-94-7Xx" firstAttribute="top" secondItem="Sax-Zk-jQw" secondAttribute="bottom" constant="8" id="GEu-ek-eNV"/>
+                <constraint firstItem="eMo-94-7Xx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VXi-9r-6Uh" secondAttribute="bottom" constant="8" id="AIE-Vq-QQ1"/>
                 <constraint firstAttribute="bottom" secondItem="zUc-ag-LNJ" secondAttribute="bottom" constant="8" id="Guf-UD-hx6"/>
                 <constraint firstItem="eMo-94-7Xx" firstAttribute="leading" secondItem="M7v-28-Llz" secondAttribute="leading" constant="16" id="K3Y-E3-1oM"/>
                 <constraint firstAttribute="bottom" secondItem="eMo-94-7Xx" secondAttribute="bottom" constant="8" id="K7f-46-hzc"/>
@@ -83,21 +76,17 @@
                 <constraint firstItem="x5f-Tp-oYb" firstAttribute="leading" secondItem="VXi-9r-6Uh" secondAttribute="trailing" constant="8" id="R0o-Ka-agF"/>
                 <constraint firstAttribute="centerX" secondItem="4Bm-PP-rV7" secondAttribute="centerX" id="RJN-2p-8m1"/>
                 <constraint firstItem="x5f-Tp-oYb" firstAttribute="leading" secondItem="M7v-28-Llz" secondAttribute="leadingMargin" id="RoI-AP-vsa"/>
-                <constraint firstItem="Sax-Zk-jQw" firstAttribute="leading" secondItem="M7v-28-Llz" secondAttribute="leading" constant="8" id="Zzr-l9-CEz"/>
                 <constraint firstItem="VXi-9r-6Uh" firstAttribute="top" secondItem="4Bm-PP-rV7" secondAttribute="top" constant="56" id="cyj-qP-qZL"/>
-                <constraint firstItem="Sax-Zk-jQw" firstAttribute="top" secondItem="VXi-9r-6Uh" secondAttribute="bottom" priority="900" constant="8" id="fAM-sA-UB3"/>
                 <constraint firstItem="4Bm-PP-rV7" firstAttribute="top" secondItem="M7v-28-Llz" secondAttribute="top" id="fUI-y4-H9I"/>
                 <constraint firstItem="x5f-Tp-oYb" firstAttribute="top" secondItem="4Bm-PP-rV7" secondAttribute="bottom" constant="16" id="gGx-XU-Ds0"/>
                 <constraint firstItem="4Bm-PP-rV7" firstAttribute="leading" secondItem="M7v-28-Llz" secondAttribute="leading" id="gtg-d6-gdz"/>
                 <constraint firstItem="zUc-ag-LNJ" firstAttribute="width" secondItem="eMo-94-7Xx" secondAttribute="width" id="qDA-aB-q0s"/>
                 <constraint firstItem="4Bm-PP-rV7" firstAttribute="top" secondItem="M7v-28-Llz" secondAttribute="top" constant="8" id="uzR-29-nKA"/>
-                <constraint firstItem="Sax-Zk-jQw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="x5f-Tp-oYb" secondAttribute="bottom" constant="8" id="wPF-9B-R8y"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                     <integer key="value" value="12"/>
                 </userDefinedRuntimeAttribute>
-                <userDefinedRuntimeAttribute type="string" keyPath="title" value="Title"/>
             </userDefinedRuntimeAttributes>
             <variation key="default">
                 <mask key="constraints">
