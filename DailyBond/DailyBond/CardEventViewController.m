@@ -26,12 +26,13 @@
     [super viewDidLoad];
     
     event = self.cardData;
+    [self.cardView.titleLabel setBackgroundColor:[UIColor eventColor]];
     
     self.eventNameLabel.text = event.name;
     [self setEventDate:event.date];
     // Do any additional setup after loading the view from its nib.
     
-//    [self.eventImageView sd_setImageWithURL:event.];
+    [self.eventImageView sd_setImageWithURL:event.coverUrl.URL];
 }
 
 - (void)didReceiveMemoryWarning {

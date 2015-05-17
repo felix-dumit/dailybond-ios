@@ -20,6 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    [self.cardView.titleLabel setBackgroundColor:[UIColor chatColor]];
+    
     UserMessage *message = self.cardData;
     
     [self.profileImageView sd_setImageWithURL:message.profileImageUrl.URL];

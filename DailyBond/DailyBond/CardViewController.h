@@ -11,6 +11,7 @@
 #import "CCMPlayNDropView.h"
 #import "UIViewController+MaryPopin.h"
 #import <UIImageView+WebCache.h>
+#import "UIColor+Custom.h"
 
 @protocol SFCardViewControllerDelegate <NSObject>
 

@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.cardView.titleLabel setBackgroundColor:[UIColor birthdayColor]];
+    
     Birthday *birthday = (Birthday *)self.cardData;
     // Do any additional setup after loading the view from its nib.
     [self setDescriptionLabelWithName:birthday.friendName];

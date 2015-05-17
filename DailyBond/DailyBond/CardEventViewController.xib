@@ -30,12 +30,12 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook EVENT" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TEr-SO-18D">
-                    <rect key="frame" x="116" y="56" width="123" height="18"/>
+                    <rect key="frame" x="116" y="56" width="476" height="18"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting in 3 days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2K-tS-rhc">
-                    <rect key="frame" x="116" y="76" width="106" height="16"/>
+                    <rect key="frame" x="116" y="76" width="476" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" red="0.4549019608" green="0.5568627451" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -72,6 +72,8 @@
             <constraints>
                 <constraint firstItem="o2K-tS-rhc" firstAttribute="top" secondItem="TEr-SO-18D" secondAttribute="bottom" constant="2" id="7eS-Bi-1n9"/>
                 <constraint firstAttribute="centerX" secondItem="4le-xC-dBC" secondAttribute="centerX" id="9U5-xK-A1F"/>
+                <constraint firstAttribute="trailing" secondItem="TEr-SO-18D" secondAttribute="trailing" constant="8" id="9cF-hW-O7C"/>
+                <constraint firstAttribute="trailing" secondItem="o2K-tS-rhc" secondAttribute="trailing" constant="8" id="Ibn-nA-fus"/>
                 <constraint firstItem="WYU-pA-tnp" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leading" constant="16" id="KZg-va-0uj"/>
                 <constraint firstItem="o2K-tS-rhc" firstAttribute="leading" secondItem="TEr-SO-18D" secondAttribute="leading" id="Mbr-dA-Foo"/>
                 <constraint firstItem="4le-xC-dBC" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leading" constant="8" id="Mcy-G4-ubz"/>

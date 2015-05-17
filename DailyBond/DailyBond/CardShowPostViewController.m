@@ -16,10 +16,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.cardView.titleLabel setBackgroundColor:[UIColor topPostColor]];
+    
     // Do any additional setup after loading the view from its nib.
     UserPost *post = self.cardData;
     
-//    [self.titleLabel setText:post.friendName]
+    [self.titleLabel setText:post.userName];
     [self.contentLabel setText:post.content];
     [self.postImageView sd_setImageWithURL:post.imageUrl.URL];
 }

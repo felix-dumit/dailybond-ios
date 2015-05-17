@@ -18,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.cardView.titleLabel setBackgroundColor:[UIColor writeColor]];
+    
     // Do any additional setup after loading the view from its nib.
     NSNumber *days = self.cardData;
     [self.descriptionLabel setText:[NSString stringWithFormat:@"It's been %@ days since you don't post in your timeline! What about posting something to your friends?", days]];

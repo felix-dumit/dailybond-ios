@@ -12,6 +12,9 @@
 
 + (NSInteger)daysBetweenDate:(NSDate*)fromDateTime andDate:(NSDate*)toDateTime
 {
+    if(fromDateTime == nil || toDateTime == nil)
+        return -1;
+    
     NSDate *fromDate;
     NSDate *toDate;
     
