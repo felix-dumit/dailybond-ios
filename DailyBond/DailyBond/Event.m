@@ -25,7 +25,7 @@
     return @"Event";
 }
 
-+ (NSDate *)strToDate:(NSString *)dateStr {
+- (NSDate *)strToDate:(NSString *)dateStr {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSDate *date = [dateFormat dateFromString:dateStr];
