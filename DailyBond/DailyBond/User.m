@@ -75,7 +75,6 @@
          
          [user setObject:[result objectForKey:@"gender"] forKey:@"gender"];
          
-         [taskCompletion trySetResult:@YES];
          
          NSLog(@"Logou com usuario: %@", user.name);
          
@@ -89,6 +88,8 @@
 	            NSLog(@"finished!");
 	            [[SDImageCache sharedImageCache] storeImage:image forKey:@"profileImage"];
          }];
+         
+         [taskCompletion trySetResult:@YES];
          
          [user saveInBackground];
      }];

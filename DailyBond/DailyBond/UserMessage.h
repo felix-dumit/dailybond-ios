@@ -15,9 +15,11 @@
 @property (strong, nonatomic) NSDate *receivedDate;
 @property (strong, nonatomic) NSString *message;
 @property (assign, nonatomic) BOOL unread;
+@property (assign, nonatomic) BOOL unseen;
+@property (strong, nonatomic) NSString *chatId;
 @property (strong, nonatomic) NSString *profileImageUrl;
 
--(NSURL*)profileImageURL;
+- (NSURL *)profileImageURL;
 + (BFTask *)allMessages;
 
 @end
