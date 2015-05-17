@@ -21,6 +21,7 @@
 #import "User.h"
 #import <POP.h>
 #import <UINavigationController+M13ProgressViewBar.h>
+#import "UIColor+Custom.h"
 
 @interface CardsViewController ()
 
@@ -50,8 +51,22 @@
 - (void)initProgressIndicators {
     [self.navigationController showProgress];
     [self.navigationController setIndeterminate:YES];
-    self.progressBirthday.progressColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
-    self.progressEvent.progressColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:1.0];
+
+    self.progressBirthday.progressBackgroundColor = [UIColor birthdayColor];
+    self.progressBirthday.progressColor = [UIColor birthdayDarkColor];
+
+    self.progressEvent.progressBackgroundColor = [UIColor eventColor];
+    self.progressEvent.progressColor = [UIColor eventDarkColor];
+    
+    self.progressPosts.progressBackgroundColor = [UIColor topPostColor];
+    self.progressPosts.progressColor = [UIColor topPostDarkColor];
+    
+    self.progressChat.progressBackgroundColor = [UIColor chatColor];
+    self.progressChat.progressColor = [UIColor chatDarkColor];
+
+    self.progressWrite.progressBackgroundColor = [UIColor writeColor];
+    self.progressWrite.progressColor = [UIColor writeDarkColor];
+    
     [self.progressBirthday startWithBlock: ^CGFloat {
         return [[CardsManager sharedInstance] progress:CardsManager.BIRTHDAY];
     }];

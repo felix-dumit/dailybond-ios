@@ -40,7 +40,6 @@ typedef CGFloat (^KKProgressBlock)();
 @property(nonatomic, strong) UIColor *progressBackgroundColor;
 @property(nonatomic, strong) UIColor *circleBackgroundColor;
 
-
 - (void)startWithBlock:(KKProgressBlock)block;
 
 - (void)updateProgress;
