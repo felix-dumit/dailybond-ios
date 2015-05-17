@@ -13,7 +13,8 @@
 
 @interface User ()
 
-@property (strong, nonatomic) NSString *profileImageURL;
+@property (strong, nonatomic) NSString *profileImageUrl;
+
 
 @end
 
@@ -22,7 +23,7 @@
 @dynamic name;
 @dynamic facebookID;
 @dynamic birthday;
-@dynamic profileImageURL;
+@dynamic profileImageUrl;
 
 
 + (BFTask *)loginWithFacebookInBackground {
@@ -61,6 +62,9 @@
          NSLog(@"Logou com usuario: %@", user.name);
          
          NSString *imageUrl = [result objectForKey:@"picture"][@"data"][@"url"];
+         
+         self.profileImageUrl = imageUrl;
+         
          NSURL *imageURL = [NSURL URLWithString:imageUrl];
          
          [[SDWebImageManager sharedManager] downloadImageWithURL:imageURL options:0 progress:nil completed: ^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
@@ -77,4 +81,7 @@
     return [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:@"profileImage"];
 }
 
+-(NSURL*)profileImageURL {
+    return [NSURL URLWithString:self.profileImageUrl];
+}
 @end
