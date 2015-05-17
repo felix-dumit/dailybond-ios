@@ -19,7 +19,6 @@
 @property (strong, nonatomic) NSString *chatId;
 @property (strong, nonatomic) NSString *profileImageUrl;
 
-- (NSURL *)profileImageURL;
 + (BFTask *)allMessages;
 
 @end

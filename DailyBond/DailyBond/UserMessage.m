@@ -137,10 +137,12 @@
         BOOL unread = [conversation[@"unread"] boolValue];
         BOOL unseen = [conversation[@"unseen"] boolValue];
         
+        
         if (![userId isEqualToString:[User currentUser].facebookID]
             && message) {
             UserMessage *umsg = [UserMessage createWithName:userName andId:userId andDate:date andMessage:message andUnread:unread];
             umsg.unseen = unseen;
+            umsg.profileImageUrl = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=square", umsg.friendId];
             
             [array addObject:umsg];
         }
