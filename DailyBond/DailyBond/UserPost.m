@@ -45,7 +45,7 @@
 
 + (UserPost *)generateMockData {
     return [self createWithContent:@"Facebook post in a long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long  time ago"
-                           andDate:[NSDate dateWithTimeInterval:-100000000 sinceDate:[NSDate date]] andId:@"828648753872660"];
+                           andDate:[NSDate dateWithTimeInterval:-1000000 sinceDate:[NSDate date]] andId:@"828648753872660"];
 }
 
 + (BFTask *)allPosts {
