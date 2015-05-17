@@ -39,8 +39,8 @@
 		EBDA22D01B07EF050095633A /* CardEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22CE1B07EF050095633A /* CardEventViewController.xib */; };
 		EBDA22D41B07F97B0095633A /* CardNewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22D21B07F97B0095633A /* CardNewPostViewController.m */; };
 		EBDA22D51B07F97B0095633A /* CardNewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22D31B07F97B0095633A /* CardNewPostViewController.xib */; };
-		EBDA22DA1B07FD7D0095633A /* CardKeepInTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22D81B07FD7D0095633A /* CardKeepInTouchViewController.xib */; };
-		EBDA22DB1B080F7B0095633A /* CardKeepInTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22D71B07FD7D0095633A /* CardKeepInTouchViewController.m */; };
+		EBDA22DF1B08198B0095633A /* CardKeepInTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */; };
+		EBDA22E01B08198B0095633A /* CardKeepInTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,9 +113,9 @@
 		EBDA22D11B07F97B0095633A /* CardNewPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardNewPostViewController.h; sourceTree = "<group>"; };
 		EBDA22D21B07F97B0095633A /* CardNewPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardNewPostViewController.m; sourceTree = "<group>"; };
 		EBDA22D31B07F97B0095633A /* CardNewPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardNewPostViewController.xib; sourceTree = "<group>"; };
-		EBDA22D61B07FD7D0095633A /* CardKeepInTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardKeepInTouchViewController.h; sourceTree = "<group>"; };
-		EBDA22D71B07FD7D0095633A /* CardKeepInTouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardKeepInTouchViewController.m; sourceTree = "<group>"; };
-		EBDA22D81B07FD7D0095633A /* CardKeepInTouchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardKeepInTouchViewController.xib; sourceTree = "<group>"; };
+		EBDA22DC1B08198B0095633A /* CardKeepInTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardKeepInTouchViewController.h; sourceTree = "<group>"; };
+		EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardKeepInTouchViewController.m; sourceTree = "<group>"; };
+		EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardKeepInTouchViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,9 +180,9 @@
 				EBDA22D11B07F97B0095633A /* CardNewPostViewController.h */,
 				EBDA22D21B07F97B0095633A /* CardNewPostViewController.m */,
 				EBDA22D31B07F97B0095633A /* CardNewPostViewController.xib */,
-				EBDA22D61B07FD7D0095633A /* CardKeepInTouchViewController.h */,
-				EBDA22D71B07FD7D0095633A /* CardKeepInTouchViewController.m */,
-				EBDA22D81B07FD7D0095633A /* CardKeepInTouchViewController.xib */,
+				EBDA22DC1B08198B0095633A /* CardKeepInTouchViewController.h */,
+				EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */,
+				EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -388,8 +388,8 @@
 				EBDA22CB1B07D51A0095633A /* CardBirthdayViewController.xib in Resources */,
 				EBDA22D01B07EF050095633A /* CardEventViewController.xib in Resources */,
 				EB04D8C51B07A61C009B8AB0 /* LaunchScreen.xib in Resources */,
-				EBDA22DA1B07FD7D0095633A /* CardKeepInTouchViewController.xib in Resources */,
 				EB04D8C21B07A61C009B8AB0 /* Images.xcassets in Resources */,
+				EBDA22E01B08198B0095633A /* CardKeepInTouchViewController.xib in Resources */,
 				EBDA22D51B07F97B0095633A /* CardNewPostViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +441,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBDA22DB1B080F7B0095633A /* CardKeepInTouchViewController.m in Sources */,
 				2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */,
 				D58F598C1B07BA8C00FAB188 /* User.m in Sources */,
 				EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */,
@@ -452,6 +451,7 @@
 				EB04D8BA1B07A61C009B8AB0 /* AppDelegate.m in Sources */,
 				2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */,
 				2E6D3AED1B07F30B00DF99C6 /* KKProgressTimer.m in Sources */,
+				EBDA22DF1B08198B0095633A /* CardKeepInTouchViewController.m in Sources */,
 				2E6D3AE61B07D68700DF99C6 /* CardsViewController.m in Sources */,
 				EBDA22D41B07F97B0095633A /* CardNewPostViewController.m in Sources */,
 				D59549B81B07C71700720A52 /* LoginViewController.m in Sources */,

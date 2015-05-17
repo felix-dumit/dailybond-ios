@@ -1,5 +1,5 @@
 //
-//  CardMessageUserViewController.m
+//  CardKeepInTouchViewController.m
 //  DailyBond
 //
 //  Created by Nick-Retina on 5/16/15.
