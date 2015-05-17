@@ -211,6 +211,9 @@
 
 - (IBAction)goToFacebook:(id)sender {
     
+    NSString* url = @"fb://";
+    
+    [[UIApplication sharedApplication] openURL:url.URL];
 }
 
 /*
