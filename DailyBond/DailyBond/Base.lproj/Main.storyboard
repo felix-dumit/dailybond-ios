@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64B-tW-6Lw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="64B-tW-6Lw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -16,12 +16,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="U9T-Fs-UtI" kind="relationship" relationship="rootViewController" id="gGt-qd-7Hf"/>
+                        <segue destination="U9T-Fs-UtI" kind="relationship" relationship="rootViewController" id="Dpd-xj-WA4"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FiO-Mm-fHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-436" y="-151"/>
+            <point key="canvasLocation" x="-352.5" y="708.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="lzF-yJ-ur2">
@@ -39,17 +39,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DailyBondCard" translatesAutoresizingMaskIntoConstraints="NO" id="bxF-58-EUn">
-                                <rect key="frame" x="108" y="96" width="160" height="160"/>
+                                <rect key="frame" x="108" y="52" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="Rki-mO-328"/>
                                     <constraint firstAttribute="width" constant="160" id="uVA-iR-FAH"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZX0-Cx-ccc" userLabel="ProfilePicture">
-                                <rect key="frame" x="120" y="108" width="136" height="136"/>
+                                <rect key="frame" x="120" y="64" width="136" height="136"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cE3-EM-drs">
-                                <rect key="frame" x="98" y="360" width="180" height="36"/>
+                                <rect key="frame" x="98" y="316" width="180" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="dc5-at-yZ1"/>
@@ -69,7 +69,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DailyBond" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2g9-IV-F7g">
-                                <rect key="frame" x="16" y="264" width="343" height="48"/>
+                                <rect key="frame" x="16" y="220" width="343" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="BEJ-eD-E3e"/>
                                 </constraints>
@@ -78,7 +78,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBX-e0-dXC" userLabel="User Info Group">
-                                <rect key="frame" x="0.0" y="264" width="375" height="206"/>
+                                <rect key="frame" x="0.0" y="220" width="375" height="206"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PM0-Kt-HeD">
                                         <rect key="frame" x="8" y="8" width="359" height="32"/>
@@ -149,6 +149,20 @@
                                     <constraint firstAttribute="trailingMargin" secondItem="mji-8p-QBd" secondAttribute="trailing" constant="16" id="pWR-3N-7qz"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xl-FY-uif">
+                                <rect key="frame" x="32" y="594" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="9nf-Gc-TIw"/>
+                                    <constraint firstAttribute="width" constant="25" id="j2d-e1-qQy"/>
+                                </constraints>
+                                <state key="normal" image="menuOpen">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openMenu:" destination="U9T-Fs-UtI" eventType="touchUpInside" id="eDa-Pn-nvh"/>
+                                    <segue destination="Yyx-As-DIT" kind="show" id="PKn-U4-ww3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.46666666666666667" blue="0.73333333333333328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -158,6 +172,7 @@
                             <constraint firstItem="pzV-GJ-ybP" firstAttribute="leading" secondItem="REh-Ak-X17" secondAttribute="leading" id="Gc4-8j-tTj"/>
                             <constraint firstItem="cE3-EM-drs" firstAttribute="leading" secondItem="REh-Ak-X17" secondAttribute="leadingMargin" id="O9U-5O-99W"/>
                             <constraint firstItem="bxF-58-EUn" firstAttribute="leading" secondItem="REh-Ak-X17" secondAttribute="leadingMargin" constant="92" id="ONF-YV-gbD"/>
+                            <constraint firstItem="3Xl-FY-uif" firstAttribute="leading" secondItem="REh-Ak-X17" secondAttribute="leadingMargin" constant="16" id="ORU-JP-1sq"/>
                             <constraint firstItem="GiL-29-eM2" firstAttribute="leading" secondItem="REh-Ak-X17" secondAttribute="leading" id="Qcm-Li-iLJ"/>
                             <constraint firstItem="ZX0-Cx-ccc" firstAttribute="top" secondItem="bxF-58-EUn" secondAttribute="top" constant="12" id="RiW-4I-3PU"/>
                             <constraint firstItem="ICQ-jz-fbA" firstAttribute="top" secondItem="GiL-29-eM2" secondAttribute="bottom" id="VPb-rS-1iD"/>
@@ -166,12 +181,14 @@
                             <constraint firstItem="bxF-58-EUn" firstAttribute="top" secondItem="sg1-zd-xfD" secondAttribute="bottom" constant="32" id="WXg-pU-vDQ"/>
                             <constraint firstItem="2g9-IV-F7g" firstAttribute="leading" secondItem="REh-Ak-X17" secondAttribute="leadingMargin" id="X4u-0r-Hbs"/>
                             <constraint firstItem="2g9-IV-F7g" firstAttribute="trailing" secondItem="REh-Ak-X17" secondAttribute="trailingMargin" id="b8L-e1-FUp"/>
+                            <constraint firstAttribute="centerX" secondItem="bxF-58-EUn" secondAttribute="centerX" id="dSx-AC-fmb"/>
                             <constraint firstItem="ZX0-Cx-ccc" firstAttribute="trailing" secondItem="bxF-58-EUn" secondAttribute="trailing" constant="-12" id="eR1-wo-hYt"/>
                             <constraint firstItem="ICQ-jz-fbA" firstAttribute="top" secondItem="pzV-GJ-ybP" secondAttribute="bottom" id="elh-R7-fME"/>
                             <constraint firstAttribute="centerX" secondItem="cE3-EM-drs" secondAttribute="centerX" id="imf-8w-K34"/>
                             <constraint firstItem="cE3-EM-drs" firstAttribute="top" secondItem="2g9-IV-F7g" secondAttribute="bottom" constant="48" id="j9W-zL-FD1"/>
                             <constraint firstItem="ZX0-Cx-ccc" firstAttribute="bottom" secondItem="bxF-58-EUn" secondAttribute="bottom" constant="-12" id="mIR-9X-LMD"/>
                             <constraint firstItem="ZX0-Cx-ccc" firstAttribute="leading" secondItem="bxF-58-EUn" secondAttribute="leading" constant="12" id="onV-NT-GbY"/>
+                            <constraint firstItem="ICQ-jz-fbA" firstAttribute="top" secondItem="3Xl-FY-uif" secondAttribute="bottom" constant="48" id="qae-KE-eQC"/>
                             <constraint firstAttribute="centerX" secondItem="2g9-IV-F7g" secondAttribute="centerX" constant="0.5" id="tJH-WJ-TEf"/>
                             <constraint firstItem="cE3-EM-drs" firstAttribute="trailing" secondItem="REh-Ak-X17" secondAttribute="trailingMargin" id="u2m-Tt-mlR"/>
                             <constraint firstAttribute="trailing" secondItem="MBX-e0-dXC" secondAttribute="trailing" id="xKo-sT-x8K"/>
@@ -179,6 +196,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="ONF-YV-gbD"/>
                                 <exclude reference="tJH-WJ-TEf"/>
                                 <exclude reference="O9U-5O-99W"/>
                                 <exclude reference="u2m-Tt-mlR"/>
@@ -186,12 +204,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="rbl-OS-Q9R">
-                        <barButtonItem key="rightBarButtonItem" title="Test" id="XCm-4A-c2a">
-                            <connections>
-                                <segue destination="Yyx-As-DIT" kind="show" id="Rbx-Tf-hmu"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Test" id="XCm-4A-c2a"/>
                     </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="buttonLogin" destination="cE3-EM-drs" id="fKJ-3P-ayn"/>
                         <outlet property="groupStart" destination="pzV-GJ-ybP" id="nAP-nJ-1Vg"/>
@@ -314,7 +329,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-KW-f7g" userLabel="BirthdayProgress" customClass="KKProgressTimer">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-KW-f7g" userLabel="BirthdayProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="16" y="80" width="54" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconBirthday" translatesAutoresizingMaskIntoConstraints="NO" id="K0u-PS-7hX">
@@ -345,7 +360,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8b-D6-8bW" userLabel="EventProgress" customClass="KKProgressTimer">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p8b-D6-8bW" userLabel="EventProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="86" y="80" width="54" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconCalendar" translatesAutoresizingMaskIntoConstraints="NO" id="Ds6-Ki-n3n">
@@ -376,7 +391,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICz-XY-sCZ" userLabel="PostsProgress" customClass="KKProgressTimer">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ICz-XY-sCZ" userLabel="PostsProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="156" y="80" width="54" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconPosts" translatesAutoresizingMaskIntoConstraints="NO" id="9Bh-BG-nxB">
@@ -407,7 +422,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K19-UJ-h7A" userLabel="ChatProgress" customClass="KKProgressTimer">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K19-UJ-h7A" userLabel="ChatProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="226" y="80" width="54" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconChat" translatesAutoresizingMaskIntoConstraints="NO" id="XNK-ab-V9r">
@@ -438,7 +453,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMC-k0-aP7" userLabel="WriteProgress" customClass="KKProgressTimer">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMC-k0-aP7" userLabel="WriteProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="296" y="80" width="54" height="54"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconWrite" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-Mc-Lfn">
@@ -523,5 +538,6 @@
         <image name="IconChat" width="50" height="50"/>
         <image name="IconPosts" width="50" height="50"/>
         <image name="IconWrite" width="50" height="50"/>
+        <image name="menuOpen" width="50" height="50"/>
     </resources>
 </document>

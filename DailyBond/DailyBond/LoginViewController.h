@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CDSideBarController.h"
 
 @interface LoginViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackground;
