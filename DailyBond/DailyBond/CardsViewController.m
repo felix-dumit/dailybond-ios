@@ -58,6 +58,15 @@
     [self.progressEvent startWithBlock: ^CGFloat {
         return [[CardsManager sharedInstance] progress:CardsManager.EVENTS];
     }];
+    [self.progressPosts startWithBlock: ^CGFloat {
+        return [[CardsManager sharedInstance] progress:CardsManager.POSTS];
+    }];
+    [self.progressChat startWithBlock: ^CGFloat {
+        return [[CardsManager sharedInstance] progress:CardsManager.CHATS];
+    }];
+    [self.progressWrite startWithBlock: ^CGFloat {
+        return [[CardsManager sharedInstance] progress:CardsManager.WRITE];
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -135,9 +144,9 @@
 - (void)updateProgress {
     [self.progressBirthday updateProgress];
     [self.progressEvent updateProgress];
-    //    [self.progressPosts updateProgress];
-    //    [self.progressChat updateProgress];
-    //    [self.progressWrite updateProgress];
+    [self.progressPosts updateProgress];
+    [self.progressChat updateProgress];
+    [self.progressWrite updateProgress];
 }
 
 - (void)showCard:(CardViewController *)popin animated:(BOOL)animated {
