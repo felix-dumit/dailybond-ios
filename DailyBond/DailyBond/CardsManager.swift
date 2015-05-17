@@ -35,7 +35,7 @@ import Foundation
             return 0.0
         } else {
             if let size = sizes[section] {
-                return Float(self.index) / Float(max(1, size))
+                return Float(self.index + 1) / Float(max(1, size))
             } else {
                 return 0.0
             }
