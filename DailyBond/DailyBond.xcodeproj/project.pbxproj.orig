@@ -223,11 +223,14 @@
 				EBDA22DC1B08198B0095633A /* CardKeepInTouchViewController.h */,
 				EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */,
 				EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */,
+<<<<<<< HEAD
 				EBDA22ED1B087E2C0095633A /* CardShowPostViewController.h */,
 				EBDA22EE1B087E2C0095633A /* CardShowPostViewController.m */,
 				EBDA22EF1B087E2C0095633A /* CardShowPostViewController.xib */,
+=======
 				2EFEB6681B0873A800071497 /* CDSideBarController.h */,
 				2EFEB6691B0873A800071497 /* CDSideBarController.m */,
+>>>>>>> 1a59f413aee65ba9219a8d7e835c0cfbeaf25bb6
 			);
 			name = Controllers;
 			sourceTree = "<group>";

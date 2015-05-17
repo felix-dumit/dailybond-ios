@@ -17,8 +17,6 @@
 
 @implementation LoginViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -26,9 +24,16 @@
     //[self.imageBackground setImage:[image blurredImageWithRadius:8.0 iterations:20 tintColor:nil]];
     //self.imageBackground.hidden = NO;
     //self.imageProfile.hidden = NO;
+    
     if ([User currentUser] != nil) {
         [self showUserInfoAnimated:NO];
     }
+}
+
+
+- (IBAction)openMenu:(id)sender {
+    NSLog(@"Open Menu");
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,6 +71,7 @@
     User *user = [User currentUser];
     UIImage *image = [UIImage imageNamed:@"mockCover"];
     [self.imageBackground setImage:[image blurredImageWithRadius:8.0 iterations:20 tintColor:nil]];
+//    self.imageBackground.
     //UIImage *picture = [UIImage imageNamed:@"mockProfile"];
     //[self.imageProfile setImage:picture];
     [self.imageProfile sd_setImageWithURL:user.profileImageUrl.URL];
