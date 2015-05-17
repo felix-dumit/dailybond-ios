@@ -15,7 +15,7 @@ import Foundation
     private func getRequest(graphPath : String, params : Dictionary<String,String>) -> BFTask {
         var task = BFTaskCompletionSource()
         if (FBSDKAccessToken.currentAccessToken() != nil) {
-            FBSDKGraphRequest(graphPath: "me/friends", parameters: ["fields" : "id,name,birthday,picture,cover"]).startWithCompletionHandler({ (connection, result:AnyObject!, error) -> Void in
+            FBSDKGraphRequest(graphPath: graphPath, parameters: params).startWithCompletionHandler({ (connection, result:AnyObject!, error) -> Void in
                 
                 if error != nil {
                     task.trySetError(error)
