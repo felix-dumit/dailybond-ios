@@ -26,7 +26,7 @@ class TestViewController: UIViewController {
     
     @IBAction func testBirthday(sender: AnyObject) {
         
-        UserPost.allPosts().continueWithSuccessResultBlock { (result) -> AnyObject! in
+        UserMessage.allMessages().continueWithSuccessResultBlock { (result) -> AnyObject! in
            
             
             println("test results: \(result)")
@@ -42,7 +42,8 @@ class TestViewController: UIViewController {
     }
     
     @IBAction func shareOnMessenger(sender: AnyObject) {
-        MessengerSharer.testShare()
+//        MessengerSharer.testShare()
+        User.publishMessage("publiquei");
 
     }
 }

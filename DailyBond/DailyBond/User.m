@@ -27,10 +27,29 @@
 
 + (BFTask *)loginWithFacebookInBackground {
     return [User logOutInBackground].thenOnMain ( ^id (id result) {
-        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_friends", @"user_birthday", @"user_events", @"read_stream",@"read_mailbox"]];
+        return [PFFacebookUtils logInInBackgroundWithReadPermissions:@[@"public_profile", @"email", @"user_friends", @"user_birthday", @"user_events", @"read_stream", @"read_mailbox"]];
     }).thenOnMain ( ^id (User *user) {
         return [user loadFacebookInfo];
     }).thenOnMain ( ^id (id result) {
+        return nil;
+    });
+}
+
++ (BFTask *)publishMessage:(NSString *)message {
+    //    ParseFacebookUtils.getSession().requestNewPublishPermissions().
+    
+    BFTask *authTask = [BFTask taskWithResult:nil];
+    if ([[FBSDKAccessToken currentAccessToken] hasGranted:@"publish_actions"]) {
+        authTask = [PFFacebookUtils logInInBackgroundWithPublishPermissions:@[@"publish_actions"]];
+    }
+    
+    return authTask.then ( ^id (id result) {
+        return [[FBRequests sharedInstance] postToTimeline:message];
+    }).then ( ^id (id result) {
+        NSLog(@"publicou: %@", result);
+        return nil;
+    }).catch ( ^id (NSError *error) {
+        NSLog(@"public error: %@", error);
         return nil;
     });
 }

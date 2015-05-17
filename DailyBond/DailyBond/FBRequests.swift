@@ -15,7 +15,9 @@ import Foundation
     private func getRequest(graphPath : String, params : Dictionary<String,String>, method : String) -> BFTask {
         var task = BFTaskCompletionSource()
         if (FBSDKAccessToken.currentAccessToken() != nil) {
-            FBSDKGraphRequest(graphPath: graphPath, parameters: params, HTTPMethod: method).startWithCompletionHandler({ (connection, result:AnyObject!, error) ->
+            
+            FBSDKGraphRequest(graphPath: graphPath, parameters: params, HTTPMethod: method).startWithCompletionHandler({
+                (connection, result:AnyObject!, error) -> Void in
                 
                 if error != nil {
                     task.trySetError(error)
@@ -24,7 +26,9 @@ import Foundation
                     task.trySetResult(result["data"])
                 }
             })
+            
         }
+        
         return task.task
     }
 
