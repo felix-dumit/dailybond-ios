@@ -107,6 +107,8 @@
             self.groupStart.transform = CGAffineTransformIdentity;
             self.labelAppName.alpha = 0.0;
             self.groupUserInfo.alpha = 1.0;
+            self.labelIntro1.alpha = 0.0;
+            self.labelIntro2.alpha = 0.0;
         }];
     }
     else {
@@ -115,7 +117,9 @@
         self.groupStart.alpha = 1.0;
         self.groupStart.transform = CGAffineTransformIdentity;
         self.buttonLogin.alpha = 0.0;
-        self.labelAppName.hidden = YES;
+        self.labelIntro1.alpha = 0.0;
+        self.labelIntro2.alpha = 0.0;
+        self.labelAppName.alpha = 0.0;
         self.groupUserInfo.alpha = 1.0;
         self.groupUserInfo.hidden = NO;
         self.imageProfile.hidden = NO;
@@ -135,6 +139,10 @@
             self.groupStart.alpha = 0.0;
             self.labelAppName.alpha = 1.0;
             self.groupUserInfo.alpha = 0.0;
+            self.labelAppName.alpha = 1.0;
+            self.labelIntro1.alpha = 1.0;
+            self.labelIntro2.alpha = 1.0;
+            self.labelAppName.hidden = NO;
         }];
 }
 

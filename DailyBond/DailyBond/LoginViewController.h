@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 @property (weak, nonatomic) IBOutlet UIView *groupMenu;
 - (IBAction)openMenu:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *labelIntro1;
+@property (weak, nonatomic) IBOutlet UILabel *labelIntro2;
 
 @property (strong, nonatomic) PagesViewController *pagesController;
 
