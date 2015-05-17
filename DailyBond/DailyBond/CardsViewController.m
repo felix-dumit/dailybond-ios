@@ -19,6 +19,7 @@
 #import "UserPost.h"
 #import "UserMessage.h"
 #import "User.h"
+#import <POP.h>
 
 @interface CardsViewController ()
 
@@ -38,6 +39,11 @@
     //[[SFTaskManager sharedInstance] requestGroupTasks:[[SFUser currentUser] root]];
     [self initProgressIndicators];
     self.loading = @YES;
+    [self.progressBirthday setHidden:true];
+    [self.progressEvent setHidden:true];
+    [self.progressPosts setHidden:true];
+    [self.progressChat setHidden:true];
+    [self.progressWrite setHidden:true];
 }
 
 - (void)initProgressIndicators {
@@ -54,6 +60,52 @@
 - (void)viewDidAppear:(BOOL)animated {
     if (self.loading.boolValue) {
         self.loading = @NO;
+        
+        float delayInSeconds = 0.1;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+            POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+            sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+            sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+            sprintAnimation.springBounciness = 20.f;
+            [self.progressBirthday setHidden:false];
+            [self.progressBirthday pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+        });
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+            POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+            sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+            sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+            sprintAnimation.springBounciness = 20.f;
+            [self.progressEvent setHidden:false];
+            [self.progressEvent pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+        });
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+            POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+            sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+            sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+            sprintAnimation.springBounciness = 20.f;
+            [self.progressPosts setHidden:false];
+            [self.progressPosts pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+        });
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+            POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+            sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+            sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+            sprintAnimation.springBounciness = 20.f;
+            [self.progressChat setHidden:false];
+            [self.progressChat pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+        });
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+            POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
+            sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
+            sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
+            sprintAnimation.springBounciness = 20.f;
+            [self.progressWrite setHidden:false];
+            [self.progressWrite pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
+        });
         
         
         // LOAD CARD RIGHT HERE

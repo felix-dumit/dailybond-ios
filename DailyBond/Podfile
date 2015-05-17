@@ -17,7 +17,7 @@ target 'DailyBond' do
     pod 'DateTools'
     pod 'MJExtension'
     pod 'SDWebImage'
-
+    pod 'pop', '~> 1.0'
 end
 
 target 'DailyBondTests' do

@@ -20,6 +20,4 @@
 + (NSArray *)generateMockData;
 + (BFTask *)allEvents;
 
-
-
 @end
