@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14E11f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -10,6 +10,7 @@
                 <outlet property="cardView" destination="hV3-Ep-Z7B" id="At9-KX-kQi"/>
                 <outlet property="descriptionLabel" destination="E90-4K-WYC" id="zT6-Eg-0YP"/>
                 <outlet property="profileImageView" destination="bd7-ar-C3l" id="coI-3L-InN"/>
+                <outlet property="textField" destination="z2H-mi-5Qp" id="ndV-Vc-CC6"/>
                 <outlet property="titleLabel" destination="kAE-0u-qn2" id="RiF-Ht-fd4"/>
                 <outlet property="view" destination="hV3-Ep-Z7B" id="hpU-Fw-XC9"/>
             </connections>
@@ -50,7 +51,7 @@
                     <rect key="frame" x="8" y="124" width="584" height="430"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsv-fG-wKI">
                     <rect key="frame" x="16" y="562" width="276" height="30"/>
@@ -65,6 +66,9 @@
                         <color key="titleColor" red="0.51295727729999996" green="0.88030642989999996" blue="0.41191776759999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="sendPostToFacebook:" destination="-1" eventType="touchUpInside" id="zcu-Sw-X3e"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

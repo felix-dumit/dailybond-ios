@@ -19,6 +19,7 @@ target 'DailyBond' do
     pod 'SDWebImage'
     pod 'pop', '~> 1.0'
     pod 'M13ProgressSuite'
+    pod 'SVProgressHUD'
 
 end
 

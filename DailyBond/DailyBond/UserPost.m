@@ -101,7 +101,7 @@
         NSString *imageUrl = dict[@"picture"];
         
         UserPost *up = [UserPost createWithContent:content andDate:date andId:facebookId];
-        up.imageUrl = imageUrl;
+        up.imageUrl = imageUrl ? : [NSString stringWithFormat:@"graph.facebook.com/%@/picture?type=square", userId];
         up.title = title;
         up.userId = userId;
         up.userName = userName;

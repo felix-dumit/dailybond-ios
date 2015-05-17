@@ -54,6 +54,7 @@
 
     self.progressBirthday.progressBackgroundColor = [UIColor semitransparentColor];
     self.progressBirthday.progressColor = [UIColor birthdayColor];
+//    self.progressBirthday.
 
     self.progressEvent.progressBackgroundColor = [UIColor semitransparentColor];
     self.progressEvent.progressColor = [UIColor eventColor];
@@ -210,6 +211,9 @@
 
 - (IBAction)goToFacebook:(id)sender {
     
+    NSString* url = @"fb://";
+    
+    [[UIApplication sharedApplication] openURL:url.URL];
 }
 
 /*
