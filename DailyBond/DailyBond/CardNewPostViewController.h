@@ -10,5 +10,7 @@
 #import "CardViewController.h"
 @interface CardNewPostViewController : CardViewController
 @property (weak, nonatomic) IBOutlet CardView *cardView;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

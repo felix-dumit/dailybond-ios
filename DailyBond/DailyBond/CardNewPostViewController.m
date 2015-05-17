@@ -7,7 +7,8 @@
 //
 
 #import "CardNewPostViewController.h"
-
+#import "UserPost.h"
+#import "NSDate+Formatter.h"
 @interface CardNewPostViewController ()
 
 @end
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UserPost *post = self.cardData;
+    [self.descriptionLabel setText:[NSString stringWithFormat:@"It's been %ld days since you don't post in your timeline!", [NSDate daysBetweenDate:[NSDate date] andDate:post.date]]];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardNewPostViewController">
             <connections>
                 <outlet property="cardView" destination="hV3-Ep-Z7B" id="At9-KX-kQi"/>
+                <outlet property="descriptionLabel" destination="E90-4K-WYC" id="zT6-Eg-0YP"/>
+                <outlet property="titleLabel" destination="kAE-0u-qn2" id="RiF-Ht-fd4"/>
                 <outlet property="view" destination="hV3-Ep-Z7B" id="hpU-Fw-XC9"/>
             </connections>
         </placeholder>

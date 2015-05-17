@@ -68,7 +68,7 @@
     
     // TODO : LOAD CONTROLLER HERE RIGHT NOWWW!!!
     CardViewController *popin;
-    switch(1) {
+    switch(2) {
         case 0:
             popin = [[CardBirthdayViewController alloc] init];
             popin.cardData = [Birthday generateMockBirthDays][0];
@@ -79,7 +79,8 @@
             break;
         case 2:
             popin = [[CardNewPostViewController alloc] init];
-            popin.cardData = nil;
+            UserPost *post = [
+            popin.cardData = ;
             break;
         case 3:
             popin = [[CardKeepInTouchViewController alloc] init];

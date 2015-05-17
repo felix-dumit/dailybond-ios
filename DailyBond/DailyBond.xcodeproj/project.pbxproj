@@ -43,6 +43,7 @@
 		EBDA22DF1B08198B0095633A /* CardKeepInTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22DD1B08198B0095633A /* CardKeepInTouchViewController.m */; };
 		EBDA22E01B08198B0095633A /* CardKeepInTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */; };
 		EBDA22E61B082D430095633A /* NSDate+Formatter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22E51B082D430095633A /* NSDate+Formatter.m */; };
+		EBDA22E91B0830E40095633A /* UserPost.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22E81B0830E40095633A /* UserPost.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,8 @@
 		EBDA22DE1B08198B0095633A /* CardKeepInTouchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardKeepInTouchViewController.xib; sourceTree = "<group>"; };
 		EBDA22E41B082D430095633A /* NSDate+Formatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatter.h"; sourceTree = "<group>"; };
 		EBDA22E51B082D430095633A /* NSDate+Formatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatter.m"; sourceTree = "<group>"; };
+		EBDA22E71B0830E40095633A /* UserPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPost.h; sourceTree = "<group>"; };
+		EBDA22E81B0830E40095633A /* UserPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserPost.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,8 @@
 				D58F598B1B07BA8C00FAB188 /* User.m */,
 				D5392F391B080B7900129D45 /* Event.h */,
 				D5392F3A1B080B7900129D45 /* Event.m */,
+				EBDA22E71B0830E40095633A /* UserPost.h */,
+				EBDA22E81B0830E40095633A /* UserPost.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 				2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */,
 				D58F598C1B07BA8C00FAB188 /* User.m in Sources */,
 				EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */,
+				EBDA22E91B0830E40095633A /* UserPost.m in Sources */,
 				EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */,
 				2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */,
 				2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */,
