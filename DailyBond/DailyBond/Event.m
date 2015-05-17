@@ -22,6 +22,8 @@
 @dynamic rsvpStatus;
 @dynamic dateString;
 @dynamic eventImageUrl;
+@dynamic placeName;
+@dynamic coverUrl;
 
 + (NSString *)parseClassName {
     return @"Event";
@@ -42,17 +44,19 @@
                  @"name": @"name",
                  @"eventId" : @"id",
                  @"rsvpStatus": @"rsvp_status",
-                 @"dateString": @"start_time"
+                 @"dateString": @"start_time",
+                 @"placeName": @"place.name",
+                 @"coverUrl": @"cover.source"
                  };
     }];
 }
 
 - (void)setDateString:(NSString *)dateString {
     [self setObject:dateString forKey:@"dateString"];
-    self.date = [self strToDate: dateString];
+    self.date = [self strToDate:dateString];
 }
 
-+ (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId andRsvp:(NSString *)rsvpStatus andEventImageUrl:(NSString*)eventImageUrl{
++ (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId andRsvp:(NSString *)rsvpStatus andEventImageUrl:(NSString *)eventImageUrl {
     Event *event = [Event object];
     event.name = name;
     event.date = date;
@@ -70,6 +74,11 @@
         NSString *eventId = @"828648753872660";
         NSString *rsvpStatus = @"attending";
         NSString *eventImage = @"https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xfa1/t31.0-8/175774_10150257616905988_1545266_o.jpg";
+        
+        Event *event = [Event createWithName:eventName andDate:date andId:eventId andRsvp:rsvpStatus andEventImageUrl:eventImage];
+        
+        event.placeName = @"Facebook São Paulo";
+        
         [array addObject:[Event createWithName:eventName andDate:date andId:eventId andRsvp:rsvpStatus andEventImageUrl:eventImage]];
     }
     

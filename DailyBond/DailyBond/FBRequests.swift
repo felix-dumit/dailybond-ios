@@ -37,7 +37,7 @@ import Foundation
     }
     
     func getEvents() -> BFTask {
-        return getRequest("me/events", params : ["":""])
+        return getRequest("me/events", params : ["fields": "place,name,start_time,id,rsvp_status,cover"])
     }
  
     func getLastPostDate() -> BFTask {
