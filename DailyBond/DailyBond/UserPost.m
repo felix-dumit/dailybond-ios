@@ -10,13 +10,21 @@
 #import <MJExtension.h>
 #import "DailyBond-Swift.h"
 
+@interface UserPost ()
+
+@property (strong, nonatomic) NSString *dateString;
+
+@end
+
 
 @implementation UserPost
 
 @dynamic facebookId;
 @dynamic content;
 @dynamic date;
+@dynamic dateString;
 @dynamic imageUrl;
+@dynamic title;
 
 + (NSString *)parseClassName {
     return @"UserPost";
@@ -27,12 +35,24 @@
     
     [UserPost setupReplacedKeyFromPropertyName: ^NSDictionary *{
         return @{
-                 @"friendName": @"name",
-                 @"friendId" : @"id",
-                 @"pictureURL": @"picture.data.url",
-                 @"coverURL": @"cover.source"
+                 @"content": @"caption",
+                 @"title" : @"",
+                 @"imageUrl" : @"picture",
+                 @"facebookId": @"id",
+                 @"dateString": @"created_time"
                  };
     }];
+}
+
+- (void)setDateString:(NSString *)dateString {
+    [self setObject:dateString forKey:dateString];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+    [dateFormatter setLocale:enUSPOSIXLocale];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+    NSDate *date = [dateFormatter dateFromString:dateString];
+    self.date = date;
 }
 
 + (instancetype)createWithContent:(NSString *)content andDate:(NSDate *)date andId:(NSString *)facebookId {

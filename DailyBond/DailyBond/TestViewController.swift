@@ -29,7 +29,8 @@ class TestViewController: UIViewController {
         UserPost.allPosts().continueWithSuccessResultBlock { (result) -> AnyObject! in
             
             if let birthdays = result as? [UserPost] {
-                println("Got bidays \(birthdays)")
+                let birthday = birthdays[0]
+                println("Got bidays \(birthday)")
             }
             
             return nil
