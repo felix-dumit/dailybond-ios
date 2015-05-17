@@ -46,6 +46,9 @@
         return nil;
     });
 }
+- (IBAction)onDismissButtonPressed:(id)sender {
+    [self dismissAnimated];
+}
 
 - (void)dismissKeyboard {
     [self.textField resignFirstResponder];

@@ -172,13 +172,12 @@ import Foundation
     
     func loadWrite() -> BFTask {
         return FBRequests.sharedInstance.getLastPostDate().continueWithSuccessResultBlock({ (result:AnyObject!) -> AnyObject! in
-//            if let list = result as? Dictionary<String,AnyObject> {
-//                println("POSTS 2")
-//                self.sizes[CardsManager.WRITE] = list.count
-//            }
+            if let list = result as? Dictionary<String,AnyObject> {
+                println("POSTS 2")
+                self.sizes[CardsManager.WRITE] = list.count
+            }
             println("POSTS 3")
-            return BFTask(result: [6]);
-            //return result;
+            return result;
             
         })
     }

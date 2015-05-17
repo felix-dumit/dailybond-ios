@@ -23,12 +23,13 @@
 #import <UINavigationController+M13ProgressViewBar.h>
 #import "UIColor+Custom.h"
 
-@interface CardsViewController ()
+@interface CardsViewController () {
+    BOOL animatedOnce;
+}
 
 @property (strong, nonatomic) CardViewController *activeCard;
 
 @property (strong, nonatomic) NSNumber *loading;
-
 @end
 
 @implementation CardsViewController
@@ -41,6 +42,7 @@
     //[[SFTaskManager sharedInstance] requestGroupTasks:[[SFUser currentUser] root]];
     [self initProgressIndicators];
     self.loading = @YES;
+    animatedOnce = NO;
     [self.progressBirthday setHidden:true];
     [self.progressEvent setHidden:true];
     [self.progressPosts setHidden:true];
@@ -127,6 +129,11 @@
         //        message.message = @"Loaded from mock: Hey are you going to Facebook Hackathon today? I'm thinking about driving early this morning, but I'm still not sure. What time are you thinking about arriving there? And what about going back??";
         //        message.profileImageUrl = [[User currentUser] profileImageUrl];
     } else {
+        
+
+        
+        
+        
         self.doneCheck.layer.borderColor = [[UIColor whiteColor] CGColor];
         self.doneCheck.layer.borderWidth = 2.0;
         self.groupFinished.alpha = 0.0;
@@ -140,14 +147,18 @@
 
 - (void)didStartCards {
     
-    // LOAD CARD RIGHT HERE
-    [self animateProgressBadges];
-    [[CardsManager sharedInstance] loadCurrentCard].then ( ^id (id result) {
-        NSLog(@"Finished loading");
-        [self.navigationController finishProgress];
-        [self showCard:(CardViewController *)result animated:YES];
-        return nil;
-    });
+    if(!animatedOnce) {
+    
+        // LOAD CARD RIGHT HERE
+        [self animateProgressBadges];
+        [[CardsManager sharedInstance] loadCurrentCard].then ( ^id (id result) {
+            NSLog(@"Finished loading");
+            [self.navigationController finishProgress];
+            [self showCard:(CardViewController *)result animated:YES];
+            return nil;
+        });
+        animatedOnce = YES;
+    }
     
 }
 
