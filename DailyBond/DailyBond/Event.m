@@ -9,14 +9,27 @@
 #import "Event.h"
 #import <DateTools.h>
 
+@interface Event ()
+
+@property (strong, nonatomic) NSString *dateString;
+@end
+
 @implementation Event
 
 @dynamic name;
 @dynamic eventId;
 @dynamic date;
+@dynamic rsvpStatus;
 
 + (NSString *)parseClassName {
     return @"Event";
+}
+
++ (NSDate *)strToDate:(NSString *)dateStr {
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd"];
+    NSDate *date = [dateFormat dateFromString:dateStr];
+    return date;
 }
 
 + (void)registerSubclass {
@@ -26,16 +39,23 @@
         return @{
                  @"name": @"name",
                  @"eventId" : @"id",
-                 @"date": @"start_time"
+                 @"rsvpStatus": @"rsvp_status",
+                 @"dateString": @"start_time"
                  };
     }];
 }
 
-+ (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId {
+- (void)setDateString:(NSString *)dateString {
+    [self setObject:dateString forKey:@"dateString"];
+    self.date = [Event strToDate: dateString];
+}
+
++ (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId andRsvp:(NSString *)rsvpStatus {
     Event *event = [Event object];
     event.name = name;
     event.date = date;
     event.eventId = eventId;
+    event.rsvpStatus = rsvpStatus;
     return event;
 }
 
@@ -45,8 +65,9 @@
         NSString *eventName = @"Bonde do Hackaton 2015";
         NSDate *date = [NSDate dateWithYear:2015 month:5 day:17];
         NSString *eventId = @"828648753872660";
+        NSString *rsvpStatus = @"attending";
         
-        [array addObject:[Event createWithName:eventName andDate:date andId:eventId]];
+        [array addObject:[Event createWithName:eventName andDate:date andId:eventId andRsvp:rsvpStatus]];
     }
     
     return array;

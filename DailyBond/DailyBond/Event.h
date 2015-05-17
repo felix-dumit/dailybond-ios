@@ -13,8 +13,9 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) NSString *eventId;
+@property (strong, nonatomic) NSString *rsvpStatus;
 
-+ (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId;
++ (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId  andRsvp:(NSString *)rsvpStatus;
 + (NSArray *)generateMockData;
 + (BFTask *)allEvents;
 
