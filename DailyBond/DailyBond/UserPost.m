@@ -80,7 +80,7 @@
             NSArray *array = [UserPost processPostsArray:result];
             return array;
         }).catch ( ^id (NSError *error) {
-            return [self generateMockData];
+            return @[[self generateMockData]];
         });
     }
     

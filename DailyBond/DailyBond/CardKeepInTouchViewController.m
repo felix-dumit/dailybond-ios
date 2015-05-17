@@ -42,4 +42,10 @@
 }
 */
 
+-(CardView *)getCardView;
+{
+    return self.cardView;
+}
+
+
 @end

@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CardShowPostViewController">
             <connections>
+                <outlet property="cardView" destination="Z3B-Ra-ffS" id="yEB-Lx-OUd"/>
                 <outlet property="contentLabel" destination="BmZ-PV-HbN" id="6Jv-1z-d0f"/>
                 <outlet property="postImageView" destination="g5d-ij-JXl" id="4in-8l-MPf"/>
                 <outlet property="titleLabel" destination="hcV-uC-xin" id="UwG-SL-N2k"/>
@@ -126,10 +127,10 @@
             </userDefinedRuntimeAttributes>
             <variation key="default">
                 <mask key="constraints">
-                    <exclude reference="NLp-Yc-e1g"/>
-                    <exclude reference="5G5-QQ-ypr"/>
                     <exclude reference="2Yk-fN-T4r"/>
+                    <exclude reference="5G5-QQ-ypr"/>
                     <exclude reference="BbA-R7-486"/>
+                    <exclude reference="NLp-Yc-e1g"/>
                     <exclude reference="HB6-KQ-V9P"/>
                     <exclude reference="g4e-Oe-2Su"/>
                 </mask>

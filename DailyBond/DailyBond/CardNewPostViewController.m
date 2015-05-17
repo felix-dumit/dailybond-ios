@@ -7,7 +7,6 @@
 //
 
 #import "CardNewPostViewController.h"
-#import "UserPost.h"
 #import "NSDate+Formatter.h"
 #import "User.h"
 
@@ -20,8 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UserPost *post = self.cardData;
-    [self.descriptionLabel setText:[NSString stringWithFormat:@"It's been %ld days since you don't post in your timeline! What about posting something to your friends?", [NSDate daysBetweenDate:post.date andDate:[NSDate date]]]];
+    NSNumber *days = self.cardData;
+    [self.descriptionLabel setText:[NSString stringWithFormat:@"It's been %@ days since you don't post in your timeline! What about posting something to your friends?", days]];
     [self.profileImageView sd_setImageWithURL:[User currentUser].profileImageUrl.URL];
 }
 
@@ -39,5 +38,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(CardView *)getCardView;
+{
+    return self.cardView;
+}
+
 
 @end

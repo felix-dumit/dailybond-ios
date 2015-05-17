@@ -98,7 +98,7 @@
 + (NSArray *)generateMockData {
     NSMutableArray *array = [NSMutableArray array];
     
-    for (NSInteger i = 0; i < 10; i++) {
+    for (NSInteger i = 0; i < 3; i++) {
         UserMessage *m = [self createWithName:@"Jorge" andId:@"1" andDate:[NSDate dateWithTimeInterval:-100000000 sinceDate:[NSDate date]] andMessage:@"Hello!" andUnread:YES];
         m.unseen = YES;
         [array addObject:m];
