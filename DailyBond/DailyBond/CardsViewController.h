@@ -18,12 +18,9 @@
 @property (weak, nonatomic) IBOutlet KKProgressTimer *progressPosts;
 @property (weak, nonatomic) IBOutlet KKProgressTimer *progressChat;
 @property (weak, nonatomic) IBOutlet KKProgressTimer *progressWrite;
+@property (weak, nonatomic) IBOutlet UIView *doneCheck;
 
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *positionBirthday;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *positionEvent;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *positionPosts;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *positionChat;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *positionWrite;
+@property (weak, nonatomic) IBOutlet UIView *groupFinished;
 
 
 -(void)cardDismissed;
