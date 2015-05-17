@@ -180,6 +180,15 @@
         //        message.read = true;
         //        message.message = @"Loaded from mock: Hey are you going to Facebook Hackathon today? I'm thinking about driving early this morning, but I'm still not sure. What time are you thinking about arriving there? And what about going back??";
         //        message.profileImageUrl = [[User currentUser] profileImageUrl];
+    } else {
+        self.doneCheck.layer.borderColor = [[UIColor whiteColor] CGColor];
+        self.doneCheck.layer.borderWidth = 2.0;
+        self.groupFinished.alpha = 0.0;
+        self.groupFinished.transform = CGAffineTransformMakeScale(0.5, 0.5);
+        [UIView animateWithDuration:0.5 animations:^{
+            self.groupFinished.alpha = 1.0;
+            self.groupFinished.transform = CGAffineTransformIdentity;
+        }];
     }
 }
 
@@ -197,6 +206,10 @@
     //    NSLog(@"Card dismissed 4");
     //[self showCard];
     //}];
+}
+
+- (IBAction)goToFacebook:(id)sender {
+    
 }
 
 /*
