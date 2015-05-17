@@ -68,11 +68,7 @@
     
     // TODO : LOAD CONTROLLER HERE RIGHT NOWWW!!!
     CardViewController *popin;
-<<<<<<< HEAD
-    switch(0) {
-=======
     switch (1) {
->>>>>>> c349aea3750463a246d1021a4702423bd3deb604
         case 0:
             popin = [[CardBirthdayViewController alloc] init];
             popin.cardData = [Birthday generateMockBirthDays][0];
@@ -82,21 +78,14 @@
             popin = [[CardEventViewController alloc] init];
             popin.cardData = [Event generateMockData][0];
             break;
-<<<<<<< HEAD
         case 2: {
-=======
-            
-        case 2:
->>>>>>> c349aea3750463a246d1021a4702423bd3deb604
+
             popin = [[CardNewPostViewController alloc] init];
             UserPost *post = [UserPost generateMockData];
             popin.cardData = post;
             break;
-<<<<<<< HEAD
         }
-=======
             
->>>>>>> c349aea3750463a246d1021a4702423bd3deb604
         case 3:
             popin = [[CardKeepInTouchViewController alloc] init];
             popin.cardData = nil;
