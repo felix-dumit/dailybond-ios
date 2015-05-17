@@ -47,9 +47,9 @@ import Foundation
         if (index >= sizes[section]) {
             index = 0
             section++
-            while (sizes[section] == 0 && section <= CardsManager.WRITE) {
-                section++
-            }
+//            while (sizes[section] == 0 && section <= CardsManager.WRITE) {
+//                section++
+//            }
             if (section > CardsManager.WRITE) {
                 println("NO MORE CARDS!!!!!")
                 return BFTask(result: nil)
@@ -117,9 +117,12 @@ import Foundation
     
     func loadEvents() -> BFTask {
         return Event.allEvents().continueWithSuccessResultBlock({ (result: AnyObject!) -> AnyObject! in
+            println("WORLD 1")
             if let list = result as? Array<AnyObject> {
+                println("WORLD 2")
                 self.sizes[CardsManager.EVENTS] = list.count
             }
+            println("WORLD 3")
             return result;
         })
     }
