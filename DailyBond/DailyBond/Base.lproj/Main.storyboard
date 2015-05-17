@@ -56,7 +56,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N5J-x3-oLz">
                                         <rect key="frame" x="375" y="0.0" width="375" height="667"/>
                                         <connections>
-                                            <segue destination="GgH-xq-gFL" kind="embed" id="zwf-le-OkX"/>
+                                            <segue destination="GgH-xq-gFL" kind="embed" identifier="segueCards" id="zwf-le-OkX"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -70,6 +70,9 @@
                                     <constraint firstItem="N5J-x3-oLz" firstAttribute="leading" secondItem="NpM-vC-IdH" secondAttribute="trailing" id="ia4-l7-dQI"/>
                                     <constraint firstItem="N5J-x3-oLz" firstAttribute="width" secondItem="TXe-Jo-9qa" secondAttribute="width" id="p1m-Ga-3Sp"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="lOn-mI-tl3" id="4qA-Jk-SYc"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.46666666670000001" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

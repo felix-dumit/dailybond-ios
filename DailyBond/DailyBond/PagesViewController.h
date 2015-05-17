@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PagesViewController : UIViewController
+@interface PagesViewController : UIViewController<UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackground;
 @property (weak, nonatomic) IBOutlet UIView *containerLogin;
 
 - (void) startCards;
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView;
 
 @end

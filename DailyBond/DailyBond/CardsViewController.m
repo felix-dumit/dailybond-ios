@@ -135,14 +135,6 @@
             [self.progressWrite pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
         });
         
-        
-        // LOAD CARD RIGHT HERE
-        [[CardsManager sharedInstance] loadCurrentCard].then ( ^id (id result) {
-            NSLog(@"Finished loading");
-            [self.navigationController finishProgress];
-            [self showCard:(CardViewController *)result animated:YES];
-            return nil;
-        });
     }
     else {
         [self.navigationController finishProgress];
@@ -191,6 +183,18 @@
             self.groupFinished.transform = CGAffineTransformIdentity;
         }];
     }
+}
+
+- (void)didStartCards {
+    
+    // LOAD CARD RIGHT HERE
+    [[CardsManager sharedInstance] loadCurrentCard].then ( ^id (id result) {
+        NSLog(@"Finished loading");
+        [self.navigationController finishProgress];
+        [self showCard:(CardViewController *)result animated:YES];
+        return nil;
+    });
+    
 }
 
 - (void)cardDismissed {

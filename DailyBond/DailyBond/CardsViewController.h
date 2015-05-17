@@ -23,6 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIView *groupFinished;
 
 
+-(void)didStartCards;
+
 -(void)cardDismissed;
 
 @end
