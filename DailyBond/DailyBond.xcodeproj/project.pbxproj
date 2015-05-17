@@ -23,6 +23,7 @@
 		2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224AC1B07CD2A00B5042E /* DraggableView.swift */; };
 		2EFEB66A1B0873A800071497 /* CDSideBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB6691B0873A800071497 /* CDSideBarController.m */; };
 		2EFEB66D1B088ABC00071497 /* PagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB66C1B088ABC00071497 /* PagesViewController.m */; };
+		55EF405E1B08A5B50063BC69 /* LastPostDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF405D1B08A5B50063BC69 /* LastPostDate.m */; };
 		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
 		D5392F3B1B080B7900129D45 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D5392F3A1B080B7900129D45 /* Event.m */; };
 		D5392F3D1B08172200129D45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5392F3C1B08172200129D45 /* Foundation.framework */; };
@@ -96,6 +97,8 @@
 		2EFEB6691B0873A800071497 /* CDSideBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSideBarController.m; sourceTree = "<group>"; };
 		2EFEB66B1B088ABC00071497 /* PagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagesViewController.h; sourceTree = "<group>"; };
 		2EFEB66C1B088ABC00071497 /* PagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagesViewController.m; sourceTree = "<group>"; };
+		55EF405C1B08A54A0063BC69 /* LastPostDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastPostDate.h; sourceTree = "<group>"; };
+		55EF405D1B08A5B50063BC69 /* LastPostDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LastPostDate.m; sourceTree = "<group>"; };
 		B3C7145450A15ADE2386B5E5 /* Pods-DailyBond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyBond.release.xcconfig"; path = "Pods/Target Support Files/Pods-DailyBond/Pods-DailyBond.release.xcconfig"; sourceTree = "<group>"; };
 		D5392F391B080B7900129D45 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		D5392F3A1B080B7900129D45 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 			children = (
 				D59549B91B07EEE000720A52 /* Birthday.h */,
 				D59549BA1B07EEE000720A52 /* Birthday.m */,
+				55EF405C1B08A54A0063BC69 /* LastPostDate.h */,
+				55EF405D1B08A5B50063BC69 /* LastPostDate.m */,
 				D59549C51B07FFF400720A52 /* KeepInTouch.h */,
 				D59549C61B07FFF400720A52 /* KeepInTouch.m */,
 				D58F598A1B07BA8C00FAB188 /* User.h */,
@@ -541,6 +546,7 @@
 				2E9224A41B07CCD800B5042E /* CardView.m in Sources */,
 				2E6D3AE31B07D15A00DF99C6 /* CardViewController.m in Sources */,
 				2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */,
+				55EF405E1B08A5B50063BC69 /* LastPostDate.m in Sources */,
 				EBDA22CF1B07EF050095633A /* CardEventViewController.m in Sources */,
 				2E6D3AF31B0820F200DF99C6 /* ILTranslucentView.swift in Sources */,
 			);
