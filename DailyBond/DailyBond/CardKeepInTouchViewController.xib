@@ -50,7 +50,7 @@
                     <rect key="frame" x="8" y="90" width="584" height="85"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Andre" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUk-3Y-Aac">
-                            <rect key="frame" x="76" y="8" width="42" height="18"/>
+                            <rect key="frame" x="76" y="8" width="500" height="18"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -79,6 +79,7 @@
                         <constraint firstAttribute="bottom" secondItem="SE3-Cg-ReT" secondAttribute="bottom" priority="900" constant="8" id="iEH-Jq-slP"/>
                         <constraint firstItem="SE3-Cg-ReT" firstAttribute="top" secondItem="mUk-3Y-Aac" secondAttribute="top" id="jep-z1-ky4"/>
                         <constraint firstAttribute="trailing" secondItem="ZVi-cl-Omy" secondAttribute="trailing" constant="8" id="kaX-gy-HQ9"/>
+                        <constraint firstAttribute="trailing" secondItem="mUk-3Y-Aac" secondAttribute="trailing" constant="8" id="q4d-rn-bol"/>
                         <constraint firstItem="ZVi-cl-Omy" firstAttribute="leading" secondItem="mUk-3Y-Aac" secondAttribute="leading" id="sco-bg-eJT"/>
                         <constraint firstItem="SE3-Cg-ReT" firstAttribute="top" secondItem="T7W-fu-PBw" secondAttribute="top" constant="8" id="sub-en-xPt"/>
                         <constraint firstItem="SE3-Cg-ReT" firstAttribute="leading" secondItem="T7W-fu-PBw" secondAttribute="leading" constant="8" id="zMJ-4E-Nyy"/>
