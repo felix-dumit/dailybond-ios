@@ -12,6 +12,7 @@
 @interface CardBirthdayViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
 @end
 
 @implementation CardBirthdayViewController
@@ -19,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Birthday *birthday = (Birthday*) self.cardData;
+    Birthday *birthday = (Birthday *)self.cardData;
     // Do any additional setup after loading the view from its nib.
     [self setDescriptionLabelWithName:birthday.friendName];
     [self.userImageView sd_setImageWithURL:birthday.pictureURL.URL];
@@ -31,8 +32,7 @@
 }
 
 #pragma mark - UI Helper Methods
-- (void) setDescriptionLabelWithName:(NSString*)aName
-{
+- (void)setDescriptionLabelWithName:(NSString *)aName {
     // TODO: Consider gender in message: Give %s congratulations for "his" birthday
     [self.descriptionLabel setText:[NSString stringWithFormat:@"Send %@ congratulations!", aName]];
     return;
@@ -43,19 +43,28 @@
 }
 
 - (IBAction)onSendPressed:(id)sender {
+    Birthday *birthday = (Birthday *)self.cardData;
+    
+    NSString *url = [NSString stringWithFormat:@"https://www.facebook.com/%@", birthday.friendId];
+    [BFAppLinkNavigation navigateToURLInBackground:url.URL].then ( ^id (id result) {
+        return nil;
+    }).catch ( ^id (NSError *error) {
+        NSLog(@"Error: %@", error);
+        return nil;
+    });
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
--(CardView *)getCardView;
+- (CardView *)getCardView;
 {
     return self.cardView;
 }

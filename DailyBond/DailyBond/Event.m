@@ -20,6 +20,7 @@
 @dynamic eventId;
 @dynamic date;
 @dynamic rsvpStatus;
+@dynamic dateString;
 @dynamic eventImageUrl;
 
 + (NSString *)parseClassName {
