@@ -45,7 +45,7 @@
 #pragma mark - Buttons delegates
 - (IBAction)onDismissPressed:(id)sender {
     [MessengerSharer testShare];
-    //    [self dismissAnimated];
+    [self dismissAnimated];
 }
 
 - (IBAction)onSendPressed:(id)sender {
