@@ -20,6 +20,7 @@
 @dynamic eventId;
 @dynamic date;
 @dynamic rsvpStatus;
+@dynamic eventImageUrl;
 
 + (NSString *)parseClassName {
     return @"Event";
@@ -50,12 +51,13 @@
     self.date = [self strToDate: dateString];
 }
 
-+ (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId andRsvp:(NSString *)rsvpStatus {
++ (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId andRsvp:(NSString *)rsvpStatus andEventImageUrl:(NSString*)eventImageUrl{
     Event *event = [Event object];
     event.name = name;
     event.date = date;
     event.eventId = eventId;
     event.rsvpStatus = rsvpStatus;
+    event.eventImageUrl = eventImageUrl;
     return event;
 }
 
@@ -66,8 +68,8 @@
         NSDate *date = [NSDate dateWithYear:2015 month:5 day:17];
         NSString *eventId = @"828648753872660";
         NSString *rsvpStatus = @"attending";
-        
-        [array addObject:[Event createWithName:eventName andDate:date andId:eventId andRsvp:rsvpStatus]];
+        NSString *eventImage = @"https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xfa1/t31.0-8/175774_10150257616905988_1545266_o.jpg";
+        [array addObject:[Event createWithName:eventName andDate:date andId:eventId andRsvp:rsvpStatus andEventImageUrl:eventImage]];
     }
     
     return array;

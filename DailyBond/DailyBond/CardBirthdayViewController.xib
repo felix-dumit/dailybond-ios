@@ -52,7 +52,7 @@
                         <action selector="onSendPressed:" destination="-1" eventType="touchUpInside" id="NYV-QT-14Q"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VXi-9r-6Uh">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VXi-9r-6Uh">
                     <rect key="frame" x="8" y="56" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="NDM-UJ-ubI"/>
