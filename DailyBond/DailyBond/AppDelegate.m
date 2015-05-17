@@ -16,6 +16,7 @@
 #import <FBSDKMessengerURLHandlerReplyContext.h>
 #import "User.h"
 #import "Birthday.h"
+#import "LastPostDate.h"
 #import "KeepInTouch.h"
 #import "Event.h"
 #import "UserPost.h"
@@ -50,6 +51,7 @@ enum MessengerShareMode { MessengerShareModeSend,
     [UserPost registerSubclass];
     [UserMessage registerSubclass];
     [Event registerSubclass];
+    [LastPostDate registerSubclass];
     
     
     [Parse enableLocalDatastore];
