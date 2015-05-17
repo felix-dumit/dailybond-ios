@@ -7,11 +7,26 @@
 //
 
 #import "UserMessage.h"
+#import "User.h"
 #import <Parse/Parse.h>
+
+@interface Message : NSObject
+
+@property NSString *userId;
+@property NSString *userName;
+@property NSString *message;
+
+@end
+
+@implementation Message
+
+@end
+
 
 @interface UserMessage ()
 
 @property (strong, nonatomic) NSString *dateString;
+@property (strong, nonatomic) NSArray *messages;
 @end
 
 @implementation UserMessage
@@ -19,9 +34,12 @@
 @dynamic friendName;
 @dynamic receivedDate;
 @dynamic message;
+@dynamic messages;
 @dynamic unread;
+@dynamic unseen;
 @dynamic dateString;
 @dynamic profileImageUrl;
+@dynamic chatId;
 
 
 + (NSString *)parseClassName {
@@ -44,13 +62,27 @@
     
     [UserMessage setupReplacedKeyFromPropertyName: ^NSDictionary *{
         return @{
-                 @"friendId": @"id.to.data.id",
-                 @"friendName" : @"id.to.data.name",
                  @"receivedDate": @"updated_time",
-                 @"message": @"comments.data.message",
-                 @"read": @"unread"
+                 @"messages": @"comments.data",
+                 @"unread": @"unread",
+                 @"unseen": @"unseen",
+                 @"chatId": @"id"
                  };
     }];
+    
+    //    [UserMessage setupObjectClassInArray: ^NSDictionary *{
+    //        return @{
+    //                 @"comments.data" : @"Message",
+    //                 };
+    //    }];
+    
+    //    [Message setupReplacedKeyFromPropertyName: ^NSDictionary *{
+    //        return @{
+    //                 @"userId": @"from.id",
+    //                 @"userName": @"from.name",
+    //                 @"message": @"message"
+    //                 };
+    //    }];
 }
 
 + (instancetype)createWithName:(NSString *)friendName andId:(NSString *)friendId andDate:(NSDate *)receivedDate andMessage:(NSString *)message andUnread:(BOOL)unread {
@@ -68,6 +100,7 @@
     
     for (NSInteger i = 0; i < 10; i++) {
         UserMessage *m = [self createWithName:@"Jorge" andId:@"1" andDate:[NSDate dateWithTimeInterval:-100000000 sinceDate:[NSDate date]] andMessage:@"Hello!" andUnread:YES];
+        m.unseen = YES;
         [array addObject:m];
     }
     
@@ -79,8 +112,7 @@
     
     if (!currentTask) {
         currentTask = [[FBRequests sharedInstance] getInbox].then ( ^id (NSArray *result) {
-            NSArray *array = [UserMessage objectArrayWithKeyValuesArray:result];
-            return array;
+            return [self processConversationArray:result];
         }).catch ( ^id (NSError *error) {
             return [self generateMockData];
         });
@@ -89,9 +121,32 @@
     return currentTask;
 }
 
-- (NSArray *)createEventsArrayFromJSONArray:(NSArray *)array {
-    NSArray *arr = [UserMessage objectArrayWithKeyValuesArray:array];
-    return arr;
++ (NSArray *)processConversationArray:(NSArray *)arr {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
+    [dateFormatter setLocale:enUSPOSIXLocale];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
+    
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSDictionary *conversation in arr) {
+        NSDictionary *lastMessage = [conversation[@"comments"][@"data"] lastObject];
+        NSString *userId = lastMessage[@"from"][@"id"];
+        NSString *userName = lastMessage[@"from"][@"name"];
+        NSString *message = lastMessage[@"message"];
+        NSDate *date =  [dateFormatter dateFromString:conversation[@"updated_time"]];
+        BOOL unread = [conversation[@"unread"] boolValue];
+        BOOL unseen = [conversation[@"unseen"] boolValue];
+        
+        if (![userId isEqualToString:[User currentUser].facebookID]
+            && message) {
+            UserMessage *umsg = [UserMessage createWithName:userName andId:userId andDate:date andMessage:message andUnread:unread];
+            umsg.unseen = unseen;
+            
+            [array addObject:umsg];
+        }
+    }
+    
+    return array;
 }
 
 - (NSURL *)profileImageURL {
