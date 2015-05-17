@@ -39,6 +39,10 @@
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6b-Al-ilq" userLabel="LoginBackground">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYc-RI-hoR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                            </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TXe-Jo-9qa">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
@@ -74,14 +78,19 @@
                             <constraint firstItem="N5J-x3-oLz" firstAttribute="height" secondItem="Srs-7R-nhP" secondAttribute="height" id="HQV-Fh-Fsn"/>
                             <constraint firstAttribute="centerX" secondItem="TXe-Jo-9qa" secondAttribute="centerX" id="JPg-wi-Gqi"/>
                             <constraint firstAttribute="width" secondItem="TXe-Jo-9qa" secondAttribute="width" id="USC-bW-AVL"/>
+                            <constraint firstAttribute="trailing" secondItem="ZYc-RI-hoR" secondAttribute="trailing" id="Uep-JT-rFm"/>
+                            <constraint firstItem="YNc-Js-sPg" firstAttribute="top" secondItem="ZYc-RI-hoR" secondAttribute="bottom" id="Z37-8V-DPJ"/>
+                            <constraint firstItem="ZYc-RI-hoR" firstAttribute="leading" secondItem="Srs-7R-nhP" secondAttribute="leading" id="eHl-D8-wWu"/>
                             <constraint firstAttribute="centerY" secondItem="TXe-Jo-9qa" secondAttribute="centerY" id="hS5-Gl-9ep"/>
                             <constraint firstAttribute="width" secondItem="NpM-vC-IdH" secondAttribute="width" id="maN-LD-rva"/>
+                            <constraint firstItem="ZYc-RI-hoR" firstAttribute="top" secondItem="Srs-7R-nhP" secondAttribute="top" id="uDo-m7-z1n"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="containerLogin" destination="NpM-vC-IdH" id="7aU-Q6-RDP"/>
                         <outlet property="imageBackground" destination="Z6b-Al-ilq" id="ISC-em-St4"/>
+                        <outlet property="scrollView" destination="TXe-Jo-9qa" id="zDC-Ef-unG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grh-q2-0ML" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -198,6 +207,9 @@
                                                 <exclude reference="J6w-CN-d63"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="start:" destination="U9T-Fs-UtI" eventType="touchUpInside" id="UlK-mC-zBE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageBackground;
 @property (weak, nonatomic) IBOutlet UIView *containerLogin;
 
+- (void) startCards;
+
 @end
