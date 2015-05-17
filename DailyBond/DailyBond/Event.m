@@ -19,6 +19,18 @@
     return @"Event";
 }
 
++ (void)registerSubclass {
+    [super registerSubclass];
+    
+    [Event setupReplacedKeyFromPropertyName: ^NSDictionary *{
+        return @{
+                 @"name": @"name",
+                 @"eventId" : @"id",
+                 @"date": @"start_time"
+                 };
+    }];
+}
+
 + (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId {
     Event *event = [Event object];
     event.name = name;
@@ -38,6 +50,25 @@
     }
     
     return array;
+}
+
++ (BFTask *)allEvents {
+    static BFTask *currentTask = nil;
+    
+    if (!currentTask) {
+        currentTask = [[FBRequests sharedInstance] getEvents].then ( ^id (NSArray *result) {
+            return [Event objectArrayWithKeyValuesArray:result];
+        }).catch ( ^id (NSError *error) {
+            return [self generateMockData];
+        });
+    }
+    
+    return currentTask;
+}
+
+- (NSArray *)createEventsArrayFromJSONArray:(NSArray *)array {
+    NSArray *arr = [Event objectArrayWithKeyValuesArray:array];
+    return arr;
 }
 
 @end

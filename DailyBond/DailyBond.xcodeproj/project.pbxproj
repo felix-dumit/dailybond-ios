@@ -13,6 +13,7 @@
 		2E6D3AED1B07F30B00DF99C6 /* KKProgressTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AEC1B07F30B00DF99C6 /* KKProgressTimer.m */; };
 		2E6D3AF11B0820E200DF99C6 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AF01B0820E200DF99C6 /* FXBlurView.m */; };
 		2E6D3AF31B0820F200DF99C6 /* ILTranslucentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AF21B0820F200DF99C6 /* ILTranslucentView.swift */; };
+		2E6D3AF91B08473A00DF99C6 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6D3AF81B08473A00DF99C6 /* CardsManager.swift */; };
 		2E92249A1B07BCF200B5042E /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224991B07BCF200B5042E /* TestViewController.swift */; };
 		2E92249C1B07BEEC00B5042E /* FBRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E92249B1B07BEEC00B5042E /* FBRequests.swift */; };
 		2E9224A41B07CCD800B5042E /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A21B07CCD800B5042E /* CardView.m */; };
@@ -74,6 +75,7 @@
 		2E6D3AEF1B0820E200DF99C6 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
 		2E6D3AF01B0820E200DF99C6 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		2E6D3AF21B0820F200DF99C6 /* ILTranslucentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ILTranslucentView.swift; sourceTree = "<group>"; };
+		2E6D3AF81B08473A00DF99C6 /* CardsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
 		2E9224981B07BCF200B5042E /* DailyBond-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-Bridging-Header.h"; sourceTree = "<group>"; };
 		2E9224991B07BCF200B5042E /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		2E92249B1B07BEEC00B5042E /* FBRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBRequests.swift; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 				EBDA22E51B082D430095633A /* NSDate+Formatter.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		2E6D3AF41B0836D200DF99C6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2E6D3AF81B08473A00DF99C6 /* CardsManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		2E9224941B07BBC300B5042E /* Controllers */ = {
@@ -290,6 +300,7 @@
 		EB04D8B31B07A61C009B8AB0 /* DailyBond */ = {
 			isa = PBXGroup;
 			children = (
+				2E6D3AF41B0836D200DF99C6 /* Manager */,
 				2E6D3AE71B07D74D00DF99C6 /* Helpers */,
 				2E9224971B07BBF700B5042E /* Web */,
 				2E9224961B07BBDB00B5042E /* Model */,
@@ -478,6 +489,7 @@
 				2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */,
 				D58F598C1B07BA8C00FAB188 /* User.m in Sources */,
 				EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */,
+				2E6D3AF91B08473A00DF99C6 /* CardsManager.swift in Sources */,
 				EBDA22E91B0830E40095633A /* UserPost.m in Sources */,
 				EB04D8BD1B07A61C009B8AB0 /* ViewController.m in Sources */,
 				2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */,

@@ -9,8 +9,12 @@
 #import <FBSDKShareKit.h>
 #import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
 #import "Birthday.h"
+#import "Event.h"
+#import "UserPost.h"
+#import "KeepInTouch.h"
 #import "User.h"
 #import "UserPost.h"
+#import "Event.h"
 #import "MessengerSharer.h"
 #import <DateTools.h>
 #import "CardKeepInTouchViewController.h"
