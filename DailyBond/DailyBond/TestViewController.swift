@@ -26,15 +26,16 @@ class TestViewController: UIViewController {
     
     @IBAction func testBirthday(sender: AnyObject) {
         
-        Birthday.allBirthdays().continueWithSuccessResultBlock { (result) -> AnyObject! in
+        UserPost.allPosts().continueWithSuccessResultBlock { (result) -> AnyObject! in
             
-            if let birthdays = result as? [Birthday] {
+            if let birthdays = result as? [UserPost] {
                 println("Got bidays \(birthdays)")
             }
             
             return nil
         }
-        
+    
+    
     }
     
     @IBAction func shareOnMessenger(sender: AnyObject) {

@@ -8,13 +8,10 @@
 
 #import "Birthday.h"
 #import "NSDate+Random.h"
-#import <MJExtension.h>
-#import "DailyBond-Swift.h"
-#import <BFTask-Extras/BFTask-Extras.h>
+
 
 
 @implementation Birthday
-
 @dynamic birthdayDate;
 @dynamic friendId;
 @dynamic friendName;
@@ -65,12 +62,17 @@
 }
 
 + (BFTask *)allBirthdays {
-    return [[FBRequests sharedInstance] getFriends].then ( ^id (NSArray *result) {
-        NSArray *array = [Birthday objectArrayWithKeyValuesArray:result];
-        return array;
-    }).catch ( ^id (NSError *error) {
-        return [self generateMockBirthDays];
-    });
+    static BFTask *currentTask = nil;
+    
+    if (!currentTask) {
+        currentTask = [[FBRequests sharedInstance] getFriends].then ( ^id (NSArray *result) {
+            return [Birthday objectArrayWithKeyValuesArray:result];
+        }).catch ( ^id (NSError *error) {
+            return [self generateMockBirthDays];
+        });
+    }
+    
+    return currentTask;
 }
 
 - (NSArray *)createBirthDayArrayFromJSONArray:(NSArray *)array {
