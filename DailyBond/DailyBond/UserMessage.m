@@ -63,8 +63,15 @@
     return user_msg;
 }
 
-+ (UserMessage *)generateMockData {
-    return [self createWithName:@"Jorge" andId:@"1" andDate:[NSDate dateWithTimeInterval:-100000000 sinceDate:[NSDate date]] andMessage:@"Hello!" andUnread:YES];
++ (NSArray *)generateMockData {
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < 10; i++) {
+        UserMessage *m = [self createWithName:@"Jorge" andId:@"1" andDate:[NSDate dateWithTimeInterval:-100000000 sinceDate:[NSDate date]] andMessage:@"Hello!" andUnread:YES];
+        [array addObject:m];
+    }
+    
+    return array;
 }
 
 + (BFTask *)allMessages {
@@ -72,7 +79,8 @@
     
     if (!currentTask) {
         currentTask = [[FBRequests sharedInstance] getInbox].then ( ^id (NSArray *result) {
-            return [UserMessage objectArrayWithKeyValuesArray:result];
+            NSArray *array = [UserMessage objectArrayWithKeyValuesArray:result];
+            return array;
         }).catch ( ^id (NSError *error) {
             return [self generateMockData];
         });

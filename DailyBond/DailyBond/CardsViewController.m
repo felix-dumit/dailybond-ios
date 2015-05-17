@@ -20,6 +20,7 @@
 #import "UserMessage.h"
 #import "User.h"
 #import <POP.h>
+#import <UINavigationController+M13ProgressViewBar.h>
 
 @interface CardsViewController ()
 
@@ -47,12 +48,14 @@
 }
 
 - (void)initProgressIndicators {
+    [self.navigationController showProgress];
+    [self.navigationController setIndeterminate:YES];
     self.progressBirthday.progressColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
     self.progressEvent.progressColor = [UIColor colorWithRed:0.0 green:0.0 blue:1.0 alpha:1.0];
-    [self.progressBirthday startWithBlock:^CGFloat{
+    [self.progressBirthday startWithBlock: ^CGFloat {
         return [[CardsManager sharedInstance] progress:CardsManager.BIRTHDAY];
     }];
-    [self.progressEvent startWithBlock:^CGFloat{
+    [self.progressEvent startWithBlock: ^CGFloat {
         return [[CardsManager sharedInstance] progress:CardsManager.EVENTS];
     }];
 }
@@ -62,7 +65,7 @@
         self.loading = @NO;
         
         float delayInSeconds = 0.1;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
             POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
             sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
             sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
@@ -71,7 +74,7 @@
             [self.progressBirthday pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
         });
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
             POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
             sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
             sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
@@ -80,7 +83,7 @@
             [self.progressEvent pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
         });
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
             POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
             sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
             sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
@@ -89,7 +92,7 @@
             [self.progressPosts pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
         });
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 4 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
             POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
             sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
             sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
@@ -98,7 +101,7 @@
             [self.progressChat pop_addAnimation:sprintAnimation forKey:@"springAnimation"];
         });
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 5 * delayInSeconds * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
             POPSpringAnimation *sprintAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPViewScaleXY];
             sprintAnimation.fromValue = [NSValue valueWithCGPoint:CGPointMake(0.0, 0.0)];
             sprintAnimation.velocity = [NSValue valueWithCGPoint:CGPointMake(2, 2)];
@@ -109,11 +112,15 @@
         
         
         // LOAD CARD RIGHT HERE
-        [[CardsManager sharedInstance] loadCurrentCard].then(^id(id result) {
+        [[CardsManager sharedInstance] loadCurrentCard].then ( ^id (id result) {
             NSLog(@"Finished loading");
+            [self.navigationController finishProgress];
             [self showCard:(CardViewController *)result animated:YES];
             return nil;
         });
+    }
+    else {
+        [self.navigationController finishProgress];
     }
 }
 
@@ -125,15 +132,15 @@
 #pragma mark - Cards methods
 
 
-- (void) updateProgress {
+- (void)updateProgress {
     [self.progressBirthday updateProgress];
     [self.progressEvent updateProgress];
-//    [self.progressPosts updateProgress];
-//    [self.progressChat updateProgress];
-//    [self.progressWrite updateProgress];
+    //    [self.progressPosts updateProgress];
+    //    [self.progressChat updateProgress];
+    //    [self.progressWrite updateProgress];
 }
 
-- (void) showCard:(CardViewController *)popin animated:(BOOL)animated {
+- (void)showCard:(CardViewController *)popin animated:(BOOL)animated {
     [self updateProgress];
     if (popin != nil) {
         NSLog(@"Showing card animated...");
@@ -142,20 +149,20 @@
         [CardHelper displayCard:popin fromController:self animated:animated];
         
         
-//        UserMessage* message = [[UserMessage alloc] init];
-//        message.friendName = @"Andre Terron";
-//        message.friendId = @"828648753872660";
-//        message.receivedDate = [NSDate date];
-//        message.read = true;
-//        message.message = @"Loaded from mock: Hey are you going to Facebook Hackathon today? I'm thinking about driving early this morning, but I'm still not sure. What time are you thinking about arriving there? And what about going back??";
-//        message.profileImageUrl = [[User currentUser] profileImageUrl];
+        //        UserMessage* message = [[UserMessage alloc] init];
+        //        message.friendName = @"Andre Terron";
+        //        message.friendId = @"828648753872660";
+        //        message.receivedDate = [NSDate date];
+        //        message.read = true;
+        //        message.message = @"Loaded from mock: Hey are you going to Facebook Hackathon today? I'm thinking about driving early this morning, but I'm still not sure. What time are you thinking about arriving there? And what about going back??";
+        //        message.profileImageUrl = [[User currentUser] profileImageUrl];
     }
 }
 
 - (void)cardDismissed {
     NSLog(@"Card dismissed 2");
     self.activeCard = nil;
-    [[CardsManager sharedInstance] loadNextCard].then(^id(id result) {
+    [[CardsManager sharedInstance] loadNextCard].then ( ^id (id result) {
         NSLog(@"Finished loading");
         [self showCard:(CardViewController *)result animated:YES];
         return nil;

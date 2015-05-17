@@ -24,5 +24,6 @@
 + (BFTask *)loginWithFacebookInBackground;
 
 - (UIImage *)profileImage;
++ (BFTask *)publishMessage:(NSString *)message;
 
 @end
