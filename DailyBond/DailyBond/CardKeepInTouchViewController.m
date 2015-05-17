@@ -43,6 +43,20 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)onDismissButtonPressed:(id)sender {
+    [self dismissAnimated];
+}
+
+- (IBAction)onReplyButtonPressed:(id)sender {
+    UserMessage *message = self.cardData;
+    NSString *url = [NSString stringWithFormat:@"https://www.facebook.com/%@", message.friendId];
+    [BFAppLinkNavigation navigateToURLInBackground:url.URL].then ( ^id (id result) {
+        return nil;
+    }).catch ( ^id (NSError *error) {
+        NSLog(@"Error: %@", error);
+        return nil;
+    });
+}
 
 -(CardView *)getCardView;
 {

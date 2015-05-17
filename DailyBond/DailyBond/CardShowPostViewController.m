@@ -41,6 +41,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)onDismissButtonPressed:(id)sender {
+    // TODO: remind later
+    [self dismissAnimated];
+}
+- (IBAction)onNextButtonPressed:(id)sender {
+    [self dismissAnimated];
+}
 
 -(CardView *)getCardView;
 {

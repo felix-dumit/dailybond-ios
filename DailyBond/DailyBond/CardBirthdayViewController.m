@@ -42,6 +42,7 @@
 
 #pragma mark - Buttons delegates
 - (IBAction)onDismissPressed:(id)sender {
+    [self dismissAnimated];
 }
 
 - (IBAction)onSendPressed:(id)sender {

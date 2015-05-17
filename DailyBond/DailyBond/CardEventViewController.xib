@@ -20,6 +20,13 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bqh-IR-wXB">
+                    <rect key="frame" x="8" y="56" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="jbR-l8-DhO"/>
+                        <constraint firstAttribute="width" constant="100" id="wBd-7x-ZcY"/>
+                    </constraints>
+                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4le-xC-dBC">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
                     <constraints>
@@ -46,23 +53,21 @@
                         <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onDismissButtonPressed:" destination="-1" eventType="touchUpInside" id="8as-hE-1pk"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tb-Jb-Nxq">
                     <rect key="frame" x="308" y="562" width="276" height="30"/>
                     <state key="normal" title="Confirm">
-                        <color key="titleColor" red="0.51295727729999996" green="0.88030642989999996" blue="0.41191776759999998" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="onConfirmButtonPressed:" destination="-1" eventType="touchUpInside" id="9CH-dA-GgY"/>
+                    </connections>
                 </button>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bqh-IR-wXB">
-                    <rect key="frame" x="8" y="56" width="100" height="100"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="jbR-l8-DhO"/>
-                        <constraint firstAttribute="width" constant="100" id="wBd-7x-ZcY"/>
-                    </constraints>
-                </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook São Paulo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omZ-fC-Ysn">
-                    <rect key="frame" x="116" y="94" width="125" height="16"/>
+                    <rect key="frame" x="116" y="94" width="476" height="16"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -81,12 +86,15 @@
                 <constraint firstItem="4le-xC-dBC" firstAttribute="top" secondItem="wpx-1k-YY1" secondAttribute="top" constant="8" id="Qha-NV-xIw"/>
                 <constraint firstAttribute="bottom" secondItem="0Tb-Jb-Nxq" secondAttribute="bottom" constant="8" id="Qo7-qe-ivk"/>
                 <constraint firstItem="TEr-SO-18D" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leadingMargin" id="U3Y-XW-oQ9"/>
+                <constraint firstItem="omZ-fC-Ysn" firstAttribute="leading" secondItem="bqh-IR-wXB" secondAttribute="trailing" constant="8" id="VX8-j2-3rA"/>
                 <constraint firstItem="bqh-IR-wXB" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leading" constant="8" id="VYC-qR-uQn"/>
                 <constraint firstAttribute="trailing" secondItem="0Tb-Jb-Nxq" secondAttribute="trailing" constant="16" id="dFl-GU-0NN"/>
                 <constraint firstItem="4le-xC-dBC" firstAttribute="top" secondItem="wpx-1k-YY1" secondAttribute="top" id="dLi-G1-DBE"/>
+                <constraint firstAttribute="trailing" secondItem="omZ-fC-Ysn" secondAttribute="trailing" constant="8" id="eC8-9B-bYl"/>
                 <constraint firstAttribute="trailing" secondItem="4le-xC-dBC" secondAttribute="trailing" id="ebI-7V-3Ks"/>
                 <constraint firstItem="TEr-SO-18D" firstAttribute="top" secondItem="4le-xC-dBC" secondAttribute="bottom" constant="16" id="gwx-G3-4v8"/>
                 <constraint firstItem="omZ-fC-Ysn" firstAttribute="top" secondItem="o2K-tS-rhc" secondAttribute="bottom" constant="2" id="h0D-bS-dQS"/>
+                <constraint firstItem="o2K-tS-rhc" firstAttribute="leading" secondItem="bqh-IR-wXB" secondAttribute="trailing" constant="8" id="hXn-VO-KMD"/>
                 <constraint firstItem="omZ-fC-Ysn" firstAttribute="leading" secondItem="TEr-SO-18D" secondAttribute="leading" id="iX7-rD-fyM"/>
                 <constraint firstItem="4le-xC-dBC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wpx-1k-YY1" secondAttribute="leading" constant="8" id="ldl-CN-ApV"/>
                 <constraint firstItem="4le-xC-dBC" firstAttribute="leading" secondItem="wpx-1k-YY1" secondAttribute="leading" id="meW-WU-YmF"/>
@@ -107,6 +115,8 @@
                     <exclude reference="Qha-NV-xIw"/>
                     <exclude reference="ldl-CN-ApV"/>
                     <exclude reference="U3Y-XW-oQ9"/>
+                    <exclude reference="Mbr-dA-Foo"/>
+                    <exclude reference="iX7-rD-fyM"/>
                 </mask>
             </variation>
         </view>

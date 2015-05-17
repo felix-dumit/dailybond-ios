@@ -35,7 +35,8 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMo-94-7Xx">
                     <rect key="frame" x="16" y="562" width="276" height="30"/>
-                    <state key="normal" title="Send a message">
+                    <state key="normal" title="Dismiss">
+                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -44,8 +45,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUc-ag-LNJ">
                     <rect key="frame" x="308" y="562" width="276" height="30"/>
-                    <state key="normal" title="Post on timeline">
-                        <color key="titleColor" red="0.51295727729999996" green="0.88030642989999996" blue="0.41191776759999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Send a message">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>

@@ -49,8 +49,20 @@
 -(void) setEventDate:(NSDate*)aDate;
 {
     // TODO: numbered
-    self.dateLabel.text = [NSString stringWithFormat:@"Starting in %ld days",
-                           (long)[NSDate daysBetweenDate:[NSDate date] andDate:event.date]];
+    long day = [NSDate daysBetweenDate:[NSDate date] andDate:event.date];
+    if(day == -1) {
+            self.dateLabel.text = @"Today";
+    } else {
+        self.dateLabel.text = [NSString stringWithFormat:@"Starting in %ld days", day];
+    }
+}
+- (IBAction)onDismissButtonPressed:(id)sender {
+    [self dismissAnimated];
+}
+
+- (IBAction)onConfirmButtonPressed:(id)sender {
+    // TODO confirm
+    [self dismissAnimated];
 }
 
 /*
