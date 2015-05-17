@@ -27,6 +27,7 @@
 @dynamic dateString;
 @dynamic imageUrl;
 @dynamic title;
+@dynamic postLink;
 
 + (NSString *)parseClassName {
     return @"UserPost";
@@ -108,6 +109,7 @@
         up.title = title;
         up.userId = userId;
         up.userName = userName;
+        up.postLink = dict[@"link"];
         
         [array addObject:up];
     }

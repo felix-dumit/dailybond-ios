@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) NSString *imageUrl;
+@property (strong, nonatomic) NSString* postLink;
 
 + (instancetype)createWithContent:(NSString *)content andDate:(NSDate *)date andId:(NSString *)facebookId;
 + (UserPost *)generateMockData;

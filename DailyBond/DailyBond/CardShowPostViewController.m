@@ -33,23 +33,26 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 - (IBAction)onDismissButtonPressed:(id)sender {
     // TODO: remind later
     [self dismissAnimated];
 }
+
 - (IBAction)onNextButtonPressed:(id)sender {
+    UserPost *post = self.cardData;
+    [[UIApplication sharedApplication] openURL:post.postLink.URL];
     [self dismissAnimated];
 }
 
--(CardView *)getCardView;
+- (CardView *)getCardView;
 {
     return self.cardView;
 }
