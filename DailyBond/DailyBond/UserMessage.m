@@ -112,7 +112,9 @@
     
     if (!currentTask) {
         currentTask = [[FBRequests sharedInstance] getInbox].then ( ^id (NSArray *result) {
-            return [self processConversationArray:result];
+            NSArray *array = [self processConversationArray:result];
+            [self saveToLDS:array];
+            return array;
         }).catch ( ^id (NSError *error) {
             return [self generateMockData];
         });
@@ -149,6 +151,17 @@
     }
     
     return array;
+}
+
++ (BFTask *)loadFromLDS {
+    PFQuery *query = [[UserMessage query] fromLocalDatastore];
+    return [query findObjectsInBackground];
+}
+
++ (BFTask *)saveToLDS:(NSArray *)array {
+    return [UserMessage unpinAllObjectsInBackground].then ( ^id (id result) {
+        return [UserMessage pinAllInBackground:array];
+    });
 }
 
 - (NSURL *)profileImageURL {

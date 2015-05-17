@@ -90,13 +90,28 @@
     
     if (!currentTask) {
         currentTask = [[FBRequests sharedInstance] getEvents].then ( ^id (NSArray *result) {
-            return [Event objectArrayWithKeyValuesArray:result];
+            NSArray *array = [Event objectArrayWithKeyValuesArray:result];
+            [self saveToLDS:array];
+            return array;
+        }).catch ( ^id (NSError *error) {
+            return [self loadFromLDS];
         }).catch ( ^id (NSError *error) {
             return [self generateMockData];
         });
     }
     
     return currentTask;
+}
+
++ (BFTask *)loadFromLDS {
+    PFQuery *query = [[Event query] fromLocalDatastore];
+    return [query findObjectsInBackground];
+}
+
++ (BFTask *)saveToLDS:(NSArray *)array {
+    return [Event unpinAllObjectsInBackground].then ( ^id (id result) {
+        return [Event pinAllInBackground:array];
+    });
 }
 
 - (NSArray *)createEventsArrayFromJSONArray:(NSArray *)array {
