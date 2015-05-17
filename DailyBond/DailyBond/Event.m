@@ -25,7 +25,7 @@
     return @"Event";
 }
 
-+ (NSDate *)strToDate:(NSString *)dateStr {
+- (NSDate *)strToDate:(NSString *)dateStr {
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setDateFormat:@"yyyy-MM-dd"];
     NSDate *date = [dateFormat dateFromString:dateStr];
@@ -47,7 +47,7 @@
 
 - (void)setDateString:(NSString *)dateString {
     [self setObject:dateString forKey:@"dateString"];
-    self.date = [Event strToDate: dateString];
+    self.date = [self strToDate: dateString];
 }
 
 + (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId andRsvp:(NSString *)rsvpStatus {
