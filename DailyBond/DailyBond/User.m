@@ -13,7 +13,6 @@
 
 @interface User ()
 
-@property (strong, nonatomic) NSString *profileImageUrl;
 
 
 @end
@@ -81,7 +80,4 @@
     return [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:@"profileImage"];
 }
 
--(NSURL*)profileImageURL {
-    return [NSURL URLWithString:self.profileImageUrl];
-}
 @end

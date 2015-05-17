@@ -23,6 +23,7 @@
 		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
 		D5392F3B1B080B7900129D45 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = D5392F3A1B080B7900129D45 /* Event.m */; };
 		D5392F3D1B08172200129D45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5392F3C1B08172200129D45 /* Foundation.framework */; };
+		D55A00681B084E8A004FD5DC /* NSString+NSURL.m in Sources */ = {isa = PBXBuildFile; fileRef = D55A00671B084E8A004FD5DC /* NSString+NSURL.m */; };
 		D58F598C1B07BA8C00FAB188 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D58F598B1B07BA8C00FAB188 /* User.m */; };
 		D59549B81B07C71700720A52 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549B71B07C71700720A52 /* LoginViewController.m */; };
 		D59549BB1B07EEE000720A52 /* Birthday.m in Sources */ = {isa = PBXBuildFile; fileRef = D59549BA1B07EEE000720A52 /* Birthday.m */; };
@@ -88,6 +89,8 @@
 		D5392F391B080B7900129D45 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		D5392F3A1B080B7900129D45 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		D5392F3C1B08172200129D45 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D55A00661B084E8A004FD5DC /* NSString+NSURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+NSURL.h"; path = "DailyBond/NSString+NSURL.h"; sourceTree = "<group>"; };
+		D55A00671B084E8A004FD5DC /* NSString+NSURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+NSURL.m"; path = "DailyBond/NSString+NSURL.m"; sourceTree = "<group>"; };
 		D58F598A1B07BA8C00FAB188 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		D58F598B1B07BA8C00FAB188 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		D59549B51B07C1E400720A52 /* DailyBond-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyBond-PrefixHeader.pch"; sourceTree = "<group>"; };
@@ -265,6 +268,8 @@
 		EB04D8A81B07A61C009B8AB0 = {
 			isa = PBXGroup;
 			children = (
+				D55A00661B084E8A004FD5DC /* NSString+NSURL.h */,
+				D55A00671B084E8A004FD5DC /* NSString+NSURL.m */,
 				EB04D8B31B07A61C009B8AB0 /* DailyBond */,
 				EB04D8CD1B07A61C009B8AB0 /* DailyBondTests */,
 				EB04D8B21B07A61C009B8AB0 /* Products */,
@@ -488,6 +493,7 @@
 				D59549B81B07C71700720A52 /* LoginViewController.m in Sources */,
 				EB04D8B71B07A61C009B8AB0 /* main.m in Sources */,
 				2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */,
+				D55A00681B084E8A004FD5DC /* NSString+NSURL.m in Sources */,
 				D59549BB1B07EEE000720A52 /* Birthday.m in Sources */,
 				D59549C41B07FCAB00720A52 /* MessengerSharer.m in Sources */,
 				D59549C71B07FFF400720A52 /* KeepInTouch.m in Sources */,

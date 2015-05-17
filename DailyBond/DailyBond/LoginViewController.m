@@ -37,14 +37,14 @@
 }
 
 - (IBAction)loginWithFacebook:(id)sender {
-    [User loginWithFacebookInBackground].then(^id(id result) {
+    [User loginWithFacebookInBackground].then ( ^id (id result) {
         [self showUserInfoAnimated:YES];
         return nil;
     });
-//    [self showUserInfoAnimated:YES];
+    //    [self showUserInfoAnimated:YES];
 }
 
-- (void) showUserInfoAnimated:(BOOL)animated {
+- (void)showUserInfoAnimated:(BOOL)animated {
     // PREPARE
     if (animated) {
         self.imageProfile.alpha = 0.0;
@@ -68,23 +68,23 @@
     [self.imageBackground setImage:[image blurredImageWithRadius:8.0 iterations:20 tintColor:nil]];
     //UIImage *picture = [UIImage imageNamed:@"mockProfile"];
     //[self.imageProfile setImage:picture];
-    [self.imageProfile sd_setImageWithURL:user.profileImageURL];
+    [self.imageProfile sd_setImageWithURL:user.profileImageUrl.URL];
     self.labelName.text = user.name;
     
     // ANIMATE
     
     if (animated) {
-        [UIView animateWithDuration:0.5 animations:^{
+        [UIView animateWithDuration:0.5 animations: ^{
             self.imageProfile.alpha = 1.0;
             self.imageBackground.alpha = 1.0;
             self.buttonLogin.alpha = 0.0;
             self.groupStart.transform = CGAffineTransformIdentity;
             self.labelAppName.alpha = 0.0;
             self.groupUserInfo.alpha = 1.0;
-        } completion:^(BOOL finished) {
-            
+        } completion: ^(BOOL finished) {
         }];
-    } else {
+    }
+    else {
         self.imageProfile.alpha = 1.0;
         self.imageBackground.alpha = 1.0;
         self.groupStart.alpha = 1.0;
@@ -102,7 +102,6 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     [super prepareForSegue:segue sender:sender];
     if ([segue.identifier isEqualToString:@"segueStart"]) {
-        
     }
 }
 

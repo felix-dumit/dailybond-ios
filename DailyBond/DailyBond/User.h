@@ -18,9 +18,8 @@
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *facebookID;
 @property (strong, nonatomic) NSDate *birthday;
+@property (strong, nonatomic) NSString *profileImageUrl;
 
-
--(NSURL*)profileImageURL;
 
 + (BFTask *)loginWithFacebookInBackground;
 
