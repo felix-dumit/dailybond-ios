@@ -20,10 +20,13 @@
 @implementation UserPost
 
 @dynamic facebookId;
+@dynamic userId;
+@dynamic userName;
 @dynamic content;
 @dynamic date;
 @dynamic dateString;
 @dynamic imageUrl;
+@dynamic title;
 
 + (NSString *)parseClassName {
     return @"UserPost";
@@ -32,25 +35,28 @@
 + (void)registerSubclass {
     [super registerSubclass];
     
-    [UserPost setupReplacedKeyFromPropertyName: ^NSDictionary *{
-        return @{
-                 @"content": @"message",
-                 @"imageUrl" : @"picture",
-                 @"facebookId": @"id",
-                 @"dateString": @"created_time"
-                 };
-    }];
+    //    [UserPost setupReplacedKeyFromPropertyName: ^NSDictionary *{
+    //        return @{
+    //                 @"content": @"message",
+    //                 @"imageUrl" : @"picture",
+    //                 @"facebookId": @"id",
+    //                 @"dateString": @"created_time",
+    //                 };
+    //    }];
 }
 
 - (void)setDateString:(NSString *)dateString {
     [self setObject:dateString forKey:dateString];
     
+    self.date = [UserPost dateForDateString:dateString];
+}
+
++ (NSDate *)dateForDateString:(NSString *)dateString {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     NSLocale *enUSPOSIXLocale = [NSLocale localeWithLocaleIdentifier:@"en_US_POSIX"];
     [dateFormatter setLocale:enUSPOSIXLocale];
     [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZZZZZ"];
-    NSDate *date = [dateFormatter dateFromString:dateString];
-    self.date = date;
+    return [dateFormatter dateFromString:dateString];
 }
 
 + (instancetype)createWithContent:(NSString *)content andDate:(NSDate *)date andId:(NSString *)facebookId {
@@ -71,7 +77,7 @@
     
     if (!currentTask) {
         currentTask = [[FBRequests sharedInstance] getNewsFeed].then ( ^id (NSArray *result) {
-            NSArray *array = [UserPost objectArrayWithKeyValuesArray:result];
+            NSArray *array = [UserPost processPostsArray:result];
             return array;
         }).catch ( ^id (NSError *error) {
             return [self generateMockData];
@@ -79,6 +85,31 @@
     }
     
     return currentTask;
+}
+
++ (NSArray *)processPostsArray:(NSArray *)arr {
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (NSDictionary *dict in arr) {
+        NSString *facebookId = dict[@"id"];
+        NSString *userId = dict[@"from"][@"id"];
+        NSString *userName = dict[@"from"][@"name"];
+        NSString *title = dict[@"story"] ? : dict[@"caption"];
+        NSString *content = dict[@"message"] ? : dict[@"description"];
+        NSString *dateString = dict[@"updated_time"];
+        NSDate *date = [self dateForDateString:dateString];
+        NSString *imageUrl = dict[@"picture"];
+        
+        UserPost *up = [UserPost createWithContent:content andDate:date andId:facebookId];
+        up.imageUrl = imageUrl;
+        up.title = title;
+        up.userId = userId;
+        up.userName = userName;
+        
+        [array addObject:up];
+    }
+    
+    return array;
 }
 
 @end

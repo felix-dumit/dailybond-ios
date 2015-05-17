@@ -11,7 +11,10 @@
 
 @interface UserPost : PFObject <PFSubclassing>
 @property (strong, nonatomic) NSString *facebookId;
+@property (strong, nonatomic) NSString *userId;
+@property (strong, nonatomic) NSString *userName;
 @property (strong, nonatomic) NSString *content;
+@property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSDate *date;
 @property (strong, nonatomic) NSString *imageUrl;
 

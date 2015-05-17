@@ -23,6 +23,7 @@
 @dynamic facebookID;
 @dynamic birthday;
 @dynamic profileImageUrl;
+@dynamic coverImageUrl;
 
 
 + (BFTask *)loginWithFacebookInBackground {

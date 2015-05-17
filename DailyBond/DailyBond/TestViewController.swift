@@ -26,7 +26,7 @@ class TestViewController: UIViewController {
     
     @IBAction func testBirthday(sender: AnyObject) {
         
-        UserMessage.allMessages().continueWithSuccessResultBlock { (result) -> AnyObject! in
+        UserPost.allPosts().continueWithSuccessResultBlock { (result) -> AnyObject! in
            
             
             println("test results: \(result)")
