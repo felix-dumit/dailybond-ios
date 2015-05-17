@@ -11,6 +11,7 @@
 #import "Birthday.h"
 #import "Event.h"
 #import "UserPost.h"
+#import "UserMessage.h"
 #import "KeepInTouch.h"
 #import "User.h"
 #import "UserPost.h"

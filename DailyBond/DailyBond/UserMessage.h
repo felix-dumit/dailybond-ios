@@ -14,7 +14,10 @@
 @property (strong, nonatomic) NSString *friendName;
 @property (strong, nonatomic) NSDate *receivedDate;
 @property (strong, nonatomic) NSString *message;
-@property (assign, nonatomic) BOOL read;
+@property (assign, nonatomic) BOOL unread;
 @property (strong, nonatomic) NSString *profileImageUrl;
+
+-(NSURL*)profileImageURL;
++ (BFTask *)allMessages;
 
 @end
