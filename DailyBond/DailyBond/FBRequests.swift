@@ -30,4 +30,8 @@ import Foundation
         return getRequest("me/home", params : ["":""])
     }
     
+    func getEvents() -> BFTask {
+        return getRequest("me/events", params : ["":""])
+    }
+    
 }
