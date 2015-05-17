@@ -21,7 +21,6 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Birthday" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Bm-PP-rV7">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
-                    <color key="backgroundColor" red="0.98431372549999996" green="0.69411764710000001" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="VS9-Zs-Rp3"/>
                     </constraints>

@@ -25,7 +25,6 @@
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Post" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGo-gl-Fbc">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
-                    <color key="backgroundColor" red="0.56470588239999997" green="0.80392156859999997" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="dtN-85-20B"/>
                     </constraints>

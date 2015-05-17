@@ -22,7 +22,6 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4le-xC-dBC">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="40"/>
-                    <color key="backgroundColor" red="0.45490196078431372" green="0.55686274509803924" blue="0.7686274509803922" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="rwu-EX-gAl"/>
                     </constraints>
