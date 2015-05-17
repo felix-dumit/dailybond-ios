@@ -28,7 +28,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give NAME congratulations!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5f-Tp-oYb">
-                    <rect key="frame" x="76" y="56" width="193" height="18"/>
+                    <rect key="frame" x="76" y="56" width="516" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -69,6 +69,7 @@
                 <constraint firstAttribute="trailing" secondItem="zUc-ag-LNJ" secondAttribute="trailing" constant="16" id="5Ec-W2-6xy"/>
                 <constraint firstItem="4Bm-PP-rV7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="M7v-28-Llz" secondAttribute="leading" constant="8" id="9NN-iA-tGL"/>
                 <constraint firstItem="eMo-94-7Xx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VXi-9r-6Uh" secondAttribute="bottom" constant="8" id="AIE-Vq-QQ1"/>
+                <constraint firstAttribute="trailing" secondItem="x5f-Tp-oYb" secondAttribute="trailing" constant="8" id="ALN-U2-vHa"/>
                 <constraint firstAttribute="bottom" secondItem="zUc-ag-LNJ" secondAttribute="bottom" constant="8" id="Guf-UD-hx6"/>
                 <constraint firstItem="eMo-94-7Xx" firstAttribute="leading" secondItem="M7v-28-Llz" secondAttribute="leading" constant="16" id="K3Y-E3-1oM"/>
                 <constraint firstAttribute="bottom" secondItem="eMo-94-7Xx" secondAttribute="bottom" constant="8" id="K7f-46-hzc"/>

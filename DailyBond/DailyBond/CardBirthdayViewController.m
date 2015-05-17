@@ -22,6 +22,7 @@
     
     Birthday *birthday = (Birthday*) self.cardData;
     // Do any additional setup after loading the view from its nib.
+    [self setDescriptionLabelWithName:birthday.friendName];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,7 +34,7 @@
 - (void) setDescriptionLabelWithName:(NSString*)aName
 {
     // TODO: Consider gender in message: Give %s congratulations for "his" birthday
-    [self.descriptionLabel setText:[NSString stringWithFormat:@"Give %@ congratulations!", aName]];
+    [self.descriptionLabel setText:[NSString stringWithFormat:@"Give %@ congratulations for his birthday!", aName]];
     return;
 }
 
