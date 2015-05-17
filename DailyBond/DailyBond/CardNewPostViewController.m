@@ -9,8 +9,10 @@
 #import "CardNewPostViewController.h"
 #import "NSDate+Formatter.h"
 #import "User.h"
+#import <SVProgressHUD.h>
 
-@interface CardNewPostViewController ()
+@interface CardNewPostViewController () <UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *textField;
 
 @end
 
@@ -22,6 +24,10 @@
     NSNumber *days = self.cardData;
     [self.descriptionLabel setText:[NSString stringWithFormat:@"It's been %@ days since you don't post in your timeline! What about posting something to your friends?", days]];
     [self.profileImageView sd_setImageWithURL:[User currentUser].profileImageUrl.URL];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    tap.delegate = self;
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,17 +35,30 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)sendPostToFacebook:(id)sender {
+    [SVProgressHUD show];
+    [User publishMessage:self.textField.text].finally ( ^id (BFTask *task) {
+        [SVProgressHUD dismiss];
+        [self dismissAnimated];
+        return nil;
+    });
 }
-*/
 
--(CardView *)getCardView;
+- (void)dismissKeyboard {
+    [self.textField resignFirstResponder];
+}
+
+/*
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
+
+- (CardView *)getCardView;
 {
     return self.cardView;
 }

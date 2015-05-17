@@ -17,13 +17,18 @@ import Foundation
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             
             FBSDKGraphRequest(graphPath: graphPath, parameters: params, HTTPMethod: method).startWithCompletionHandler({
-                (connection, result:AnyObject!, error) -> Void in
+                (connection, result:AnyObject?, error) -> Void in
                 
                 if error != nil {
                     task.trySetError(error)
                 }
                 else {
-                    task.trySetResult(result["data"])
+                    if let a = result as? Dictionary<String,AnyObject>{
+                        task.trySetResult(a["data"])
+                    } else {
+                        task.trySetResult(0)
+                    }
+
                 }
             })
             
@@ -37,7 +42,7 @@ import Foundation
     }
 
     func getNewsFeed() -> BFTask {
-        return getRequest("me/home", params : ["":""], method: "GET")
+        return getRequest("me/home", params : ["limit":"5"], method: "GET")
     }
     
     func getEvents() -> BFTask {
@@ -49,7 +54,7 @@ import Foundation
     }
 
     func getInbox() -> BFTask {
-        return getRequest("me/inbox", params : ["":""], method: "GET")
+        return getRequest("me/inbox", params : ["limit":"5"], method: "GET")
     }
     
     func postToTimeline(message : String) -> BFTask {
