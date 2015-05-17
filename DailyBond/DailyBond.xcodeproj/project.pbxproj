@@ -36,8 +36,8 @@
 		EBDA22D01B07EF050095633A /* CardEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22CE1B07EF050095633A /* CardEventViewController.xib */; };
 		EBDA22D41B07F97B0095633A /* CardNewPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22D21B07F97B0095633A /* CardNewPostViewController.m */; };
 		EBDA22D51B07F97B0095633A /* CardNewPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22D31B07F97B0095633A /* CardNewPostViewController.xib */; };
-		EBDA22D91B07FD7D0095633A /* CardKeepInTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22D71B07FD7D0095633A /* CardKeepInTouchViewController.m */; };
 		EBDA22DA1B07FD7D0095633A /* CardKeepInTouchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBDA22D81B07FD7D0095633A /* CardKeepInTouchViewController.xib */; };
+		EBDA22DB1B080F7B0095633A /* CardKeepInTouchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA22D71B07FD7D0095633A /* CardKeepInTouchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -426,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBDA22DB1B080F7B0095633A /* CardKeepInTouchViewController.m in Sources */,
 				2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */,
 				D58F598C1B07BA8C00FAB188 /* User.m in Sources */,
 				EBDA22CA1B07D51A0095633A /* CardBirthdayViewController.m in Sources */,

@@ -98,9 +98,9 @@
                     </constraints>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="bvI-ay-CDK"/>
                             <exclude reference="ORa-9I-yym"/>
                             <exclude reference="SEW-dg-BJv"/>
+                            <exclude reference="bvI-ay-CDK"/>
                             <exclude reference="vrM-yx-clf"/>
                             <exclude reference="bi7-T0-Q30"/>
                         </mask>
