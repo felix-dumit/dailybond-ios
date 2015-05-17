@@ -32,9 +32,9 @@
     UIBezierPath *shadowPath = [UIBezierPath bezierPathWithRect:self.bounds];
     self.layer.masksToBounds = NO;
     self.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.layer.shadowOffset = CGSizeMake(0.0f, 5.0f);
-    self.layer.shadowOpacity = 0.5f;
-    self.layer.shadowRadius = 12.0f;
+    self.layer.shadowOffset = CGSizeMake(0.0f, 2.5f);
+    self.layer.shadowOpacity = 0.2f;
+    self.layer.shadowRadius = 5.0f;
     self.layer.shadowPath = shadowPath.CGPath;
 }
 
