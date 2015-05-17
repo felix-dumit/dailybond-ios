@@ -47,7 +47,7 @@
 
 - (void)setDateString:(NSString *)dateString {
     [self setObject:dateString forKey:@"dateString"];
-    self.date = [Event strToDate: dateString];
+    self.date = [self strToDate: dateString];
 }
 
 + (instancetype)createWithName:(NSString *)name andDate:(NSDate *)date andId:(NSString *)eventId andRsvp:(NSString *)rsvpStatus {
