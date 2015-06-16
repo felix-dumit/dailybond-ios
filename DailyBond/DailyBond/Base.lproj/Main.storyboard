@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lOn-mI-tl3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lOn-mI-tl3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -510,6 +510,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lI-KW-f7g" userLabel="BirthdayProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="20" y="576" width="54" height="54"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJv-UA-n0X">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickProgressBirthday:" destination="GgH-xq-gFL" eventType="touchUpInside" id="fJW-aC-0YW"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconBirthday" translatesAutoresizingMaskIntoConstraints="NO" id="K0u-PS-7hX">
                                         <rect key="frame" x="17" y="17" width="20" height="20"/>
                                         <constraints>
@@ -526,10 +535,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="lJv-UA-n0X" firstAttribute="top" secondItem="6lI-KW-f7g" secondAttribute="top" id="04P-vn-sdL"/>
                                     <constraint firstAttribute="centerX" secondItem="K0u-PS-7hX" secondAttribute="centerX" id="3Fj-6t-c73"/>
                                     <constraint firstAttribute="width" secondItem="6lI-KW-f7g" secondAttribute="height" multiplier="1:1" id="6ay-Ra-aWg"/>
+                                    <constraint firstAttribute="bottom" secondItem="lJv-UA-n0X" secondAttribute="bottom" id="CCT-2c-AOQ"/>
                                     <constraint firstAttribute="width" constant="54" id="XB5-Sb-Kwq"/>
+                                    <constraint firstAttribute="trailing" secondItem="lJv-UA-n0X" secondAttribute="trailing" id="aHL-mE-3R4"/>
                                     <constraint firstAttribute="height" constant="50" id="bY2-Cm-013"/>
+                                    <constraint firstItem="lJv-UA-n0X" firstAttribute="leading" secondItem="6lI-KW-f7g" secondAttribute="leading" id="cO6-Jv-KeQ"/>
                                     <constraint firstAttribute="centerY" secondItem="K0u-PS-7hX" secondAttribute="centerY" id="nc5-fZ-gRf"/>
                                 </constraints>
                                 <variation key="default">
@@ -541,6 +554,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p8b-D6-8bW" userLabel="EventProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="90" y="576" width="54" height="54"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DV0-HF-cvi">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickProgressEvents:" destination="GgH-xq-gFL" eventType="touchUpInside" id="jwx-2a-KpB"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconCalendar" translatesAutoresizingMaskIntoConstraints="NO" id="Ds6-Ki-n3n">
                                         <rect key="frame" x="17" y="17" width="20" height="20"/>
                                         <constraints>
@@ -557,11 +579,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="DV0-HF-cvi" secondAttribute="bottom" id="1sR-J9-Isd"/>
                                     <constraint firstAttribute="height" constant="50" id="67B-49-uzP"/>
+                                    <constraint firstItem="DV0-HF-cvi" firstAttribute="top" secondItem="p8b-D6-8bW" secondAttribute="top" id="bvX-1d-aPu"/>
                                     <constraint firstAttribute="centerX" secondItem="Ds6-Ki-n3n" secondAttribute="centerX" id="gwq-17-v6n"/>
+                                    <constraint firstItem="DV0-HF-cvi" firstAttribute="leading" secondItem="p8b-D6-8bW" secondAttribute="leading" id="jlp-Sb-M8o"/>
                                     <constraint firstAttribute="width" secondItem="p8b-D6-8bW" secondAttribute="height" multiplier="1:1" id="p9s-fr-BAk"/>
                                     <constraint firstAttribute="width" constant="54" id="qPc-YZ-1tw"/>
                                     <constraint firstAttribute="centerY" secondItem="Ds6-Ki-n3n" secondAttribute="centerY" id="x81-rm-hQy"/>
+                                    <constraint firstAttribute="trailing" secondItem="DV0-HF-cvi" secondAttribute="trailing" id="z5b-rw-FgX"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -572,6 +598,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICz-XY-sCZ" userLabel="PostsProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="160" y="576" width="54" height="54"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ee-co-c1Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickProgressPosts:" destination="GgH-xq-gFL" eventType="touchUpInside" id="dDX-iw-hPC"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconPosts" translatesAutoresizingMaskIntoConstraints="NO" id="9Bh-BG-nxB">
                                         <rect key="frame" x="17" y="17" width="20" height="20"/>
                                         <constraints>
@@ -588,9 +623,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="3ee-co-c1Q" firstAttribute="leading" secondItem="ICz-XY-sCZ" secondAttribute="leading" id="9u0-Yc-e5x"/>
+                                    <constraint firstItem="3ee-co-c1Q" firstAttribute="top" secondItem="ICz-XY-sCZ" secondAttribute="top" id="Aqq-KY-Ihl"/>
                                     <constraint firstAttribute="centerY" secondItem="9Bh-BG-nxB" secondAttribute="centerY" id="CjP-f1-mqE"/>
                                     <constraint firstAttribute="centerX" secondItem="9Bh-BG-nxB" secondAttribute="centerX" id="JFj-Tz-aTL"/>
+                                    <constraint firstAttribute="bottom" secondItem="3ee-co-c1Q" secondAttribute="bottom" id="abV-f4-iSX"/>
                                     <constraint firstAttribute="width" constant="54" id="fPr-gL-Xg9"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ee-co-c1Q" secondAttribute="trailing" id="qk1-YM-ifB"/>
                                     <constraint firstAttribute="height" constant="50" id="uik-hH-dvN"/>
                                     <constraint firstAttribute="width" secondItem="ICz-XY-sCZ" secondAttribute="height" multiplier="1:1" id="uje-LQ-6fG"/>
                                 </constraints>
@@ -603,6 +642,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K19-UJ-h7A" userLabel="ChatProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="230" y="576" width="54" height="54"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdY-yB-ckG">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickProgressChats:" destination="GgH-xq-gFL" eventType="touchUpInside" id="nS5-lL-tWc"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconChat" translatesAutoresizingMaskIntoConstraints="NO" id="XNK-ab-V9r">
                                         <rect key="frame" x="17" y="17" width="20" height="20"/>
                                         <constraints>
@@ -619,9 +667,13 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="bdY-yB-ckG" firstAttribute="leading" secondItem="K19-UJ-h7A" secondAttribute="leading" id="7wW-Yf-HBb"/>
                                     <constraint firstAttribute="width" constant="54" id="EgT-TL-59d"/>
+                                    <constraint firstItem="bdY-yB-ckG" firstAttribute="top" secondItem="K19-UJ-h7A" secondAttribute="top" id="FyC-yo-8Bp"/>
                                     <constraint firstAttribute="centerX" secondItem="XNK-ab-V9r" secondAttribute="centerX" id="JU8-dv-r5l"/>
                                     <constraint firstAttribute="centerY" secondItem="XNK-ab-V9r" secondAttribute="centerY" id="MgE-mP-1PG"/>
+                                    <constraint firstAttribute="trailing" secondItem="bdY-yB-ckG" secondAttribute="trailing" id="MiS-V5-jsl"/>
+                                    <constraint firstAttribute="bottom" secondItem="bdY-yB-ckG" secondAttribute="bottom" id="f3r-eI-LhV"/>
                                     <constraint firstAttribute="height" constant="50" id="t1q-gy-tQy"/>
                                     <constraint firstAttribute="width" secondItem="K19-UJ-h7A" secondAttribute="height" multiplier="1:1" id="z51-zk-dhT"/>
                                 </constraints>
@@ -634,6 +686,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMC-k0-aP7" userLabel="WriteProgress" customClass="KKProgressTimer">
                                 <rect key="frame" x="300" y="576" width="54" height="54"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pSn-gq-Kae">
+                                        <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clickProgressWrite:" destination="GgH-xq-gFL" eventType="touchUpInside" id="kc8-VT-VV7"/>
+                                        </connections>
+                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IconWrite" translatesAutoresizingMaskIntoConstraints="NO" id="dmd-Mc-Lfn">
                                         <rect key="frame" x="17" y="17" width="20" height="20"/>
                                         <constraints>
@@ -651,10 +712,14 @@
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="54" id="DpI-TT-tlJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="pSn-gq-Kae" secondAttribute="bottom" id="Foq-7d-XsI"/>
+                                    <constraint firstAttribute="trailing" secondItem="pSn-gq-Kae" secondAttribute="trailing" id="GBc-9S-xdg"/>
                                     <constraint firstAttribute="height" constant="50" id="Lg8-bb-9Hf"/>
+                                    <constraint firstItem="pSn-gq-Kae" firstAttribute="leading" secondItem="xMC-k0-aP7" secondAttribute="leading" id="SMB-6Z-vdm"/>
                                     <constraint firstAttribute="width" secondItem="xMC-k0-aP7" secondAttribute="height" multiplier="1:1" id="YET-0A-3yp"/>
                                     <constraint firstAttribute="centerY" secondItem="dmd-Mc-Lfn" secondAttribute="centerY" id="mrd-FR-qpP"/>
                                     <constraint firstAttribute="centerX" secondItem="dmd-Mc-Lfn" secondAttribute="centerX" id="tB9-c4-LFD"/>
+                                    <constraint firstItem="pSn-gq-Kae" firstAttribute="top" secondItem="xMC-k0-aP7" secondAttribute="top" id="vYD-nA-pJy"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -666,7 +731,7 @@
                                 <rect key="frame" x="356" y="599" width="3" height="48"/>
                             </view>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nr3-In-o1D" userLabel="DoneGroup">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="560"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have Bonded today!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zz-0t-71e">
                                         <rect key="frame" x="8" y="145" width="359" height="38"/>
@@ -701,7 +766,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pt-se-YYt">
-                                        <rect key="frame" x="94" y="451" width="188" height="36"/>
+                                        <rect key="frame" x="94" y="460" width="188" height="36"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="AaX-gU-Vkn"/>
@@ -728,7 +793,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="6Pt-se-YYt" secondAttribute="centerX" id="1QE-qL-5MR"/>
-                                    <constraint firstAttribute="bottom" secondItem="6Pt-se-YYt" secondAttribute="bottom" constant="180" id="MZS-fs-VLT"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Pt-se-YYt" secondAttribute="bottom" constant="64" id="MZS-fs-VLT"/>
                                     <constraint firstAttribute="trailing" secondItem="3zz-0t-71e" secondAttribute="trailing" constant="8" id="bMb-uT-868"/>
                                     <constraint firstItem="3zz-0t-71e" firstAttribute="leading" secondItem="Nr3-In-o1D" secondAttribute="leading" constant="8" id="elc-9d-hXP"/>
                                     <constraint firstItem="3zz-0t-71e" firstAttribute="top" secondItem="Nr3-In-o1D" secondAttribute="top" constant="145" id="kb6-QU-AG6"/>
@@ -772,9 +837,11 @@
                             <constraint firstItem="p8b-D6-8bW" firstAttribute="width" secondItem="p8b-D6-8bW" secondAttribute="height" multiplier="1:1" id="vOT-ym-1b8"/>
                             <constraint firstItem="ICz-XY-sCZ" firstAttribute="top" secondItem="ogR-eG-ka5" secondAttribute="bottom" constant="16" id="vQa-jG-4aC"/>
                             <constraint firstItem="1Wb-3D-kPB" firstAttribute="leading" secondItem="SYW-r4-iaR" secondAttribute="leadingMargin" id="yW9-Wh-aab"/>
+                            <constraint firstItem="6lI-KW-f7g" firstAttribute="top" secondItem="Nr3-In-o1D" secondAttribute="bottom" constant="16" id="znd-dz-5w6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="E7t-K8-5OR"/>
                                 <exclude reference="tty-pZ-qpC"/>
                                 <exclude reference="YwM-aa-9jO"/>
                                 <exclude reference="JlO-nB-u2V"/>

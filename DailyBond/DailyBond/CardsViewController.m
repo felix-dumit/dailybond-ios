@@ -244,4 +244,47 @@
     });
 }
 
+#pragma mark - Progress Click Actions
+
+- (IBAction)clickProgressBirthday:(UIButton *)sender {
+    NSLog(@"Birthday Click");
+    [self.activeCard dismissAnimated];
+    [[CardsManager sharedInstance] setSection:0];
+    [[CardsManager sharedInstance] setIndex:-1];
+}
+
+- (IBAction)clickProgressEvents:(UIButton *)sender {
+    NSLog(@"Events Click");
+    [self.activeCard dismissAnimated];
+    [[CardsManager sharedInstance] setSection:1];
+    [[CardsManager sharedInstance] setIndex:-1];
+}
+
+- (IBAction)clickProgressPosts:(UIButton *)sender {
+    NSLog(@"Posts Click");
+    [self.activeCard dismissAnimated];
+    [[CardsManager sharedInstance] setSection:2];
+    [[CardsManager sharedInstance] setIndex:-1];
+}
+
+- (IBAction)clickProgressChats:(UIButton *)sender {
+    NSLog(@"Chats Click");
+    [self.activeCard dismissAnimated];
+    [[CardsManager sharedInstance] setSection:3];
+    [[CardsManager sharedInstance] setIndex:-1];
+}
+
+- (IBAction)clickProgressWrite:(UIButton *)sender {
+    NSLog(@"Write Click");
+    [self.activeCard dismissAnimated];
+    [[CardsManager sharedInstance] setSection:4];
+    [[CardsManager sharedInstance] setIndex:-1];
+}
+
+
+
+
+
+
+
 @end
