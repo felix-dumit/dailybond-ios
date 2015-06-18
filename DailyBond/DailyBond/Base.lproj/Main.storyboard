@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Yyx-As-DIT" kind="relationship" relationship="rootViewController" id="ASp-XD-STw"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VWq-Y7-YBh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FiO-Mm-fHe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -391,50 +391,6 @@
             </objects>
             <point key="canvasLocation" x="117.5" y="-151.5"/>
         </scene>
-        <!--Tests-->
-        <scene sceneID="bBh-Dp-UJW">
-            <objects>
-                <viewController id="Yyx-As-DIT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="XHk-ud-LoK"/>
-                        <viewControllerLayoutGuide type="bottom" id="GXv-zD-ZIj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gxg-gM-647">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wk-oL-wZ6">
-                                <rect key="frame" x="172" y="113" width="30" height="30"/>
-                                <state key="normal" title="Test">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="YQg-We-Pnn"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lE-oz-TAs">
-                                <rect key="frame" x="168" y="220" width="38" height="30"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4V-XR-wu2">
-                                <rect key="frame" x="168" y="319" width="41" height="30"/>
-                                <state key="normal" title="Cards">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Tests" id="Bk1-6Y-nOM">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="tPx-9C-dVc"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tTL-YF-1uT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="117.5" y="708.5"/>
-        </scene>
         <!--Web Tests-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -477,17 +433,41 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="483-LE-06c">
                                 <rect key="frame" x="36" y="270" width="116" height="100"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oA-fU-uEQ">
+                                <rect key="frame" x="198" y="123" width="57" height="30"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HcH-Ri-0rB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ql8-PC-M4V">
+                                <rect key="frame" x="227" y="175" width="67" height="30"/>
+                                <state key="normal" title="Native FB">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getFacebook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FhO-Jq-0Cq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Web Tests" id="X0l-ZZ-VWe"/>
+                    <navigationItem key="navigationItem" title="Web Tests" id="X0l-ZZ-VWe">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="Vka-Ey-Pro">
+                            <connections>
+                                <action selector="dismiss:" destination="BYZ-38-t0r" id="WFV-24-2HM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="483-LE-06c" id="t55-Mz-ifV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="593.5" y="708.5"/>
+            <point key="canvasLocation" x="274.5" y="708.5"/>
         </scene>
         <!--Cards View Controller-->
         <scene sceneID="FDf-8U-hKj">
