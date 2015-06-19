@@ -21,7 +21,6 @@
 		2E9224AA1B07CD1F00B5042E /* CCMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A71B07CD1F00B5042E /* CCMBorderView.m */; };
 		2E9224AB1B07CD1F00B5042E /* CCMPlayNDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */; };
 		2E9224AD1B07CD2A00B5042E /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9224AC1B07CD2A00B5042E /* DraggableView.swift */; };
-		2EFEB66A1B0873A800071497 /* CDSideBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB6691B0873A800071497 /* CDSideBarController.m */; };
 		2EFEB66D1B088ABC00071497 /* PagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EFEB66C1B088ABC00071497 /* PagesViewController.m */; };
 		55EF405E1B08A5B50063BC69 /* LastPostDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55EF405D1B08A5B50063BC69 /* LastPostDate.m */; };
 		908AFC06AB055D6E4D88E9CD /* libPods-DailyBond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06E9BB640064F12766596638 /* libPods-DailyBond.a */; };
@@ -93,8 +92,6 @@
 		2E9224A81B07CD1F00B5042E /* CCMPlayNDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCMPlayNDropView.h; sourceTree = "<group>"; };
 		2E9224A91B07CD1F00B5042E /* CCMPlayNDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCMPlayNDropView.m; sourceTree = "<group>"; };
 		2E9224AC1B07CD2A00B5042E /* DraggableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
-		2EFEB6681B0873A800071497 /* CDSideBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDSideBarController.h; sourceTree = "<group>"; };
-		2EFEB6691B0873A800071497 /* CDSideBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDSideBarController.m; sourceTree = "<group>"; };
 		2EFEB66B1B088ABC00071497 /* PagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagesViewController.h; sourceTree = "<group>"; };
 		2EFEB66C1B088ABC00071497 /* PagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagesViewController.m; sourceTree = "<group>"; };
 		55EF405C1B08A54A0063BC69 /* LastPostDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LastPostDate.h; sourceTree = "<group>"; };
@@ -237,8 +234,6 @@
 				EBDA22ED1B087E2C0095633A /* CardShowPostViewController.h */,
 				EBDA22EE1B087E2C0095633A /* CardShowPostViewController.m */,
 				EBDA22EF1B087E2C0095633A /* CardShowPostViewController.xib */,
-				2EFEB6681B0873A800071497 /* CDSideBarController.h */,
-				2EFEB6691B0873A800071497 /* CDSideBarController.m */,
 				2EFEB66B1B088ABC00071497 /* PagesViewController.h */,
 				2EFEB66C1B088ABC00071497 /* PagesViewController.m */,
 			);
@@ -536,7 +531,6 @@
 				D59549B81B07C71700720A52 /* LoginViewController.m in Sources */,
 				EB04D8B71B07A61C009B8AB0 /* main.m in Sources */,
 				2E6D3AEA1B07D75500DF99C6 /* CardHelper.m in Sources */,
-				2EFEB66A1B0873A800071497 /* CDSideBarController.m in Sources */,
 				D55A00681B084E8A004FD5DC /* NSString+NSURL.m in Sources */,
 				D59549BB1B07EEE000720A52 /* Birthday.m in Sources */,
 				EBDA22F01B087E2C0095633A /* CardShowPostViewController.m in Sources */,

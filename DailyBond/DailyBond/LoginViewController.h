@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CDSideBarController.h"
 #import "PagesViewController.h"
 
 @interface LoginViewController : UIViewController

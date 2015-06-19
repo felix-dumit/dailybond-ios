@@ -27,8 +27,8 @@ typedef NS_OPTIONS(NSInteger, Border){
     Border_Right
 };
 
-@property IBInspectable CGFloat   borderWidth;
-@property IBInspectable CGFloat   cornerRadius;
+@property IBInspectable double   borderWidth;
+@property IBInspectable double   cornerRadius;
 @property IBInspectable UIColor*  borderColor;
 @property IBInspectable BOOL      borderBottom;
 @property IBInspectable BOOL      borderRight;
